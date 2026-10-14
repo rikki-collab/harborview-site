@@ -224,7 +224,7 @@ header.on .nav{height:66px}
 /* ————— asset index ————— */
 .aidx{border-top:1px solid rgba(255,255,255,.13)}
 .arow{
-  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr) auto;gap:clamp(16px,3vw,54px);
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:clamp(16px,3vw,54px);
   align-items:baseline;padding-block:clamp(22px,2.6vw,34px);
   border-bottom:1px solid rgba(255,255,255,.13);position:relative;
 }
@@ -396,7 +396,7 @@ footer{background:var(--night);overflow:clip}
   .about,.contact{grid-template-columns:1fr}
     .statement .inner{padding-block:clamp(90px,14vw,140px)}
   .f1{top:2%}.f2{bottom:2%}
-  .arow{grid-template-columns:1fr auto;gap:8px 18px}
+  .arow{grid-template-columns:1fr;gap:8px 18px}
   .arow p{grid-column:1/-1}
     .press{grid-template-columns:1fr;gap:10px}
   .press p{max-width:none}
@@ -487,6 +487,11 @@ footer{background:var(--night);overflow:clip}
   font-weight:500;font-variation-settings:"wdth" 118;color:var(--drift);margin-bottom:7px;white-space:nowrap}
 .tk b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(17px,1.9vw,25px);line-height:1;
   color:#fff;font-variant-numeric:tabular-nums}
+.tk i.tkd{display:block;margin-top:6px;font-family:var(--sans);font-size:9.5px;letter-spacing:.05em;
+  font-style:normal;font-variant-numeric:tabular-nums;min-height:12px}
+.tk i.up{color:#5FCB8E}
+.tk i.dn{color:#F2797F}
+.tk i.fl{color:var(--drift);opacity:.65}
 .tkr-note{margin:0;padding:9px 14px;font-family:var(--sans);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
   font-variation-settings:"wdth" 118;color:var(--drift);text-align:center;border-top:1px solid rgba(255,255,255,.1)}
 .tkpop{position:absolute;bottom:calc(100% + 12px);z-index:30;width:270px;padding:16px 18px;
@@ -590,13 +595,13 @@ header.on .brand-logo{height:26px}
       </div>
       <div class="tkr" id="tkr" aria-label="Live interest rates">
         <div class="tkr-row" id="tkrRow">
-          <button class="tk" data-r="sofr"><span>SOFR</span><b>—</b></button>
-          <button class="tk" data-r="sofr30"><span>SOFR 30-day</span><b>—</b></button>
-          <button class="tk" data-r="sofr90"><span>SOFR 90-day</span><b>—</b></button>
-          <button class="tk" data-r="y5"><span>5-yr UST</span><b>—</b></button>
-          <button class="tk" data-r="y7"><span>7-yr UST</span><b>—</b></button>
-          <button class="tk" data-r="y10"><span>10-yr UST</span><b>—</b></button>
-          <button class="tk" data-r="y30"><span>30-yr UST</span><b>—</b></button>
+          <button class="tk" data-r="sofr"><span>SOFR</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="sofr30"><span>SOFR 30-day</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="sofr90"><span>SOFR 90-day</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y5"><span>5-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y7"><span>7-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y10"><span>10-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y30"><span>30-yr UST</span><b>—</b><i class="tkd"></i></button>
         </div>
         <p class="tkr-note"><span id="tkrDate">Loading rates…</span> · NY Fed &amp; U.S. Treasury · indicative only</p>
         <div class="tkpop" id="tkPop" hidden aria-hidden="true"></div>
@@ -641,17 +646,17 @@ header.on .brand-logo{height:26px}
   <div class="wrap">
     <div class="tenets">
       <div class="tenet gs-up">
-        <span class="k">i. Our clients</span>
+        <span class="k">Our clients</span>
         <h3 class="t4">The needs drive the structure.</h3>
         <p>Our process starts and ends with our clients — their needs drive every decision we make.</p>
       </div>
       <div class="tenet gs-up">
-        <span class="k">ii. Clarity in lending</span>
+        <span class="k">Clarity in lending</span>
         <h3 class="t4">No silence, no surprises.</h3>
         <p>We work closely with our borrowers and lenders, keeping everyone updated throughout the process.</p>
       </div>
       <div class="tenet gs-up">
-        <span class="k">iii. Certainty of execution</span>
+        <span class="k">Certainty of execution</span>
         <h3 class="t4">Experience that closes.</h3>
         <p>Decades of experience, relationships and creativity, combined to deliver customized financing solutions.</p>
       </div>
@@ -672,17 +677,17 @@ header.on .brand-logo{height:26px}
 
     <div class="svc-grid">
       <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-1.webp)"><i class="wv"></i></span>
-        <span class="no">No. 1 — Debt</span>
+        <span class="no">Debt</span>
         <h3 class="t3">Customized financing, every sector</h3>
         <p>Long-standing relationships with all major real estate capital providers — domestic and foreign banks, CMBS lenders, credit companies, insurance companies, private lenders, and our own balance sheet.</p>
       </article>
       <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-2.webp)"><i class="wv"></i></span>
-        <span class="no">No. 2 — Equity</span>
+        <span class="no">Equity</span>
         <h3 class="t3">Capital aligned to the horizon</h3>
         <p>Trusted relationships with institutional equity providers and private equity sources. We spend the time not just to raise the equity required, but to ensure the provider is a productive match for a long-term relationship.</p>
       </article>
       <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-3.webp)"><i class="wv"></i></span>
-        <span class="no">No. 3 — Advisory</span>
+        <span class="no">Advisory</span>
         <h3 class="t3">Critical thinking, applied</h3>
         <p>Helping clients navigate the unique challenges facing investors and operators with both critical thinking and creativity. Our relationships with owners across all asset classes open unique opportunities to further their portfolios.</p>
       </article>
@@ -699,32 +704,26 @@ header.on .brand-logo{height:26px}
         <div class="arow gs-fade">
           <h3 class="t3">Multifamily</h3>
           <p>Creativity and expertise across conventional, affordable and student housing — leveraging lender relationships and decades of experience.</p>
-          <span class="n">01</span>
         </div>
         <div class="arow gs-fade">
           <h3 class="t3">Healthcare</h3>
           <p>Billions arranged for skilled nursing, independent living, assisted living and memory care facilities across the country.</p>
-          <span class="n">02</span>
         </div>
         <div class="arow gs-fade">
           <h3 class="t3">Hospitality</h3>
           <p>From limited service to full-service luxury hotels — tailor-made financing built on a deep understanding of the industry.</p>
-          <span class="n">03</span>
         </div>
         <div class="arow gs-fade">
           <h3 class="t3">Office &amp; Mixed-Use</h3>
           <p>Diverse financing solutions for mixed-use and office properties nationwide, structured around each asset's tenancy and story.</p>
-          <span class="n">04</span>
         </div>
         <div class="arow gs-fade">
           <h3 class="t3">Retail</h3>
           <p>Strip centers, grocery-anchored and big-box anchored shopping centers — unique financing solutions nationwide.</p>
-          <span class="n">05</span>
         </div>
         <div class="arow gs-fade">
           <h3 class="t3">Industrial</h3>
           <p>Logistics, flex and self-storage assets, financed against the operating fundamentals that actually drive value.</p>
-          <span class="n">06</span>
         </div>
       </div>
     </div>
@@ -1365,7 +1364,18 @@ header.on .brand-logo{height:26px}
     Promise.allSettled(jobs).then(function(){
       Object.keys(LBL).forEach(function(k){
         var a=series[k];
-        if(a && a.length){ setVal(k, a[a.length-1].v); if(!latestDate || a[a.length-1].d>latestDate) latestDate=a[a.length-1].d; }
+        if(!a || !a.length) return;
+        var last=a[a.length-1];
+        setVal(k, last.v);
+        if(!latestDate || last.d>latestDate) latestDate=last.d;
+        var slot=row.querySelector('[data-r="'+k+'"] .tkd');
+        if(slot && a.length>1){
+          var d=last.v-a[a.length-2].v, eps=Math.pow(10,-DP[k])/2;
+          var cls=d>eps?"up":(d<-eps?"dn":"fl");
+          var arrow=d>eps?"\u25B2":(d<-eps?"\u25BC":"\u2014");
+          slot.className="tkd "+cls;
+          slot.textContent=(cls==="fl")?"":(arrow+" "+Math.abs(d).toFixed(DP[k]));
+        }
       });
       dateEl.textContent = latestDate ? ("As of "+nice(latestDate)) : "Rates unavailable";
     });
