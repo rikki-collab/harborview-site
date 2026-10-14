@@ -766,13 +766,13 @@ header.on .brand-logo{height:26px}
   <div class="wrap">
     <div class="ledger-head">
       <div>
-        <p class="sig sig-lg gs-fade" style="margin-bottom:22px">Closed transactions</p>
+        <p class="sig sig-lg gs-fade" style="margin-bottom:22px">Closed deals</p>
         <h2 class="t2 t2-sub"><span class="msk"><span><i>Closed</i>, not pitched.</span></span></h2>
       </div>
       <a class="pill gs-fade" href="#contact"><span>Request the tombstone book</span></a>
     </div>
 
-    <div class="filters gs-fade" role="group" aria-label="Filter transactions by asset class">
+    <div class="filters gs-fade" role="group" aria-label="Filter deals by asset class">
       <button class="filter" data-f="all" aria-pressed="true">All</button>
       <button class="filter" data-f="healthcare" aria-pressed="false">Healthcare</button>
       <button class="filter" data-f="multifamily" aria-pressed="false">Multifamily</button>
@@ -943,7 +943,7 @@ header.on .brand-logo{height:26px}
         </div>
       </article>
     </div>
-    <p class="ledger-note" id="dealCount" role="status">10 transactions shown</p>
+    <p class="ledger-note" id="dealCount" role="status">10 deals shown</p>
   </div>
 </section>
 
@@ -1259,7 +1259,7 @@ header.on .brand-logo{height:26px}
         d.hidden = !match;
         if(match) shown++;
       });
-      counter.textContent = shown + (shown === 1 ? " transaction shown" : " transactions shown");
+      counter.textContent = shown + (shown === 1 ? " deal shown" : " deals shown");
       if(window.ScrollTrigger) ScrollTrigger.refresh();
     });
   });
