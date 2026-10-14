@@ -288,25 +288,6 @@ header.on .nav{height:66px}
 .press .t4{max-width:30ch}
 .press p{font-size:16px;line-height:1.62;color:var(--drift);margin:0;max-width:64ch}
 
-/* ————— faq ————— */
-.faq{max-width:980px}
-.q{border-bottom:1px solid var(--ln-dark)}
-.q summary{
-  list-style:none;cursor:pointer;padding-block:clamp(22px,2.5vw,32px);
-  display:flex;align-items:baseline;justify-content:space-between;gap:26px;
-  font-family:var(--serif);font-size:clamp(19px,2vw,26px);line-height:1.3;letter-spacing:-.008em;
-  transition:color .3s var(--ease);
-}
-.q summary::-webkit-details-marker{display:none}
-.q summary:hover{color:var(--teak)}
-.q .pm{flex:0 0 auto;width:15px;height:15px;position:relative;transform:translateY(1px)}
-.q .pm::before,.q .pm::after{content:"";position:absolute;background:var(--teak)}
-.q .pm::before{left:0;top:7px;width:15px;height:1px}
-.q .pm::after{left:7px;top:0;width:1px;height:15px;transition:transform .45s var(--ease),opacity .3s}
-.q[open] .pm::after{transform:rotate(90deg);opacity:0}
-.q .a{padding-bottom:clamp(24px,2.6vw,36px);max-width:74ch}
-.q .a p{color:var(--drift);font-size:16.5px;line-height:1.66}
-
 /* ————— contact ————— */
 .contact{display:flex;flex-direction:column;align-items:center;gap:clamp(34px,4.5vw,54px);text-align:center}
 .contact .sig{justify-content:center}
@@ -481,18 +462,28 @@ footer{background:var(--night);overflow:clip}
   .fcols a,.social a{display:inline-flex;align-items:center;min-height:40px}
   .tk{padding-block:14px}
 }
-/* ————— FAQ: topic filters + animated answers ————— */
-.faq-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(26px,3vw,38px)}
-.ffilter{min-height:42px;padding:9px 18px;background:none;border:1px solid var(--ln-dark);cursor:pointer;
-  font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
-  font-variation-settings:"wdth" 118;color:var(--drift);transition:all .32s var(--ease);display:inline-flex;align-items:center;gap:8px}
-.ffilter i{font-style:normal;font-size:10px;opacity:.6}
-.ffilter:hover{border-color:var(--teak);color:var(--teak)}
-.ffilter[aria-pressed="true"]{background:var(--teak);border-color:var(--teak);color:#fff}
-.ffilter[aria-pressed="true"] i{opacity:.85}
-.q[hidden]{display:none}
-.q .a{overflow:hidden}
-.faq-empty{margin:18px 0 0;font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--drift)}
+/* ————— FAQ: split pane ————— */
+.faq-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,5vw,72px);align-items:start}
+.faq-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ln-dark)}
+.faq-q{display:flex;gap:16px;align-items:flex-start;width:100%;text-align:left;background:none;border:0;
+  border-bottom:1px solid var(--ln-dark);padding:clamp(16px,1.9vw,22px) 4px;cursor:pointer;color:var(--drift);
+  transition:color .3s var(--ease),padding-left .35s var(--ease);position:relative}
+.faq-q::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--teak);transition:width .45s var(--ease)}
+.faq-q:hover{color:#fff;padding-left:10px}
+.faq-q[aria-selected="true"]{color:#fff;padding-left:10px}
+.faq-q[aria-selected="true"]::after{width:100%}
+.faq-n{flex:0 0 auto;font-family:var(--sans);font-size:11px;letter-spacing:.14em;font-weight:600;
+  font-variation-settings:"wdth" 120;color:var(--teak);padding-top:4px;transition:opacity .3s}
+.faq-q[aria-selected="true"] .faq-n{opacity:1}
+.faq-t{font-family:var(--serif);font-size:clamp(16px,1.6vw,20px);line-height:1.28;letter-spacing:.004em}
+.faq-panel{position:sticky;top:96px;border-left:1px solid var(--ln-dark);padding-left:clamp(24px,3.5vw,48px);min-height:200px}
+.faq-ans p{font-family:var(--text);font-size:clamp(16px,1.35vw,18px);line-height:1.68;color:var(--drift);margin:0}
+.faq-ans[hidden]{display:none}
+@media (max-width:900px){
+  .faq-split{grid-template-columns:1fr;gap:0}
+  .faq-panel{position:static;border-left:0;border-top:1px solid var(--ln-dark);padding-left:0;
+    padding-top:clamp(20px,3vw,28px);margin-top:clamp(20px,3vw,28px);min-height:0}
+}
 /* ————— paper texture on the light chapters ————— */
 .on-light{position:relative;isolation:isolate}
 .on-light::before{
@@ -967,47 +958,75 @@ header.on .brand-logo{height:26px}
     <div>
       <p class="sig sig-lg gs-fade" style="margin-bottom:22px">Clarity in lending</p>
       <h2 class="t2 t2-sub" style="margin-bottom:clamp(36px,4.4vw,56px)"><span class="msk"><span>Asked, <i>answered</i>.</span></span></h2>
-      <div class="faq-filters" role="group" aria-label="Filter questions by topic">
-        <button class="ffilter" data-f="all" aria-pressed="true">All <i>8</i></button>
-        <button class="ffilter" data-f="firm" aria-pressed="false">The firm <i>1</i></button>
-        <button class="ffilter" data-f="structure" aria-pressed="false">Structure &amp; leverage <i>3</i></button>
-        <button class="ffilter" data-f="timing" aria-pressed="false">Timing <i>2</i></button>
-        <button class="ffilter" data-f="equity" aria-pressed="false">Equity <i>1</i></button>
-        <button class="ffilter" data-f="fees" aria-pressed="false">Fees <i>1</i></button>
-      </div>
-      <div class="faq">
-        <details class="q gs-fade" data-cat="firm">
-          <summary>What separates you from your competition?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>Harborview is a true one-stop shop for all commercial real estate capital. Our wide variety of debt, equity and advisory products and services truly separates us from the competition — as does our proprietary mezzanine financing platform.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="structure">
-          <summary>How do I get higher leverage on my transaction?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>It depends on the asset class, but HUD loans offer higher leverage in general, and mezzanine options for an additional 5–20% leverage points are available from our Harborview Funding balance sheet product and our relationship lenders for most asset classes and transaction sizes. For smaller deals — under a $10M mezz check — be prepared for recourse. We always add a creative layer to the structuring, weighing leverage against rate and terms to craft the best loan for your needs.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="structure">
-          <summary>Will an interest-only period be available, and for how long?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>Interest-only is typically given in new construction and substantial rehabilitation as a matter of course. The same can be had on value-add, turnaround or repositioning transactions if the need is demonstrated to the lender — generally 6 to 24 months from a bank, proportionate to the need. CMBS lenders will structure interest-only periods of 2, 3, 5 or even 7 years or longer for projects with a particularly strong credit profile.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="timing">
-          <summary>How long does a HUD deal really take?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>For an A7 refinance, either MAP or LEAN, figure 2 to 4 months including all processing and closing. A healthcare refinance into HUD — a LEAN 232(f) deal — adds about a month due to the diligence, underwriting and third parties involved. A multifamily MAP 223(f) is simpler, with timing similar to an A7. Timing is also affected by HUD office workload, which varies by season — choose a lender with a good HUD relationship, and ask about early rate lock.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="timing">
-          <summary>How long does it take to close a loan?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>It depends on the type of loan — typically 45 to 60 days, with the exception of a HUD execution.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="structure">
-          <summary>Is it possible to get a non-recourse loan?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>Yes. HUD, Fannie Mae, Freddie Mac, CMBS and life company loans are all non-recourse, and there are banks that may offer non-recourse in certain cases.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="equity">
-          <summary>What do you need from us to source an equity partner?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>A clear, concise overview of the deal itself; resume, background and completed-deal information on the sponsor; and an underwriting model showing current and proposed financials with equity splits and returns. We have many partners — large and small, with different appetites, target markets and return profiles — eager to see new deals from quality sponsors.</p></div>
-        </details>
-        <details class="q gs-fade" data-cat="fees">
-          <summary>What are your typical fees?<span class="pm" aria-hidden="true"></span></summary>
-          <div class="a"><p>Our fees are market based, and we have never lost a deal based on fees. We offer transparency and clarity in every aspect of your transaction from start to finish, including all fees. Many of our clients tell us their savings from reduced rates, cash-out to investors or better leverage utilization far exceed any deal costs.</p></div>
-        </details>
+      <div class="faq-split">
+        <ul class="faq-list">
+          <li>
+            <button class="faq-q" id="fq0" data-i="0" aria-selected="true" aria-controls="fa0">
+              <span class="faq-n">01</span><span class="faq-t">What separates you from your competition?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq1" data-i="1" aria-selected="false" aria-controls="fa1">
+              <span class="faq-n">02</span><span class="faq-t">How do I get higher leverage on my transaction?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq2" data-i="2" aria-selected="false" aria-controls="fa2">
+              <span class="faq-n">03</span><span class="faq-t">Will an interest-only period be available, and for how long?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq3" data-i="3" aria-selected="false" aria-controls="fa3">
+              <span class="faq-n">04</span><span class="faq-t">How long does a HUD deal really take?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq4" data-i="4" aria-selected="false" aria-controls="fa4">
+              <span class="faq-n">05</span><span class="faq-t">How long does it take to close a loan?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq5" data-i="5" aria-selected="false" aria-controls="fa5">
+              <span class="faq-n">06</span><span class="faq-t">Is it possible to get a non-recourse loan?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq6" data-i="6" aria-selected="false" aria-controls="fa6">
+              <span class="faq-n">07</span><span class="faq-t">What do you need from us to source an equity partner?</span>
+            </button>
+          </li>
+          <li>
+            <button class="faq-q" id="fq7" data-i="7" aria-selected="false" aria-controls="fa7">
+              <span class="faq-n">08</span><span class="faq-t">What are your typical fees?</span>
+            </button>
+          </li>
+        </ul>
+        <div class="faq-panel">
+        <div class="faq-ans" id="fa0" data-i="0" role="region" aria-labelledby="fq0">
+          <p>Harborview is a true one-stop shop for all commercial real estate capital. Our wide variety of debt, equity and advisory products and services truly separates us from the competition — as does our proprietary mezzanine financing platform.</p>
+        </div>
+        <div class="faq-ans" id="fa1" data-i="1" role="region" aria-labelledby="fq1" hidden>
+          <p>It depends on the asset class, but HUD loans offer higher leverage in general, and mezzanine options for an additional 5–20% leverage points are available from our Harborview Funding balance sheet product and our relationship lenders for most asset classes and transaction sizes. For smaller deals — under a $10M mezz check — be prepared for recourse. We always add a creative layer to the structuring, weighing leverage against rate and terms to craft the best loan for your needs.</p>
+        </div>
+        <div class="faq-ans" id="fa2" data-i="2" role="region" aria-labelledby="fq2" hidden>
+          <p>Interest-only is typically given in new construction and substantial rehabilitation as a matter of course. The same can be had on value-add, turnaround or repositioning transactions if the need is demonstrated to the lender — generally 6 to 24 months from a bank, proportionate to the need. CMBS lenders will structure interest-only periods of 2, 3, 5 or even 7 years or longer for projects with a particularly strong credit profile.</p>
+        </div>
+        <div class="faq-ans" id="fa3" data-i="3" role="region" aria-labelledby="fq3" hidden>
+          <p>For an A7 refinance, either MAP or LEAN, figure 2 to 4 months including all processing and closing. A healthcare refinance into HUD — a LEAN 232(f) deal — adds about a month due to the diligence, underwriting and third parties involved. A multifamily MAP 223(f) is simpler, with timing similar to an A7. Timing is also affected by HUD office workload, which varies by season — choose a lender with a good HUD relationship, and ask about early rate lock.</p>
+        </div>
+        <div class="faq-ans" id="fa4" data-i="4" role="region" aria-labelledby="fq4" hidden>
+          <p>It depends on the type of loan — typically 45 to 60 days, with the exception of a HUD execution.</p>
+        </div>
+        <div class="faq-ans" id="fa5" data-i="5" role="region" aria-labelledby="fq5" hidden>
+          <p>Yes. HUD, Fannie Mae, Freddie Mac, CMBS and life company loans are all non-recourse, and there are banks that may offer non-recourse in certain cases.</p>
+        </div>
+        <div class="faq-ans" id="fa6" data-i="6" role="region" aria-labelledby="fq6" hidden>
+          <p>A clear, concise overview of the deal itself; resume, background and completed-deal information on the sponsor; and an underwriting model showing current and proposed financials with equity splits and returns. We have many partners — large and small, with different appetites, target markets and return profiles — eager to see new deals from quality sponsors.</p>
+        </div>
+        <div class="faq-ans" id="fa7" data-i="7" role="region" aria-labelledby="fq7" hidden>
+          <p>Our fees are market based, and we have never lost a deal based on fees. We offer transparency and clarity in every aspect of your transaction from start to finish, including all fees. Many of our clients tell us their savings from reduced rates, cash-out to investors or better leverage utilization far exceed any deal costs.</p>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1297,57 +1316,40 @@ header.on .brand-logo{height:26px}
     });
   });
 
-  /* ————— FAQ: topic filter + animated answers ————— */
-  var qs = Array.prototype.slice.call(document.querySelectorAll(".q"));
-  var hasGsap = !!window.gsap;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* ————— FAQ: split pane ————— */
+  (function(){
+    var btns = Array.prototype.slice.call(document.querySelectorAll(".faq-q"));
+    var answers = Array.prototype.slice.call(document.querySelectorAll(".faq-ans"));
+    if(!btns.length) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function closeQ(q, animate){
-    var panel = q.querySelector(".a");
-    if(!animate || !hasGsap || reduce){ q.open = false; return; }
-    gsap.to(panel, {height:0, opacity:0, duration:.34, ease:"power2.inOut",
-      onComplete:function(){ q.open = false; gsap.set(panel,{clearProps:"all"}); }});
-  }
-  function openQ(q){
-    var panel = q.querySelector(".a");
-    q.open = true;
-    if(!hasGsap || reduce) return;
-    gsap.fromTo(panel, {height:0, opacity:0}, {height:"auto", opacity:1, duration:.42, ease:"power2.out",
-      onComplete:function(){ gsap.set(panel,{clearProps:"height"}); }});
-  }
-  qs.forEach(function(q){
-    var summary = q.querySelector("summary");
-    summary.addEventListener("click", function(e){
-      e.preventDefault();
-      if(q.open){ closeQ(q, true); return; }
-      qs.forEach(function(o){ if(o !== q && o.open) closeQ(o, false); });
-      openQ(q);
-    });
-  });
-
-  var ffilters = document.querySelectorAll(".ffilter");
-  var faqWrap = document.querySelector(".faq");
-  var emptyNote = null;
-  ffilters.forEach(function(btn){
-    btn.addEventListener("click", function(){
-      var f = btn.getAttribute("data-f");
-      ffilters.forEach(function(b){ b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
-      var shown = 0;
-      qs.forEach(function(q){
-        var match = (f === "all" || q.getAttribute("data-cat") === f);
-        q.hidden = !match;
-        if(!match && q.open) q.open = false;
-        if(match) shown++;
+    function select(i, userInitiated){
+      btns.forEach(function(b){ b.setAttribute("aria-selected", b.getAttribute("data-i") === String(i) ? "true" : "false"); });
+      answers.forEach(function(a){
+        var on = a.getAttribute("data-i") === String(i);
+        if(on){
+          a.hidden = false;
+          if(window.gsap && !reduce){
+            gsap.fromTo(a, {opacity:0, y:10}, {opacity:1, y:0, duration:.45, ease:"power2.out"});
+          }
+        } else { a.hidden = true; }
       });
-      if(!emptyNote){
-        emptyNote = document.createElement("p");
-        emptyNote.className = "faq-empty";
-        faqWrap.parentNode.insertBefore(emptyNote, faqWrap.nextSibling);
+      if(userInitiated && window.innerWidth <= 900){
+        var panel = document.querySelector(".faq-panel");
+        var top = panel.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({top:top, behavior: reduce ? "auto" : "smooth"});
       }
-      emptyNote.textContent = shown ? "" : "No questions in this topic.";
-      if(window.ScrollTrigger) ScrollTrigger.refresh();
+    }
+
+    btns.forEach(function(b){
+      b.addEventListener("click", function(){ select(b.getAttribute("data-i"), true); });
+      b.addEventListener("keydown", function(e){
+        var idx = btns.indexOf(b);
+        if(e.key === "ArrowDown" || e.key === "ArrowRight"){ e.preventDefault(); var n=btns[(idx+1)%btns.length]; n.focus(); select(n.getAttribute("data-i"), false); }
+        if(e.key === "ArrowUp" || e.key === "ArrowLeft"){ e.preventDefault(); var pv=btns[(idx-1+btns.length)%btns.length]; pv.focus(); select(pv.getAttribute("data-i"), false); }
+      });
     });
-  });
+  })();
 
   /* ————— form (demo validation — wire to a real endpoint before launch) ————— */
   var form = document.getElementById("dealForm");
