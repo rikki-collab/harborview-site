@@ -28,7 +28,7 @@
   --pine-2:#04121F;
   --glass:#EEF3F7;
   --glass-2:#E1EAF1;
-  --foam:#FFFFFF;
+  --foam:#F3F8FC;
   --drift:#CCE0F2;      /* dim on dark */
   --moss:#B2D2EC;       /* dimmer on pine */
   --slate:#43607A;      /* dim on light */
@@ -463,6 +463,20 @@ footer{background:var(--night);overflow:clip}
 @media (max-width:1060px){.rates-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.rate-gap{box-shadow:none}.rate:last-child{grid-column:span 2}}
 @media (max-width:560px){.rates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rate:last-child{grid-column:span 2}}
 @media (max-width:1240px){.nav-cta .tel{display:none}.menu{gap:clamp(12px,1.7vw,22px)}.menu a{letter-spacing:.15em}.pill{padding-inline:18px}}
+/* ————— paper texture on the light chapters ————— */
+.on-light{position:relative;isolation:isolate}
+.on-light::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'><filter%20id='g'><feTurbulence%20type='fractalNoise'%20baseFrequency='.9'%20numOctaves='3'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='160'%20height='160'%20filter='url(%23g)'/></svg>");background-size:160px 160px;
+  opacity:.16;mix-blend-mode:multiply;
+}
+/* a whisper of tone so the field isn't one flat sheet */
+.on-light::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(120% 70% at 18% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 60%),
+    linear-gradient(170deg,rgba(226,235,243,0) 55%,rgba(206,220,233,.5) 100%);
+}
 /* ————— hero: centered wordmark, blurred ground ————— */
 .hero-core{text-align:center}
 .hero-kick{justify-content:center}
