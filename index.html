@@ -162,14 +162,6 @@ header.on .nav{height:66px}
 .hero-kick{display:flex;align-items:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
 .hero-kick .ln{width:44px;height:1px;background:var(--teak)}
 .hero-foot{position:relative;z-index:2;padding-bottom:clamp(26px,3.4vw,44px)}
-.hero-stats{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;
-  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);
-  max-width:760px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-}
-.hstat{background:rgba(8,28,49,.42);padding:clamp(18px,2.2vw,30px) clamp(16px,2vw,28px);text-align:center}
-.hstat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.1vw,44px);line-height:1;letter-spacing:-.015em}
-.hstat span{display:block;margin-top:10px;font-size:9px;letter-spacing:.3em;text-transform:uppercase;font-variation-settings:"wdth" 122;font-weight:500;color:var(--drift)}
 .hero-between{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:clamp(22px,3vw,38px)}
 .hero-lede{max-width:44ch;color:#D7E5F0;font-size:clamp(17px,1.3vw,19.5px);line-height:1.62;margin:0}
 
@@ -402,8 +394,7 @@ footer{background:var(--night);overflow:clip}
   header.open .menu a{padding:16px 0;border-bottom:1px solid var(--ln-dark);font-size:13px;color:var(--foam)}
   header.open .menu a:last-child{border-bottom:0}
   .about,.contact{grid-template-columns:1fr}
-  .hero-stats{grid-template-columns:1fr 1fr 1fr;max-width:none}
-  .statement .inner{padding-block:clamp(90px,14vw,140px)}
+    .statement .inner{padding-block:clamp(90px,14vw,140px)}
   .f1{top:2%}.f2{bottom:2%}
   .arow{grid-template-columns:1fr auto;gap:8px 18px}
   .arow p{grid-column:1/-1}
@@ -411,10 +402,7 @@ footer{background:var(--night);overflow:clip}
   .press p{max-width:none}
 }
 @media (max-width:560px){
-  .hero-stats{grid-template-columns:1fr}
-  .hstat{display:flex;align-items:baseline;justify-content:center;gap:14px}
-  .hstat span{margin-top:0}
-  .frow{grid-template-columns:1fr}
+    .frow{grid-template-columns:1fr}
   .fcols{grid-template-columns:1fr}
   .foot-mark{font-size:clamp(44px,13vw,72px)}
 }
@@ -475,6 +463,55 @@ footer{background:var(--night);overflow:clip}
 @media (max-width:1060px){.rates-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.rate-gap{box-shadow:none}.rate:last-child{grid-column:span 2}}
 @media (max-width:560px){.rates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rate:last-child{grid-column:span 2}}
 @media (max-width:1240px){.nav-cta .tel{display:none}.menu{gap:clamp(12px,1.7vw,22px)}.menu a{letter-spacing:.15em}.pill{padding-inline:18px}}
+/* ————— hero: centered wordmark, blurred ground ————— */
+.hero-core{text-align:center}
+.hero-kick{justify-content:center}
+.hero-mark{margin:0;display:flex;justify-content:center}
+.hero-mark img{width:min(820px,78vw);height:auto;filter:drop-shadow(0 8px 34px rgba(8,28,49,.5))}
+.hero-between{flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero-lede{margin-inline:auto}
+.hero-media img{width:104%;left:-2%;filter:saturate(.72) contrast(1.02) brightness(.86) blur(3px)}
+.hero-media::after{background:
+  linear-gradient(to bottom,rgba(8,28,49,.80) 0%,rgba(8,28,49,.50) 30%,rgba(8,28,49,.58) 62%,rgba(8,28,49,.94) 100%),
+  linear-gradient(to top,rgba(8,28,49,.62) 0%,rgba(8,28,49,0) 34%)}
+
+/* ————— hero rate ticker ————— */
+.tkr{position:relative;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);
+  background:rgba(8,28,49,.42);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tkr-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.tk{appearance:none;background:none;border:0;border-left:1px solid rgba(255,255,255,.12);cursor:pointer;
+  padding:clamp(12px,1.5vw,18px) clamp(6px,1vw,14px);text-align:center;color:inherit;transition:background .3s}
+.tk:first-child{border-left:0}
+.tk:hover,.tk:focus-visible{background:rgba(158,219,255,.12)}
+.tk span{display:block;font-family:var(--sans);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:500;font-variation-settings:"wdth" 118;color:var(--drift);margin-bottom:7px;white-space:nowrap}
+.tk b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(17px,1.9vw,25px);line-height:1;
+  color:#fff;font-variant-numeric:tabular-nums}
+.tkr-note{margin:0;padding:9px 14px;font-family:var(--sans);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  font-variation-settings:"wdth" 118;color:var(--drift);text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+.tkpop{position:absolute;bottom:calc(100% + 12px);z-index:30;width:270px;padding:16px 18px;
+  background:rgba(8,28,49,.96);border:1px solid rgba(158,219,255,.3);backdrop-filter:blur(14px);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);text-align:left;pointer-events:none}
+.tkpop h4{margin:0 0 2px;font-family:var(--sans);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:600;font-variation-settings:"wdth" 120;color:var(--teak)}
+.tkpop .pr{font-family:var(--serif);font-size:26px;line-height:1.1;color:#fff;font-variant-numeric:tabular-nums}
+.tkpop .chg{font-family:var(--sans);font-size:11px;letter-spacing:.04em;margin-left:8px}
+.tkpop .up{color:#7FD6A0}.tkpop .dn{color:#F2969A}.tkpop .fl{color:var(--drift)}
+.tkpop svg{display:block;width:100%;height:56px;margin:10px 0 8px;overflow:visible}
+.tkpop .rng{display:flex;justify-content:space-between;font-family:var(--sans);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--drift);font-variation-settings:"wdth" 118}
+@media (max-width:900px){
+  .tkr-row{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tk:nth-child(5){border-left:0}
+  .tk:nth-child(n+5){border-top:1px solid rgba(255,255,255,.12)}
+}
+@media (max-width:560px){
+  .tkr-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tk:nth-child(odd){border-left:0}
+  .tk:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .hero-mark img{width:86vw}
+  .tkpop{width:min(270px,88vw)}
+}
 /* ————— sans-serif type overrides (Navy/Channel scheme) ————— */
 .disp{font-size:clamp(46px,7.6vw,112px);font-weight:400;letter-spacing:-.01em;line-height:.99}
 .t2{font-size:clamp(32px,4.8vw,68px);font-weight:400;letter-spacing:-.008em;line-height:1.03}
@@ -487,7 +524,6 @@ p{font-weight:400}
 .pull{font-style:italic;font-weight:500;color:var(--teak-deep)!important}
 .tenet .k,.svc .no,.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:15px;letter-spacing:0;text-transform:none}
 .prod-strip .lead{font-size:17px;color:var(--moss)}
-.hstat b{font-weight:400;letter-spacing:0}
 
 .q summary{font-weight:400;letter-spacing:.004em;font-size:clamp(19px,2vw,25px)}
 .press .dt{color:var(--teak)}
@@ -541,9 +577,8 @@ header.on .brand-logo{height:26px}
   <div class="hero-core">
     <div class="wrap">
       <div class="hero-kick gs-fade"><span class="ln" aria-hidden="true"></span><p class="sig" style="color:#D7E5F0">Commercial real estate finance · Est. 2013</p></div>
-      <h1 class="disp">
-        <span class="msk"><span>Clarity in lending.</span></span>
-        <span class="msk"><span><i>Certainty</i> of execution.</span></span>
+      <h1 class="hero-mark">
+        <img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" fetchpriority="high">
       </h1>
     </div>
   </div>
@@ -553,32 +588,20 @@ header.on .brand-logo{height:26px}
         <p class="hero-lede gs-fade">A full-service commercial real estate finance, equity and advisory firm — unparalleled access to capital across every asset class.</p>
         <a class="pill gs-fade" href="#contact"><span>Connect</span></a>
       </div>
-      <div class="hero-stats">
-        <div class="hstat gs-up"><b>$10 Billion</b><span>Financing delivered</span></div>
-        <div class="hstat gs-up"><b>All</b><span>Asset classes</span></div>
-        <div class="hstat gs-up"><b>50</b><span>States served</span></div>
+      <div class="tkr" id="tkr" aria-label="Live interest rates">
+        <div class="tkr-row" id="tkrRow">
+          <button class="tk" data-r="sofr"><span>SOFR</span><b>—</b></button>
+          <button class="tk" data-r="sofr30"><span>SOFR 30-day</span><b>—</b></button>
+          <button class="tk" data-r="sofr90"><span>SOFR 90-day</span><b>—</b></button>
+          <button class="tk" data-r="y5"><span>5-yr UST</span><b>—</b></button>
+          <button class="tk" data-r="y7"><span>7-yr UST</span><b>—</b></button>
+          <button class="tk" data-r="y10"><span>10-yr UST</span><b>—</b></button>
+          <button class="tk" data-r="y30"><span>30-yr UST</span><b>—</b></button>
+        </div>
+        <p class="tkr-note"><span id="tkrDate">Loading rates…</span> · NY Fed &amp; U.S. Treasury · indicative only</p>
+        <div class="tkpop" id="tkPop" hidden aria-hidden="true"></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═════════ LIVE RATES ═════════ -->
-<section class="rates" id="rates" aria-labelledby="rates-h">
-  <div class="wrap rates-in">
-    <div class="rates-head">
-      <p class="sig" id="rates-h" style="color:var(--teak)">Live interest rates</p>
-      <p class="rates-date" id="ratesDate">Loading…</p>
-    </div>
-    <div class="rates-grid" id="ratesGrid" aria-live="polite">
-      <div class="rate"><span>SOFR</span><b data-r="sofr">—</b></div>
-      <div class="rate"><span>SOFR 30-day avg</span><b data-r="sofr30">—</b></div>
-      <div class="rate"><span>SOFR 90-day avg</span><b data-r="sofr90">—</b></div>
-      <div class="rate rate-gap"><span>5-yr Treasury</span><b data-r="y5">—</b></div>
-      <div class="rate"><span>7-yr Treasury</span><b data-r="y7">—</b></div>
-      <div class="rate"><span>10-yr Treasury</span><b data-r="y10">—</b></div>
-      <div class="rate"><span>30-yr Treasury</span><b data-r="y30">—</b></div>
-    </div>
-    <p class="rates-note" id="ratesNote">Official daily rates — SOFR: Federal Reserve Bank of New York · Treasury par yields: U.S. Department of the Treasury. Indicative only; not a quote.</p>
   </div>
 </section>
 
@@ -1162,7 +1185,7 @@ header.on .brand-logo{height:26px}
       </div>
       <div>
         <h3>Connect</h3>
-        <ul><li><a href="#directory">Directory</a></li><li><a href="#rates">Live rates</a></li><li><a href="#contact">Contact us</a></li><li><a href="#news">FAQs</a></li></ul>
+        <ul><li><a href="#directory">Directory</a></li><li><a href="#contact">Contact us</a></li><li><a href="#news">FAQs</a></li></ul>
       </div>
     </div>
     <div class="fbase">
@@ -1297,47 +1320,92 @@ header.on .brand-logo{height:26px}
     });
   });
 
-  /* ————— live rates: NY Fed (SOFR) + Treasury.gov (par yields) ————— */
+  /* ————— hero rate ticker + hover history (NY Fed SOFR, U.S. Treasury) ————— */
   (function(){
-    var grid = document.getElementById("ratesGrid");
-    if(!grid) return;
-    var dateEl = document.getElementById("ratesDate"), noteEl = document.getElementById("ratesNote");
-    function put(key, val, dp){
-      var el = grid.querySelector('[data-r="'+key+'"]');
-      if(el && val != null && !isNaN(val)) el.textContent = Number(val).toFixed(dp) + "%";
-    }
-    function nice(iso){
-      var d = new Date(iso.slice(0,10) + "T12:00:00");
-      return d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"});
-    }
-    function ym(offset){
-      var d = new Date(); d.setDate(1); d.setMonth(d.getMonth() - offset);
-      return "" + d.getFullYear() + ("0" + (d.getMonth()+1)).slice(-2);
-    }
-    function treasury(offset){
-      var u = "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=" + ym(offset);
-      return fetch(u).then(function(r){ if(!r.ok) throw 0; return r.text(); }).then(function(t){
-        var e = t.split("<entry>").slice(1);
-        if(!e.length){ if(offset < 1) return treasury(offset + 1); throw 0; }
-        var last = e[e.length-1];
-        function g(k){ var m = last.match(new RegExp("<d:"+k+"[^>]*>([^<]+)<")); return m ? m[1] : null; }
-        return {date:g("NEW_DATE"), y5:g("BC_5YEAR"), y7:g("BC_7YEAR"), y10:g("BC_10YEAR"), y30:g("BC_30YEAR")};
-      });
-    }
-    var base = "https://markets.newyorkfed.org/api/rates/secured/";
-    var jobs = [
-      fetch(base+"sofr/last/1.json").then(function(r){return r.json();}).then(function(j){ var x=j.refRates[0]; put("sofr", x.percentRate, 2); return x.effectiveDate; }),
-      fetch(base+"sofrai/last/1.json").then(function(r){return r.json();}).then(function(j){ var x=j.refRates[0]; put("sofr30", x.average30day, 3); put("sofr90", x.average90day, 3); return x.effectiveDate; }),
-      treasury(0).then(function(y){ put("y5",y.y5,2); put("y7",y.y7,2); put("y10",y.y10,2); put("y30",y.y30,2); return y.date; })
+    var row=document.getElementById("tkrRow"); if(!row) return;
+    var pop=document.getElementById("tkPop"), dateEl=document.getElementById("tkrDate");
+    var LBL={sofr:"SOFR",sofr30:"SOFR 30-day avg",sofr90:"SOFR 90-day avg",
+             y5:"5-year Treasury",y7:"7-year Treasury",y10:"10-year Treasury",y30:"30-year Treasury"};
+    var DP={sofr:2,sofr30:3,sofr90:3,y5:2,y7:2,y10:2,y30:2};
+    var series={}, latestDate=null;
+
+    function setVal(k,v){ var b=row.querySelector('[data-r="'+k+'"] b'); if(b&&v!=null) b.textContent=Number(v).toFixed(DP[k])+"%"; }
+    function nice(iso){ return new Date(iso.slice(0,10)+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+    function ym(off){ var d=new Date(); d.setDate(1); d.setMonth(d.getMonth()-off); return ""+d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2); }
+
+    function fedJSON(path){ return fetch("https://markets.newyorkfed.org/api/rates/secured/"+path).then(function(r){ if(!r.ok) throw 0; return r.json(); }); }
+
+    var jobs=[
+      fedJSON("sofr/last/120.json").then(function(j){
+        series.sofr=j.refRates.map(function(x){return {d:x.effectiveDate,v:x.percentRate};}).filter(function(x){return x.v!=null;}).reverse();
+      }),
+      fedJSON("sofrai/last/120.json").then(function(j){
+        var a=j.refRates.slice().reverse();
+        series.sofr30=a.map(function(x){return {d:x.effectiveDate,v:x.average30day};}).filter(function(x){return x.v!=null;});
+        series.sofr90=a.map(function(x){return {d:x.effectiveDate,v:x.average90day};}).filter(function(x){return x.v!=null;});
+      }),
+      Promise.all([0,1,2].map(function(off){
+        return fetch("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month="+ym(off))
+          .then(function(r){ return r.ok?r.text():""; }).catch(function(){ return ""; });
+      })).then(function(parts){
+        var map={y5:"BC_5YEAR",y7:"BC_7YEAR",y10:"BC_10YEAR",y30:"BC_30YEAR"};
+        Object.keys(map).forEach(function(k){ series[k]=[]; });
+        parts.reverse().forEach(function(t){
+          t.split("<entry>").slice(1).forEach(function(e){
+            var dm=e.match(/<d:NEW_DATE[^>]*>([^<]+)</); if(!dm) return;
+            Object.keys(map).forEach(function(k){
+              var m=e.match(new RegExp("<d:"+map[k]+"[^>]*>([^<]+)<"));
+              if(m && m[1]!=="") series[k].push({d:dm[1], v:parseFloat(m[1])});
+            });
+          });
+        });
+      })
     ];
-    Promise.allSettled(jobs).then(function(res){
-      var dates = res.filter(function(x){return x.status==="fulfilled" && x.value;}).map(function(x){return x.value.slice(0,10);}).sort();
-      if(dates.length){
-        dateEl.textContent = "As of " + nice(dates[dates.length-1]);
-      } else {
-        dateEl.textContent = "Temporarily unavailable";
-        noteEl.innerHTML = 'Rates could not be loaded right now. See the official sources: <a href="https://www.newyorkfed.org/markets/reference-rates/sofr" target="_blank" rel="noopener">NY Fed SOFR</a> · <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates" target="_blank" rel="noopener">Treasury yields</a>.';
-      }
+
+    Promise.allSettled(jobs).then(function(){
+      Object.keys(LBL).forEach(function(k){
+        var a=series[k];
+        if(a && a.length){ setVal(k, a[a.length-1].v); if(!latestDate || a[a.length-1].d>latestDate) latestDate=a[a.length-1].d; }
+      });
+      dateEl.textContent = latestDate ? ("As of "+nice(latestDate)) : "Rates unavailable";
+    });
+
+    function spark(a){
+      var w=234,h=56,vs=a.map(function(x){return x.v;});
+      var lo=Math.min.apply(null,vs), hi=Math.max.apply(null,vs), sp=(hi-lo)||1;
+      var pts=a.map(function(x,i){ return [(i/(a.length-1||1))*w, h-((x.v-lo)/sp)*h]; });
+      var d=pts.map(function(p,i){ return (i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1); }).join(" ");
+      var area=d+" L"+w+" "+h+" L0 "+h+" Z";
+      return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-hidden="true">'+
+        '<path d="'+area+'" fill="rgba(158,219,255,.14)"/>'+
+        '<path d="'+d+'" fill="none" stroke="#9EDBFF" stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'+
+        '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.6" fill="#9EDBFF"/></svg>';
+    }
+
+    function show(btn){
+      var k=btn.getAttribute("data-r"), a=series[k];
+      if(!a || a.length<2){ return; }
+      var last=a[a.length-1], first=a[0], diff=last.v-first.v;
+      var vs=a.map(function(x){return x.v;});
+      var cls=diff>0.001?"up":(diff<-0.001?"dn":"fl"), arrow=diff>0.001?"▲":(diff<-0.001?"▼":"—");
+      pop.innerHTML='<h4>'+LBL[k]+'</h4>'+
+        '<div><span class="pr">'+last.v.toFixed(DP[k])+'%</span>'+
+        '<span class="chg '+cls+'">'+arrow+" "+Math.abs(diff).toFixed(DP[k])+'</span></div>'+
+        spark(a)+
+        '<div class="rng"><span>'+nice(first.d)+'</span><span>Low '+Math.min.apply(null,vs).toFixed(DP[k])+' · High '+Math.max.apply(null,vs).toFixed(DP[k])+'</span></div>';
+      pop.hidden=false; pop.setAttribute("aria-hidden","false");
+      var tw=document.getElementById("tkr").getBoundingClientRect(), br=btn.getBoundingClientRect();
+      var x=br.left-tw.left+br.width/2-pop.offsetWidth/2;
+      pop.style.left=Math.max(8,Math.min(x,tw.width-pop.offsetWidth-8))+"px";
+    }
+    function hide(){ pop.hidden=true; pop.setAttribute("aria-hidden","true"); }
+
+    row.querySelectorAll(".tk").forEach(function(btn){
+      btn.addEventListener("pointerenter",function(){ show(btn); });
+      btn.addEventListener("focus",function(){ show(btn); });
+      btn.addEventListener("pointerleave",hide);
+      btn.addEventListener("blur",hide);
+      btn.addEventListener("click",function(){ pop.hidden ? show(btn) : hide(); });
     });
   })();
 
@@ -1357,10 +1425,10 @@ header.on .brand-logo{height:26px}
     var intro = gsap.timeline({defaults:{ease:"power4.out"}});
     intro
       .from("#heroImg", {scale:1.12, duration:2.4, ease:"power2.out"}, 0)
-      .from(".hero .msk > span", {yPercent:112, duration:1.3, stagger:.14}, .25)
+      .from(".hero-mark img", {opacity:0, y:26, scale:.965, duration:1.5, ease:"power3.out"}, .25)
       .from(".hero-kick", {opacity:0, y:14, duration:.9}, .55)
       .from(".hero-between > *", {opacity:0, y:18, duration:.9, stagger:.1}, .8)
-      .from(".hstat", {opacity:0, y:24, duration:.9, stagger:.09}, .95);
+      .from(".tkr", {opacity:0, y:22, duration:1, ease:"power3.out"}, .95);
 
     /* hero settles back as you scroll away */
     gsap.to(".hero-media img", {
