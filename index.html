@@ -182,8 +182,8 @@ header.on .nav{height:66px}
 .tenet{padding:clamp(34px,3.8vw,56px) clamp(22px,2.6vw,44px) clamp(38px,4.4vw,64px) 0;border-right:1px solid var(--ln-light)}
 .tenet:last-child{border-right:0}
 .tenet+.tenet{padding-left:clamp(22px,2.6vw,44px)}
-.tenet .k{font-family:var(--text);font-style:italic;font-size:15px;color:var(--teak-deep);display:block;margin-bottom:18px}
-.tenet .t4{margin-bottom:12px}
+.tenet .k{font-family:var(--serif);font-style:normal;font-size:clamp(23px,2.5vw,31px);line-height:1.1;letter-spacing:.004em;color:var(--teak-deep);display:block;margin-bottom:10px}
+.tenet .t4{font-family:var(--sans);font-size:clamp(15px,1.4vw,17px);line-height:1.4;font-weight:500;letter-spacing:.002em;color:var(--night);margin-bottom:14px}
 .tenet p{font-size:16.5px;color:var(--slate);margin:0;max-width:34ch}
 
 /* ————— about split ————— */
@@ -209,8 +209,8 @@ header.on .nav{height:66px}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.13)}
 .svc{background:var(--pine);padding:clamp(28px,3vw,46px);display:flex;flex-direction:column;min-height:clamp(340px,32vw,470px);transition:background .5s var(--ease)}
 .svc:hover{background:var(--pine-2)}
-.svc .no{font-family:var(--text);font-style:italic;font-size:15px;color:var(--teak);margin-bottom:auto}
-.svc .t3{margin:36px 0 16px}
+.svc .no{font-family:var(--serif);font-style:normal;font-size:clamp(28px,3.2vw,40px);line-height:1.05;letter-spacing:.004em;color:var(--teak);margin-bottom:auto;display:block}
+.svc .t3{font-family:var(--sans);font-size:clamp(16px,1.5vw,18.5px);line-height:1.35;font-weight:500;letter-spacing:.002em;margin:30px 0 14px}
 .svc p{font-size:16.5px;line-height:1.62;color:var(--moss);margin:0}
 .svc .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
 .tagi{
@@ -540,7 +540,8 @@ footer{background:var(--night);overflow:clip}
 .statement .t2 i{color:var(--teak-deep)}
 p{font-weight:400}
 .pull{font-style:italic;font-weight:500;color:var(--teak-deep)!important}
-.tenet .k,.svc .no,.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:15px;letter-spacing:0;text-transform:none}
+.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:17px;letter-spacing:0;text-transform:none}
+.tenet .k,.svc .no{font-weight:400;text-transform:none}
 .prod-strip .lead{font-size:17px;color:var(--moss)}
 
 .q summary{font-weight:400;letter-spacing:.004em;font-size:clamp(19px,2vw,25px)}
