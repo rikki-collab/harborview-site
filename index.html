@@ -460,14 +460,6 @@ footer{background:var(--night);overflow:clip}
 .pc-links a{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--slate);transition:color .28s;word-break:break-word}
 .pc-links a:hover{color:var(--teak-deep)}
 .pc-links svg{width:14px;height:14px;flex:0 0 auto;opacity:.6}
-/* ————— hero wordmark ————— */
-.hero-core{text-align:center}
-.hero-kick{justify-content:center}
-.hero-mark{margin:0;display:flex;justify-content:center}
-.hero-mark img{width:min(820px,78vw);height:auto;filter:drop-shadow(0 6px 28px rgba(8,28,49,.42))}
-.hero-between{flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.hero-lede{margin-inline:auto}
-@media (max-width:560px){.hero-mark img{width:86vw}}
 /* ————— live rates band ————— */
 .rates{background:var(--night-2);border-top:1px solid var(--ln-dark);border-bottom:1px solid var(--ln-dark);scroll-margin-top:70px}
 .rates-in{padding-block:clamp(26px,3vw,40px)}
@@ -518,12 +510,7 @@ header.on .brand-logo{height:26px}
 
 <header id="hdr">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Harborview Capital Partners — home">
-      <img class="brand-logo" src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256">
-      <span class="brand-sub" aria-hidden="true">Capital Partners</span>
-    </a>
     <nav class="menu" id="menu" aria-label="Primary">
-      <a href="#rates">Live Rates</a>
       <a href="#about">About Us</a>
       <a href="#process">Our Process</a>
       <a href="#what">What We Do</a>
@@ -554,8 +541,9 @@ header.on .brand-logo{height:26px}
   <div class="hero-core">
     <div class="wrap">
       <div class="hero-kick gs-fade"><span class="ln" aria-hidden="true"></span><p class="sig" style="color:#D7E5F0">Commercial real estate finance · Est. 2013</p></div>
-      <h1 class="hero-mark">
-        <img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" fetchpriority="high">
+      <h1 class="disp">
+        <span class="msk"><span>Clarity in lending.</span></span>
+        <span class="msk"><span><i>Certainty</i> of execution.</span></span>
       </h1>
     </div>
   </div>
@@ -563,7 +551,7 @@ header.on .brand-logo{height:26px}
     <div class="wrap">
       <div class="hero-between">
         <p class="hero-lede gs-fade">A full-service commercial real estate finance, equity and advisory firm — unparalleled access to capital across every asset class.</p>
-        <a class="pill pill-solid gs-fade" href="#contact"><span>Connect</span></a>
+        <a class="pill gs-fade" href="#contact"><span>Connect</span></a>
       </div>
       <div class="hero-stats">
         <div class="hstat gs-up"><b>$10 Billion</b><span>Financing delivered</span></div>
@@ -1369,7 +1357,7 @@ header.on .brand-logo{height:26px}
     var intro = gsap.timeline({defaults:{ease:"power4.out"}});
     intro
       .from("#heroImg", {scale:1.12, duration:2.4, ease:"power2.out"}, 0)
-      .from(".hero-mark img", {opacity:0, y:26, scale:.965, duration:1.5, ease:"power3.out"}, .25)
+      .from(".hero .msk > span", {yPercent:112, duration:1.3, stagger:.14}, .25)
       .from(".hero-kick", {opacity:0, y:14, duration:.9}, .55)
       .from(".hero-between > *", {opacity:0, y:18, duration:.9, stagger:.1}, .8)
       .from(".hstat", {opacity:0, y:24, duration:.9, stagger:.09}, .95);
