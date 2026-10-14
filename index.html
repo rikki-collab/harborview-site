@@ -32,8 +32,8 @@
   --drift:#CCE0F2;      /* dim on dark */
   --moss:#B2D2EC;       /* dimmer on pine */
   --slate:#43607A;      /* dim on light */
-  --teak:#1C8FEA;       /* accent on dark */
-  --teak-deep:#1C8FEA;  /* accent on light (AA) */
+  --teak:#3B8AC9;       /* accent on dark */
+  --teak-deep:#3B8AC9;  /* accent on light (AA) */
   --ln-dark:rgba(255,255,255,.14);
   --ln-light:rgba(8,28,49,.16);
 
@@ -58,7 +58,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--teak);outline-offset:3px}
-::selection{background:#1C8FEA;color:#fff}
+::selection{background:#3B8AC9;color:#fff}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 .skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--teak);color:var(--night);padding:12px 20px}
 .skip:focus{left:12px;top:12px}
@@ -71,6 +71,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .sig-t{color:var(--teak)}
 .on-light .sig{color:var(--slate)}
 .on-light .sig-t{color:var(--teak-deep)}
+.sig.sig-lg,.on-light .sig.sig-lg,.on-pine .sig.sig-lg{color:var(--teak)}
 .disp{
   font-family:var(--serif);font-weight:400;letter-spacing:-.015em;margin:0;
   font-size:clamp(46px,7.8vw,120px);line-height:.96;text-wrap:balance;
@@ -134,10 +135,10 @@ header.on .nav{height:66px}
 .pill:hover::before{transform:scaleX(1)}
 .pill:hover{color:var(--night)}
 .pill>*{position:relative}
-.pill-solid{background:#1C8FEA;color:#fff;border-color:#1C8FEA}
+.pill-solid{background:#3B8AC9;color:#fff;border-color:#3B8AC9}
 .pill-solid::before{background:#5CB1F7}
 .on-light .pill{border-color:rgba(8,28,49,.34);color:var(--night)}
-.on-light .pill::before{background:#1C8FEA}
+.on-light .pill::before{background:#3B8AC9}
 .on-light .pill:hover{color:var(--glass)}
 .arr{width:13px;height:13px;flex:0 0 auto;transition:transform .4s var(--ease)}
 .pill:hover .arr{transform:translateX(4px)}
@@ -218,7 +219,6 @@ header.on .nav{height:66px}
   color:var(--drift);border:1px solid rgba(255,255,255,.18);padding:7px 12px;
 }
 .prod-strip{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px 34px;margin-top:clamp(44px,5vw,70px)}
-.prod-strip .lead{font-family:var(--text);font-style:italic;font-size:19px;letter-spacing:0;text-transform:none;color:var(--moss)}
 .prod-strip span:not(.lead){font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;color:var(--foam)}
 
 /* ————— asset index ————— */
@@ -244,7 +244,7 @@ header.on .nav{height:66px}
   color:var(--drift);transition:all .35s var(--ease);
 }
 .filter:hover{border-color:var(--teak);color:var(--teak)}
-.filter[aria-pressed="true"]{background:#1C8FEA;border-color:#1C8FEA;color:#fff}
+.filter[aria-pressed="true"]{background:#3B8AC9;border-color:#3B8AC9;color:#fff}
   display:grid;grid-template-columns:minmax(150px,.7fr) minmax(0,1.6fr) minmax(0,.7fr) minmax(0,.55fr);
   gap:clamp(14px,2.4vw,40px);align-items:baseline;padding-block:clamp(20px,2.3vw,30px);
   border-bottom:1px solid var(--ln-dark);transition:background .4s var(--ease);
@@ -336,7 +336,7 @@ header.on .nav{height:66px}
 .field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#9B3A31}
 .err{font-size:13.5px;color:#9B3A31;min-height:0}
 .formnote{font-family:var(--sans);font-size:13.5px;margin:0}
-.formnote.ok{color:#1C8FEA}
+.formnote.ok{color:#3B8AC9}
 .formnote.bad{color:#9B3A31}
 
 /* ————— footer ————— */
@@ -421,7 +421,7 @@ footer{background:var(--night);overflow:clip}
 @media (hover:hover){
   .svc-x:hover{background:var(--pine)}
   .svc-x:hover .tide{transform:translateY(0)}
-  .svc-x:hover .no{color:#1C8FEA}
+  .svc-x:hover .no{color:#3B8AC9}
   .svc-x:hover p{color:rgba(255,255,255,.92)}
   .svc-x:hover .t3,.svc-x:hover p{transform:translateY(-4px)}
 }
@@ -465,7 +465,7 @@ footer{background:var(--night);overflow:clip}
 @media (max-width:1240px){.nav-cta .tel{display:none}.menu{gap:clamp(12px,1.7vw,22px)}.menu a{letter-spacing:.15em}.pill{padding-inline:18px}}
 /* ————— section titles outrank their statements ————— */
 .sig-lg{
-  font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.8vw,50px);line-height:1.04;
+  color:var(--teak);font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.8vw,50px);line-height:1.04;
   letter-spacing:.004em;text-transform:none;display:block;
   font-variation-settings:normal;margin-bottom:14px;
 }
@@ -549,9 +549,9 @@ footer{background:var(--night);overflow:clip}
 .statement .t2 i{color:var(--teak-deep)}
 p{font-weight:400}
 .pull{font-style:italic;font-weight:500;color:var(--teak-deep)!important}
-.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:17px;letter-spacing:0;text-transform:none}
+.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:17px;letter-spacing:0;text-transform:none;color:var(--teak)}
 .tenet .k,.svc .no{font-weight:400;text-transform:none}
-.prod-strip .lead{font-size:17px;color:var(--moss)}
+.prod-strip .lead{font-size:19px;color:var(--teak)}
 
 .q summary{font-weight:400;letter-spacing:.004em;font-size:clamp(19px,2vw,25px)}
 .press .dt{color:var(--teak)}
@@ -562,7 +562,7 @@ p{font-weight:400}
 /* ————— logo lockup ————— */
 .brand{display:block}
 .brand-logo{height:clamp(30px,3.2vw,38px);width:auto;display:block}
-.brand-sub{display:block;margin-top:6px;font-family:var(--serif);font-size:13.5px;letter-spacing:.36em;text-transform:uppercase;font-weight:400;color:#1C8FEA;opacity:.92}
+.brand-sub{display:block;margin-top:6px;font-family:var(--serif);font-size:13.5px;letter-spacing:.36em;text-transform:uppercase;font-weight:400;color:#3B8AC9;opacity:.92}
 header.on .brand-sub{display:none}
 header.on .brand-logo{height:26px}
 .foot-mark{border-bottom:1px solid var(--ln-dark)}
@@ -1411,8 +1411,8 @@ header.on .brand-logo{height:26px}
       var area=d+" L"+w+" "+h+" L0 "+h+" Z";
       return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-hidden="true">'+
         '<path d="'+area+'" fill="rgba(158,219,255,.14)"/>'+
-        '<path d="'+d+'" fill="none" stroke="#1C8FEA" stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'+
-        '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.6" fill="#1C8FEA"/></svg>';
+        '<path d="'+d+'" fill="none" stroke="#3B8AC9" stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'+
+        '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.6" fill="#3B8AC9"/></svg>';
     }
 
     function show(btn){
