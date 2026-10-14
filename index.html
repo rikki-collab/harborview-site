@@ -467,15 +467,14 @@ footer{background:var(--night);overflow:clip}
 .on-light{position:relative;isolation:isolate}
 .on-light::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'><filter%20id='g'><feTurbulence%20type='fractalNoise'%20baseFrequency='.9'%20numOctaves='3'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='160'%20height='160'%20filter='url(%23g)'/></svg>");background-size:160px 160px;
-  opacity:.16;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='180'%20height='180'><filter%20id='g'><feTurbulence%20type='fractalNoise'%20baseFrequency='.65'%20numOctaves='4'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='180'%20height='180'%20filter='url(%23g)'/></svg>");background-size:180px 180px;
+  opacity:.45;mix-blend-mode:multiply;
 }
-/* a whisper of tone so the field isn't one flat sheet */
 .on-light::after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(120% 70% at 18% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 60%),
-    linear-gradient(170deg,rgba(226,235,243,0) 55%,rgba(206,220,233,.5) 100%);
+    radial-gradient(130% 75% at 15% -5%,rgba(255,255,255,.95),rgba(255,255,255,0) 62%),
+    linear-gradient(168deg,rgba(226,235,243,0) 42%,rgba(198,214,230,.72) 100%);
 }
 /* ————— hero: centered wordmark, blurred ground ————— */
 .hero-core{text-align:center}
