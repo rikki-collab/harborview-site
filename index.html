@@ -12,7 +12,8 @@
 <meta property="og:image" content="img/harbor-hero3-1600.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Abel&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap">
+<script>if(new URLSearchParams(location.search).get("font")==="serif")document.documentElement.classList.add("serif")</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Abel&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap">
 <link rel="preload" as="image" href="img/harbor-hero3-1600.webp" imagesrcset="img/harbor-hero3-900.webp 900w, img/harbor-hero3-1600.webp 1600w, img/harbor-hero3-2560.webp 2560w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23081C31'/><path d='M16 6v16M16 22c-5.2 0-8.4-3.2-8.4-6.4l8.4 3.2 8.4-3.2c0 3.2-3.2 6.4-8.4 6.4Z' stroke='%23FFFFFF' stroke-width='1.6' fill='none' stroke-linejoin='round'/><circle cx='16' cy='7.6' r='1.9' stroke='%23FFFFFF' stroke-width='1.4' fill='none'/></svg>">
 <style>
@@ -608,6 +609,32 @@ header.on .brand-sub{display:none}
 header.on .brand-logo{height:26px}
 .foot-mark{border-bottom:1px solid var(--ln-dark)}
 .foot-mark img{width:min(680px,86%);height:auto;margin-inline:auto}
+
+/* ── client memo 2026-10-13 ── */
+.sig-lg{font-size:clamp(34px,4.5vw,60px)}
+.wwd-head{display:block}
+.wwd-big{font-size:clamp(40px,6vw,92px);line-height:1}
+.wwd-big .wwd-blue{color:var(--teak);white-space:nowrap}
+.wwd-big .wwd-white{color:#fff;font-size:.56em;display:block;margin-top:.22em;letter-spacing:.02em}
+@media (max-width:760px){.wwd-big .wwd-blue{white-space:normal}}
+.caps{margin-top:clamp(48px,5.6vw,80px);padding:clamp(22px,2.6vw,36px) clamp(22px,2.8vw,40px);border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.025)}
+.caps-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 24px;margin-bottom:clamp(18px,2vw,26px)}
+.caps-k{color:var(--teak)}
+.caps-note{margin:0;font-family:var(--text);font-style:italic;font-size:14.5px;color:var(--drift)}
+.caps-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2px}
+.cap{display:inline-flex;align-items:center;gap:9px;padding:12px 11px;margin:0;font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1;letter-spacing:.01em;color:var(--foam);border:1px solid transparent;transition:background .25s,border-color .25s,color .25s;min-height:44px}
+.cap svg{width:16px;height:16px;flex:0 0 auto;opacity:0;transform:translateY(-5px);transition:opacity .25s,transform .25s}
+.cap:hover,.cap:focus-visible{background:var(--teak);border-color:var(--teak);color:#fff}
+.cap:hover svg,.cap:focus-visible svg{opacity:1;transform:none}
+@media (max-width:760px){.caps-row{justify-content:flex-start}.cap{font-size:20px;padding:10px 12px}}
+.foot-tel{display:flex;justify-content:center;align-items:center;gap:16px;margin:clamp(26px,3vw,40px) auto 0;font-family:var(--serif);font-size:clamp(30px,3.6vw,48px);line-height:1;letter-spacing:.02em;color:#fff;transition:color .3s}
+.foot-tel svg{width:.78em;height:.78em;color:var(--teak)}
+.foot-tel:hover{color:var(--teak)}
+html.serif{--serif:"Instrument Serif",Georgia,"Times New Roman",serif}
+html.serif .t2 i,html.serif .disp i,html.serif .t4 i,html.serif .sig-lg i{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+html.serif .wwd-big{letter-spacing:0;text-transform:none;font-size:clamp(38px,6.2vw,92px)}
+html.serif .cap,html.serif .foot-tel{letter-spacing:0}
+#process .t2.t2-sub{font-size:clamp(27px,3.1vw,42px);line-height:1.18}
 </style>
 </head>
 <body>
@@ -621,10 +648,8 @@ header.on .brand-logo{height:26px}
       <a href="#what">What We Do</a>
       <a href="#transactions">Closed Deals</a>
       <a href="#directory">Directory</a>
-      <a href="tel:+15164539400" class="m-only">516.453.9400</a>
     </nav>
     <div class="nav-cta">
-      <a class="tel" href="tel:+15164539400">516.453.9400</a>
       <a class="pill" href="#contact"><span>Connect</span></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
@@ -654,7 +679,7 @@ header.on .brand-logo{height:26px}
   <div class="hero-foot">
     <div class="wrap">
       <div class="hero-between">
-        <p class="hero-lede gs-fade">A full-service commercial real estate finance, equity and advisory firm — unparalleled access to capital across every asset class.</p>
+        <p class="hero-lede gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Providing unparalleled access to capital across every asset class.</p>
         <a class="pill gs-fade" href="#contact"><span>Connect</span></a>
       </div>
       <div class="tkr" id="tkr" aria-label="Live interest rates">
@@ -681,11 +706,10 @@ header.on .brand-logo{height:26px}
       <img class="prlx" data-speed="0.12" src="img/about-yaletown.webp" alt="Aerial view of a city marina ringed by residential towers." width="1200" height="1500" loading="lazy" decoding="async">
     </figure>
     <div>
-      <p class="sig sig-lg gs-fade">Who we are</p>
+      <p class="sig sig-lg gs-fade">About us</p>
       <h2 class="t2 t2-sub"><span class="msk"><span>An innovative <i>partner</i>,</span></span><span class="msk"><span>not a broker.</span></span></h2>
-      <p class="pull gs-fade">Our industry-leading proprietary mezzanine loan program allows us to consistently deliver exceptional results for our clients.</p>
       <p class="body-l gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes — multifamily, healthcare, office, retail, industrial and hospitality.</p>
-      <p class="body-l gs-fade" style="margin-top:1.1em">We are humbled by the relationships we have built and maintained over the years, and look forward to continuing our goal of providing clarity in lending and certainty of execution.</p>
+      <p class="pull gs-fade" style="margin-top:1.1em">Top ten HUD lender in the country since 2013. Harborview and its partners.</p>
     </div>
   </div>
 </section>
@@ -699,29 +723,28 @@ header.on .brand-logo{height:26px}
   <div class="wrap inner">
     <p class="sig sig-lg gs-fade" style="margin-bottom:26px">Our process</p>
     <h2 class="t2 t2-sub">
-      <span class="msk"><span>It starts and ends</span></span>
-      <span class="msk"><span>with the <i>client</i> —</span></span>
-      <span class="msk"><span>and it closes.</span></span>
+      <span class="msk"><span>Clarity in <i>lending</i>.</span></span>
+      <span class="msk"><span>Certainty of <i>execution</i>.</span></span>
     </h2>
-    <p class="body-l gs-fade">Their needs drive every decision we make. We work closely with our borrowers and our lenders, and we keep everyone updated throughout the process.</p>
+    <p class="body-l gs-fade">We work for you. Keeping you updated every step of the way.</p>
   </div>
   </div>
   <div class="wrap">
     <div class="tenets">
       <div class="tenet gs-up">
         <span class="k">Our clients</span>
-        <h3 class="t4">The needs drive the structure.</h3>
-        <p>Our process starts and ends with our clients — their needs drive every decision we make.</p>
+        <h3 class="t4">It starts and ends with you.</h3>
+        <p>Our process starts and ends with you. Your need drives every decision.</p>
       </div>
       <div class="tenet gs-up">
         <span class="k">Clarity in lending</span>
-        <h3 class="t4">No silence, no surprises.</h3>
+        <h3 class="t4">No silence. No surprises.</h3>
         <p>We work closely with our borrowers and lenders, keeping everyone updated throughout the process.</p>
       </div>
       <div class="tenet gs-up">
         <span class="k">Certainty of execution</span>
         <h3 class="t4">Experience that closes.</h3>
-        <p>Decades of experience, relationships and creativity, combined to deliver customized financing solutions.</p>
+        <p>Combining decades of experience, relationships and creativity to deliver customized financing solutions.</p>
       </div>
     </div>
   </div>
@@ -733,15 +756,14 @@ header.on .brand-logo{height:26px}
     <div class="wwd-head">
       <div>
         <p class="sig sig-lg gs-fade" style="margin-bottom:22px">What we do</p>
-        <h2 class="disp wwd-big"><span class="msk"><span>Debt, Equity,</span></span><span class="msk"><span><i>Advisory</i></span></span></h2>
+        <h2 class="disp wwd-big"><span class="msk"><span class="wwd-blue">Debt. Equity. Advisory.</span></span><span class="msk"><span class="wwd-white">We do it all.</span></span></h2>
       </div>
-      <p class="body-l gs-fade" style="max-width:38ch">A true one-stop shop for commercial real estate capital — agnostic about where the money comes from, relentless about where it lands.</p>
     </div>
 
     <div class="svc-grid">
       <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-1.webp)"><i class="wv"></i></span>
         <span class="no">Debt</span>
-        <h3 class="t3">Customized financing, every sector</h3>
+        <h3 class="t3">Customized financing</h3>
         <p>Long-standing relationships with all major real estate capital providers — domestic and foreign banks, <span class="gl" tabindex="0" data-def="Commercial mortgage-backed securities — fixed-rate loans pooled and sold to bond investors.">CMBS</span> lenders, credit companies, insurance companies, private lenders, and our own balance sheet.</p>
       </article>
       <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-2.webp)"><i class="wv"></i></span>
@@ -756,8 +778,19 @@ header.on .brand-logo{height:26px}
       </article>
     </div>
 
-    <div class="prod-strip gs-fade">
-      <span>HUD / FHA</span><span>Fannie Mae DUS</span><span>Freddie Mac</span><span>CMBS</span><span>Bank</span><span>Life Company</span><span>Bridge</span><span>Mezzanine</span><span>Equity</span>
+    <div class="caps gs-fade" id="sources">
+      <div class="caps-head"><p class="sig caps-k">Capital sources</p><p class="caps-note">Select a source to request its tear sheet.</p></div>
+      <div class="caps-row">
+        <a class="cap" href="#contact" data-sheet="HUD / FHA" aria-label="Request the HUD / FHA tear sheet"><span>HUD / FHA</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Fannie Mae DUS" aria-label="Request the Fannie Mae DUS tear sheet"><span>Fannie Mae DUS</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Freddie Mac" aria-label="Request the Freddie Mac tear sheet"><span>Freddie Mac</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="CMBS" aria-label="Request the CMBS tear sheet"><span>CMBS</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Bank" aria-label="Request the Bank tear sheet"><span>Bank</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Life Company" aria-label="Request the Life Company tear sheet"><span>Life Company</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Bridge" aria-label="Request the Bridge tear sheet"><span>Bridge</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Mezzanine" aria-label="Request the Mezzanine tear sheet"><span>Mezzanine</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Equity" aria-label="Request the Equity tear sheet"><span>Equity</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+      </div>
     </div>
 
     <div style="margin-top:clamp(64px,8vw,110px)">
@@ -1209,7 +1242,7 @@ header.on .brand-logo{height:26px}
 <section class="on-light chapter" id="contact">
   <div class="wrap contact">
     <div>
-      <p class="sig sig-lg gs-fade">Contact</p>
+      <p class="sig sig-lg gs-fade">Connect</p>
       <h2 class="t2 t2-sub"><span class="msk"><span>Tell us about</span></span><span class="msk"><span>the <i>deal</i>.</span></span></h2>
     </div>
     <form class="form gs-fade" id="dealForm" novalidate>
@@ -1246,11 +1279,10 @@ header.on .brand-logo{height:26px}
 <footer>
   <div class="wrap">
     <div class="foot-mark"><img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" loading="lazy" decoding="async"></div>
+    <a class="foot-tel" href="tel:+15164539400"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg><span>516.453.9400</span></a>
     <div class="fcols">
       <div class="about-f">
-        <div style="margin-bottom:18px"><img class="brand-logo" src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" loading="lazy"><span class="brand-sub" aria-hidden="true">Capital Partners</span></div>
         <p>A full-service commercial real estate finance, equity and advisory firm. Clarity in lending. Certainty of execution.</p>
-        <a class="tel" href="tel:+15164539400">516.453.9400</a>
         <div class="social">
           <a href="https://www.linkedin.com/company/harborview-capital-partners" target="_blank" rel="noopener" aria-label="Harborview Capital Partners on LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg>
@@ -1268,7 +1300,7 @@ header.on .brand-logo{height:26px}
       </div>
       <div>
         <h3>What we do</h3>
-        <ul><li><a href="#what">Business lines</a></li><li><a href="#what">Asset classes</a></li><li><a href="#transactions">Closed deals</a></li><li><a href="#transactions">Case studies</a></li></ul>
+        <ul><li><a href="#what">What we do</a></li><li><a href="#sources">Capital sources</a></li><li><a href="#transactions">Closed deals</a></li></ul>
       </div>
       <div>
         <h3>Connect</h3>
@@ -1617,6 +1649,11 @@ header.on .brand-logo{height:26px}
 
   window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
 })();
+
+(function(){var caps=document.querySelectorAll(".cap");if(!caps.length)return;
+caps.forEach(function(a){a.addEventListener("click",function(){var ta=document.querySelector("#contact textarea");if(!ta)return;
+var want="Please send the "+a.getAttribute("data-sheet")+" tear sheet.";if(ta.value.indexOf(want)===-1)ta.value=(ta.value?ta.value.trim()+"\n":"")+want;
+setTimeout(function(){ta.focus()},700);});});})();
 </script>
 </body>
 </html>
