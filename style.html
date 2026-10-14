@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harborview Style Board</title>
+<meta name="description" content="Colors, type and imagery for the Harborview Capital Partners website.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Abel&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap">
+<style>
+:root{
+  --night:#081C31;--night-2:#102B47;--pine:#061829;--pine-2:#04121F;
+  --glass:#EEF3F7;--glass-2:#E1EAF1;--foam:#F3F8FC;--drift:#C9D0D6;--slate:#5E6A72;--teak:#337ACC;
+  --ln-dark:rgba(255,255,255,.14);--ln-light:rgba(8,28,49,.16);
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --abel:"Abel","Archivo Narrow",Helvetica,Arial,sans-serif;
+  --text:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --gut:clamp(20px,4.6vw,72px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--foam);font-family:var(--text);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1360px;margin-inline:auto;padding-inline:var(--gut)}
+section{padding-block:clamp(56px,7vw,110px)}
+.light{background:var(--glass);color:var(--night);position:relative}
+.light::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.6 0 0 0 0 0.66 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.light>.wrap{position:relative}
+.k{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122;color:var(--drift);margin:0}
+.light .k{color:var(--slate)}
+.k.blue{color:var(--teak)}
+.h{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5vw,68px);line-height:1.02;letter-spacing:0;margin:10px 0 18px;color:var(--teak)}
+.lede{font-size:clamp(17px,1.3vw,19.5px);color:var(--drift);max-width:60ch;margin:0}
+.light .lede{color:var(--slate)}
+.hdr{padding-block:clamp(40px,5vw,72px) 0}
+.hdr .wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;padding-bottom:clamp(28px,3vw,44px);border-bottom:1px solid var(--ln-dark)}
+.hdr img{width:min(420px,70vw)}
+.hdr .k{text-align:right}
+.hdr .k b{display:block;color:var(--foam);font-weight:500;margin-top:6px}
+
+/* palette */
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:34px}
+.s{border:1px solid var(--ln-dark);padding:14px 14px 16px;min-height:180px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}
+.light .s{border-color:var(--ln-light)}
+.s b{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1;letter-spacing:0}
+.s span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.s.on-dark{color:#fff}.s.on-light{color:var(--night)}
+.ratio{margin-top:26px;display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--ln-dark);overflow:hidden}
+.ratio>div{flex:1 1 180px;padding:22px 18px;display:flex;flex-direction:column;gap:8px}
+.ratio .k{margin-top:auto}
+
+/* type */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,48px);margin-top:36px}
+.card{border:1px solid var(--ln-dark);padding:clamp(22px,2.6vw,36px)}
+.light .card{border-color:var(--ln-light);background:rgba(255,255,255,.35)}
+.card .tag{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--teak);padding:7px 11px;margin-bottom:26px}
+.card .tag.ghost{background:transparent;color:var(--teak);border:1px solid var(--teak)}
+.spec{font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--drift);margin:0 0 8px;font-variation-settings:"wdth" 118}
+.light .spec{color:var(--slate)}
+.t-big{font-weight:400;line-height:1.02;margin:0 0 22px;color:var(--night)}
+.t-big i{font-family:var(--text);font-style:italic;font-weight:450;font-size:.95em;letter-spacing:-.02em;color:var(--teak)}
+.serif .t-big{font-family:var(--serif);font-size:clamp(36px,4.2vw,58px);letter-spacing:0}
+.serif .t-big i{font-family:var(--serif);font-size:1em;letter-spacing:0}
+.abel .t-big{font-family:var(--abel);font-size:clamp(36px,4.2vw,58px);letter-spacing:-.005em}
+.t-title{font-weight:400;color:var(--teak);margin:0 0 6px;line-height:1.04}
+.serif .t-title{font-family:var(--serif);font-size:44px}
+.abel .t-title{font-family:var(--abel);font-size:44px}
+.t-sub{font-size:22px;line-height:1.3;margin:0 0 18px;color:var(--night)}
+.serif .t-sub{font-family:var(--serif)}
+.abel .t-sub{font-family:var(--abel)}
+.t-body{font-size:16.5px;color:var(--slate);margin:0 0 22px;max-width:40ch}
+.t-num{font-weight:400;font-size:40px;line-height:1;margin:0;color:var(--night)}
+.serif .t-num{font-family:var(--serif)}
+.abel .t-num{font-family:var(--abel)}
+.fonts{display:grid;gap:10px;margin-top:26px;padding-top:22px;border-top:1px solid var(--ln-light)}
+.fonts div{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:var(--slate)}
+.fonts div b{font-weight:500;color:var(--night)}
+.fonts .f-serif{font-family:var(--serif);font-size:18px}
+.fonts .f-abel{font-family:var(--abel);font-size:18px}
+.fonts .f-hank{font-family:var(--text);font-style:italic}
+.fonts .f-arch{font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+
+/* imagery */
+.pics{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-auto-rows:clamp(150px,20vw,300px);gap:12px;margin-top:34px}
+.pics figure{margin:0;overflow:hidden;position:relative}
+.pics img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.04) brightness(.94)}
+.pics figure:first-child{grid-row:span 2}
+.pics figcaption{position:absolute;left:12px;bottom:10px;font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(8,28,49,.6);padding:6px 9px;backdrop-filter:blur(4px)}
+.note{margin-top:22px;font-size:15px;color:var(--drift);max-width:70ch}
+
+/* components */
+.comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.c{border:1px solid var(--ln-dark);padding:26px 22px;display:flex;flex-direction:column;gap:18px;min-height:200px}
+.c .k{margin-bottom:auto}
+.pill{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;border:1px solid rgba(255,255,255,.55);color:#fff;padding:14px 26px;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;transition:.3s}
+.pill:hover{background:var(--teak);border-color:var(--teak)}
+.tk{display:inline-flex;flex-direction:column;gap:6px;padding:12px 16px;border:1px solid var(--ln-dark);align-self:flex-start}
+.tk .k{font-size:11px}
+.tk b{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1}
+.tk .up{font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:#5BD39A}
+.cap{display:inline-flex;align-items:center;gap:9px;padding:12px 12px;font-family:var(--serif);font-size:22px;line-height:1;color:var(--foam);border:1px solid transparent;transition:.25s;align-self:flex-start}
+.cap svg{width:16px;height:16px;opacity:0;transform:translateY(-5px);transition:.25s}
+.cap:hover{background:var(--teak);border-color:var(--teak);color:#fff}.cap:hover svg{opacity:1;transform:none}
+.fc{position:relative;aspect-ratio:1/1;overflow:hidden;max-width:260px}
+.fc img{width:100%;height:100%;object-fit:cover}
+.fc::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,28,49,.9),rgba(8,28,49,.18) 48%,transparent)}
+.fc .tag{position:absolute;z-index:2;top:12px;left:12px;background:rgba(8,28,49,.66);color:#fff;padding:6px 10px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.fc .meta{position:absolute;z-index:2;left:14px;right:14px;bottom:12px}
+.fc .meta b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:#fff;line-height:1}
+.fc .meta span{display:block;margin-top:6px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--drift)}
+
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.cmp a{border:1px solid var(--ln-dark);padding:26px 24px;display:block;transition:.3s}
+.cmp a:hover{border-color:var(--teak);background:rgba(51,122,204,.08)}
+.cmp strong{display:block;font-weight:400;font-size:34px;line-height:1.05;margin:6px 0 10px}
+.cmp a.s1 strong{font-family:var(--serif)}
+.cmp a.s2 strong{font-family:var(--abel)}
+.cmp p{margin:0;color:var(--drift);font-size:15px}
+.cmp .k.blue{margin-top:16px}
+footer{padding:36px 0 48px;border-top:1px solid var(--ln-dark)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--drift)}
+@media (max-width:860px){
+  .cols,.cmp{grid-template-columns:1fr}
+  .pics{grid-template-columns:1fr 1fr}
+  .pics figure:first-child{grid-column:1/-1;grid-row:auto}
+  .hdr .k{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256">
+    <p class="k">Website style board<b>October 2026 · prepared by The Groundwork Co.</b></p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="k blue">01 — Palette</p>
+    <h2 class="h">Navy, fog, and one bright blue.</h2>
+    <p class="lede">Two deep navies carry the site. Harbor Fog is the light ground. A single Channel Blue does every accent, button, and title, so the eye always knows what matters.</p>
+    <div class="sw">
+      <div class="s on-dark" style="background:#081C31"><b>Harbor Night</b><span>#081C31 · main dark</span></div>
+      <div class="s on-dark" style="background:#102B47"><b>Night Two</b><span>#102B47 · cards on dark</span></div>
+      <div class="s on-dark" style="background:#061829"><b>Deep Water</b><span>#061829 · what we do</span></div>
+      <div class="s on-dark" style="background:#337ACC"><b>Channel Blue</b><span>#337ACC · the accent</span></div>
+      <div class="s on-light" style="background:#EEF3F7"><b>Harbor Fog</b><span>#EEF3F7 · light ground</span></div>
+      <div class="s on-light" style="background:#E1EAF1"><b>Fog Two</b><span>#E1EAF1 · cards on light</span></div>
+      <div class="s on-light" style="background:#F3F8FC"><b>Sea Foam</b><span>#F3F8FC · text on dark</span></div>
+      <div class="s on-light" style="background:#C9D0D6"><b>Driftwood</b><span>#C9D0D6 · quiet text</span></div>
+      <div class="s on-dark" style="background:#5E6A72"><b>Slate</b><span>#5E6A72 · quiet on light</span></div>
+    </div>
+    <div class="ratio">
+      <div style="background:#081C31;flex-grow:5"><span style="font-family:var(--serif);font-size:30px;line-height:1">Harbor Night</span><p class="k">about 50% of the page</p></div>
+      <div style="background:#EEF3F7;color:#081C31;flex-grow:4"><span style="font-family:var(--serif);font-size:30px;line-height:1">Harbor Fog</span><p class="k" style="color:#5E6A72">about 40%</p></div>
+      <div style="background:#337ACC;flex-grow:1;min-width:120px"><span style="font-family:var(--serif);font-size:30px;line-height:1">Blue</span><p class="k" style="color:#fff">10%, on purpose</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <p class="k blue">02 — Typography</p>
+    <h2 class="h">Two directions, same bones.</h2>
+    <p class="lede">Everything below the headlines is identical in both: Hanken Grotesk for reading, Archivo in small tracked capitals for labels. The only decision is the headline face.</p>
+    <div class="cols">
+      <div class="card serif">
+        <span class="tag">Option A · Serif headlines</span>
+        <p class="spec">Section title</p>
+        <h3 class="t-title">Our process</h3>
+        <p class="spec" style="margin-top:18px">Statement</p>
+        <p class="t-big">Clarity in <i>lending</i>.<br>Certainty of <i>execution</i>.</p>
+        <p class="spec">Subhead</p>
+        <p class="t-sub">An innovative partner, not a broker.</p>
+        <p class="spec">Body</p>
+        <p class="t-body">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. We work for you. Keeping you updated every step of the way.</p>
+        <p class="spec">Figures</p>
+        <p class="t-num">$102,560,000</p>
+        <div class="fonts">
+          <div><b class="f-serif">Instrument Serif</b><span>headlines, figures, italics</span></div>
+          <div><b class="f-hank">Hanken Grotesk</b><span>body copy</span></div>
+          <div><b class="f-arch">Archivo</b><span>labels, nav, buttons</span></div>
+        </div>
+      </div>
+      <div class="card abel">
+        <span class="tag ghost">Option B · Sans headlines</span>
+        <p class="spec">Section title</p>
+        <h3 class="t-title">Our process</h3>
+        <p class="spec" style="margin-top:18px">Statement</p>
+        <p class="t-big">Clarity in <i>lending</i>.<br>Certainty of <i>execution</i>.</p>
+        <p class="spec">Subhead</p>
+        <p class="t-sub">An innovative partner, not a broker.</p>
+        <p class="spec">Body</p>
+        <p class="t-body">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. We work for you. Keeping you updated every step of the way.</p>
+        <p class="spec">Figures</p>
+        <p class="t-num">$102,560,000</p>
+        <div class="fonts">
+          <div><b class="f-abel">Abel</b><span>headlines, figures</span></div>
+          <div><b class="f-hank">Hanken Grotesk</b><span>body copy and italics</span></div>
+          <div><b class="f-arch">Archivo</b><span>labels, nav, buttons</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="k blue">03 — Imagery</p>
+    <h2 class="h">Harbor light, real buildings.</h2>
+    <p class="lede">Atmosphere comes from the water: cool, slightly desaturated harbor photography behind the big statements. The deals use Harborview's own photos of the actual properties, left honest rather than polished.</p>
+    <div class="pics">
+      <figure><img src="img/harbor-hero3-1600.webp" alt="" loading="lazy"><figcaption>Hero · marina at dusk</figcaption></figure>
+      <figure><img src="img/process-tri-1.webp" alt="" loading="lazy"><figcaption>Our process · one photo, three slices</figcaption></figure>
+      <figure><img src="img/about-yaletown.webp" alt="" loading="lazy"><figcaption>About · waterfront towers</figcaption></figure>
+      <figure><img src="img/deal-7.webp" alt="" loading="lazy"><figcaption>Closed deal · Comfort Inn, DC</figcaption></figure>
+      <figure><img src="img/deal-2.webp" alt="" loading="lazy"><figcaption>Closed deal · senior living, TN</figcaption></figure>
+    </div>
+    <p class="note">Treatment on all site photography: saturation pulled to about 75%, slight contrast lift, navy gradient where text sits on top. White sections carry a faint paper grain so they never read as flat screen-white.</p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <p class="k blue">04 — Components</p>
+    <h2 class="h">The parts that repeat.</h2>
+    <div class="comp" style="color:#fff">
+      <div class="c" style="background:#081C31"><p class="k">Connect button · used everywhere</p><a class="pill" href="#">Connect</a></div>
+      <div class="c" style="background:#081C31"><p class="k">Live rate · ticker</p><div class="tk"><span class="k">10-yr UST</span><b>5.21%</b><span class="up">▲ 0.03</span></div></div>
+      <div class="c" style="background:#061829"><p class="k">Capital source · hover to request</p><a class="cap" href="#"><span>HUD / FHA</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a></div>
+      <div class="c" style="background:#102B47;padding:18px"><p class="k">Closed deal card · flips for detail</p><div class="fc"><img src="img/deal-9.webp" alt="" loading="lazy"><span class="tag">Healthcare</span><div class="meta"><b>$11,440,000</b><span>Massachusetts</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="k blue">05 — See both live</p>
+    <h2 class="h">Side by side.</h2>
+    <p class="lede">Same site, same copy, same photos. Open both and compare the headlines.</p>
+    <div class="cmp">
+      <a class="s1" href="index.html"><span class="k">Option A</span><strong>Serif headlines</strong><p>Instrument Serif for titles, statements and figures. Editorial, a little warmer.</p><p class="k blue">zahaval.github.io/harborview-site/</p></a>
+      <a class="s2" href="sans.html"><span class="k">Option B</span><strong>Sans headlines</strong><p>Abel for titles, statements and figures. Cleaner, more technical.</p><p class="k blue">zahaval.github.io/harborview-site/sans.html</p></a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Harborview Capital Partners · style board</span><span>The Groundwork Co.</span></div></footer>
+</body>
+</html>

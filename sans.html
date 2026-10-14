@@ -1,0 +1,1658 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harborview Capital Partners — Clarity in Lending. Certainty of Execution.</title>
+<meta name="description" content="Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm — debt, equity and advisory across multifamily, healthcare, hospitality, office and retail.">
+<meta name="theme-color" content="#081C31">
+<meta property="og:title" content="Harborview Capital Partners">
+<meta property="og:description" content="Clarity in lending. Certainty of execution. Full-service commercial real estate finance, equity and advisory.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/harbor-hero3-1600.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>/*FONT-DEFAULT*/if(new URLSearchParams(location.search).get("font")==="serif")document.documentElement.classList.add("serif")</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Abel&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap">
+<link rel="preload" as="image" href="img/harbor-hero3-1600.webp" imagesrcset="img/harbor-hero3-900.webp 900w, img/harbor-hero3-1600.webp 1600w, img/harbor-hero3-2560.webp 2560w" imagesizes="100vw" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23081C31'/><path d='M16 6v16M16 22c-5.2 0-8.4-3.2-8.4-6.4l8.4 3.2 8.4-3.2c0 3.2-3.2 6.4-8.4 6.4Z' stroke='%23FFFFFF' stroke-width='1.6' fill='none' stroke-linejoin='round'/><circle cx='16' cy='7.6' r='1.9' stroke='%23FFFFFF' stroke-width='1.4' fill='none'/></svg>">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   HARBORVIEW — design tokens
+   night #081C31 · pine #22403B · sea-glass #E7E9E3 · seafoam #8FB5A5
+   Abel (display) · Hanken Grotesk (text + italics) · Archivo (labels) — all sans
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --night:#081C31;
+  --night-2:#102B47;
+  --pine:#061829;
+  --pine-2:#04121F;
+  --glass:#EEF3F7;
+  --glass-2:#E1EAF1;
+  --foam:#F3F8FC;
+  --drift:#C9D0D6;      /* dim on dark */
+  --moss:#C9D0D6;       /* dimmer on pine */
+  --slate:#5E6A72;      /* dim on light */
+  --teak:#337ACC;       /* accent on dark */
+  --teak-deep:#337ACC;  /* accent on light (AA) */
+  --ln-dark:rgba(255,255,255,.14);
+  --ln-light:rgba(8,28,49,.16);
+
+  --serif:"Abel","Archivo Narrow",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --text:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+
+  --gut:clamp(20px,4.6vw,72px);
+  --maxw:1440px;
+  --ease:cubic-bezier(.62,.05,.28,.99);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--night);color:var(--foam);
+  font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:400;
+  font-variation-settings:"wdth" 100;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:clip;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--teak);outline-offset:3px}
+::selection{background:#337ACC;color:#fff}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--teak);color:var(--night);padding:12px 20px}
+.skip:focus{left:12px;top:12px}
+
+/* ————— voices ————— */
+.sig{  /* signal-flag label: expanded caps */
+  font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  font-variation-settings:"wdth" 122;color:var(--drift);margin:0;
+}
+.sig-t{color:var(--teak)}
+.on-light .sig{color:var(--slate)}
+.on-light .sig-t{color:var(--teak-deep)}
+.sig.sig-lg,.on-light .sig.sig-lg,.on-pine .sig.sig-lg{color:var(--teak)}
+.disp{
+  font-family:var(--serif);font-weight:400;letter-spacing:-.015em;margin:0;
+  font-size:clamp(46px,7.8vw,120px);line-height:.96;text-wrap:balance;
+}
+.disp i,.t2 i{font-style:italic;letter-spacing:-.01em}
+.t2{
+  font-family:var(--serif);font-weight:400;letter-spacing:-.012em;margin:0;
+  font-size:clamp(36px,5.2vw,76px);line-height:1.0;text-wrap:balance;
+}
+.t3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.1;letter-spacing:-.008em;margin:0}
+.t4{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2vw,25px);line-height:1.18;margin:0}
+.body-l{font-size:clamp(17px,1.35vw,20px);line-height:1.62;color:var(--drift);max-width:58ch}
+.on-light .body-l{color:var(--slate)}
+.on-pine .body-l{color:var(--moss)}
+p{margin:0 0 1.1em;font-family:var(--text);font-optical-sizing:auto;font-weight:400}
+p:last-child{margin-bottom:0}
+
+/* masked-line reveal targets */
+.msk{display:block;overflow:hidden;padding:.06em .08em;margin:-.02em -.08em}
+.msk>span{display:block;will-change:transform}
+
+/* ————— chapters ————— */
+.on-light{background:var(--glass);color:var(--night)}
+.on-pine{background:var(--pine);color:var(--foam)}
+section{position:relative}
+.chapter{padding-block:clamp(88px,11vw,180px)}
+.chapter-t0{padding-top:0}
+.rule{border:0;height:1px;margin:0;background:var(--ln-dark)}
+.on-light .rule{background:var(--ln-light)}
+
+/* ————— nav ————— */
+header{position:fixed;inset:0 0 auto 0;z-index:90;transition:background .5s var(--ease),border-color .5s var(--ease)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ln-dark);opacity:0;transition:opacity .5s var(--ease)}
+header.on{background:rgba(8,28,49,.82);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3)}
+header.on::after{opacity:1}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;transition:height .5s var(--ease)}
+header.on .nav{height:66px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:27px;height:27px;flex:0 0 auto}
+.brand b{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:.01em;line-height:1}
+.brand i{display:block;font-style:normal;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-variation-settings:"wdth" 122;color:var(--drift);margin-top:4px}
+.menu{display:flex;gap:clamp(18px,2.6vw,38px)}
+.menu a{white-space:nowrap;  font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  font-variation-settings:"wdth" 116;color:var(--drift);padding:8px 0;position:relative;
+  transition:color .3s var(--ease);
+}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:3px;height:1px;background:var(--teak);transition:right .45s var(--ease)}
+.menu a:hover{color:var(--foam)}
+.menu a:hover::after{right:0}
+.nav-cta{display:flex;align-items:center;gap:22px}
+.tel{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122;color:var(--drift);transition:color .3s}
+.tel:hover{color:var(--teak)}
+.pill{
+  display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:12px 24px;
+  border:1px solid rgba(255,255,255,.32);border-radius:0;cursor:pointer;background:none;
+  font-size:13.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 116;
+  color:var(--foam);position:relative;overflow:hidden;transition:color .4s var(--ease),border-color .4s var(--ease);
+  white-space:nowrap;
+}
+.pill::before{content:"";position:absolute;inset:0;background:var(--foam);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.pill:hover::before{transform:scaleX(1)}
+.pill:hover{color:var(--night)}
+.pill>*{position:relative}
+.pill-solid{background:#337ACC;color:#fff;border-color:#337ACC}
+.pill-solid::before{background:#5CB1F7}
+.on-light .pill{border-color:rgba(8,28,49,.34);color:var(--night)}
+.on-light .pill::before{background:#337ACC}
+.on-light .pill:hover{color:var(--glass)}
+.arr{width:13px;height:13px;flex:0 0 auto;transition:transform .4s var(--ease)}
+.pill:hover .arr{transform:translateX(4px)}
+.burger{display:none;background:none;border:0;padding:12px;margin-right:-12px;cursor:pointer;color:var(--foam)}
+.burger svg{width:22px;height:22px}
+.m-only{display:none}
+
+/* ————— hero ————— */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:clip}
+.hero-media{position:absolute;inset:0}
+.hero-media img{
+  width:100%;height:112%;object-fit:cover;object-position:50% 42%;
+  filter:saturate(.72) contrast(1.05) brightness(.92);
+}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom,rgba(8,28,49,.72) 0%,rgba(8,28,49,.30) 30%,rgba(8,28,49,.44) 62%,rgba(8,28,49,.92) 100%),
+    linear-gradient(to top,rgba(8,28,49,.55) 0%,rgba(8,28,49,0) 34%);
+}
+.hero-core{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:96px}
+.hero-kick{display:flex;align-items:center;gap:16px;margin-bottom:clamp(24px,3vw,40px)}
+.hero-kick .ln{width:44px;height:1px;background:var(--teak)}
+.hero-foot{position:relative;z-index:2;padding-bottom:clamp(26px,3.4vw,44px)}
+.hero-between{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:clamp(22px,3vw,38px)}
+.hero-lede{max-width:44ch;color:#C9D0D6;font-size:clamp(17px,1.3vw,19.5px);line-height:1.62;margin:0}
+
+/* ————— statement collage (signature) ————— */
+.statement{position:relative;overflow:clip}
+.czone{position:relative}
+.statement .inner{position:relative;z-index:2;max-width:1080px;margin-inline:auto;text-align:center;padding-block:clamp(120px,16vw,240px)}
+.statement .t2{font-size:clamp(38px,5.6vw,84px)}
+.float{position:absolute;z-index:1;overflow:hidden;box-shadow:0 24px 70px rgba(8,28,49,.18)}
+.float img{width:100%;height:100%;object-fit:cover;filter:saturate(.82)}
+.f1{width:clamp(110px,13vw,190px);aspect-ratio:1/2;left:21%;top:24%}
+.f2{width:clamp(110px,13vw,190px);aspect-ratio:1/2;right:19%;bottom:14%}
+.f3{width:clamp(110px,13vw,190px);aspect-ratio:1/2;right:30%;top:9%}
+.statement .body-l{margin:clamp(26px,3vw,40px) auto 0;max-width:52ch}
+
+/* ————— tenets (the named process) ————— */
+.tenets{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ln-light)}
+.tenet{padding:clamp(34px,3.8vw,56px) clamp(22px,2.6vw,44px) clamp(38px,4.4vw,64px) 0;border-right:1px solid var(--ln-light)}
+.tenet:last-child{border-right:0}
+.tenet+.tenet{padding-left:clamp(22px,2.6vw,44px)}
+.tenet .k{font-family:var(--serif);font-style:normal;font-size:clamp(23px,2.5vw,31px);line-height:1.1;letter-spacing:.004em;color:var(--teak-deep);display:block;margin-bottom:10px}
+.tenet .t4{font-family:var(--sans);font-size:clamp(15px,1.4vw,17px);line-height:1.4;font-weight:500;letter-spacing:.002em;color:var(--night);margin-bottom:14px}
+.tenet p{font-size:16.5px;color:var(--slate);margin:0;max-width:34ch}
+
+/* ————— about split ————— */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(36px,6vw,110px);align-items:center}
+.about-fig{position:relative;overflow:hidden;aspect-ratio:4/5}
+.about-fig img{width:100%;height:114%;object-fit:cover;filter:saturate(.8)}
+.about .t2{margin:20px 0 26px}
+.about .pull{
+  font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.9vw,26px);line-height:1.4;
+  color:var(--night);margin:0 0 26px;letter-spacing:-.005em;
+}
+
+/* ————— pine band: what we do ————— */
+.on-pine .sig{color:var(--moss)}
+.wwd-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:clamp(48px,6vw,88px)}
+.wwd-head .t2{max-width:14ch}
+.wwd-big{font-size:clamp(44px,7.6vw,118px);line-height:.98;letter-spacing:.012em;text-transform:uppercase}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.13)}
+.svc{background:var(--pine);padding:clamp(28px,3vw,46px);display:flex;flex-direction:column;min-height:clamp(340px,32vw,470px);transition:background .5s var(--ease)}
+.svc:hover{background:var(--pine-2)}
+.svc .no{font-family:var(--serif);font-style:normal;font-size:clamp(26px,3vw,36px);line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:var(--teak);margin-bottom:auto;display:block}
+.svc .t3{font-family:var(--sans);font-size:clamp(16px,1.5vw,18.5px);line-height:1.35;font-weight:500;letter-spacing:.002em;margin:30px 0 14px}
+.svc p{font-size:16.5px;line-height:1.62;color:var(--moss);margin:0}
+.svc .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.tagi{
+  font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 116;
+  color:var(--drift);border:1px solid rgba(255,255,255,.18);padding:7px 12px;
+}
+.prod-strip{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(10px,1.8vw,26px);margin-top:clamp(44px,5vw,70px);padding-top:clamp(20px,2.4vw,30px);border-top:1px solid rgba(255,255,255,.14);overflow-x:auto;scrollbar-width:none}
+.prod-strip::-webkit-scrollbar{display:none}
+.prod-strip span{flex:0 0 auto;white-space:nowrap;font-family:var(--sans);font-size:clamp(10.5px,1.05vw,12.5px);letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;color:var(--foam)}
+
+/* ————— asset index ————— */
+.aidx{border-top:1px solid rgba(255,255,255,.13)}
+.arow{
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:clamp(16px,3vw,54px);
+  align-items:baseline;padding-block:clamp(22px,2.6vw,34px);
+  border-bottom:1px solid rgba(255,255,255,.13);position:relative;
+}
+.arow::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--teak);transition:width .6s var(--ease)}
+.arow:hover::after{width:100%}
+.arow .t3{transition:transform .5s var(--ease)}
+.arow:hover .t3{transform:translateX(10px)}
+.arow p{font-size:16px;color:var(--moss);margin:0;max-width:60ch}
+.arow .n{font-size:13px;letter-spacing:.15em;color:var(--moss);font-variation-settings:"wdth" 122}
+
+/* ————— ledger ————— */
+.ledger-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:clamp(40px,5vw,64px)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(28px,3.4vw,44px)}
+.filter{
+  min-height:40px;padding:9px 18px;background:none;border:1px solid var(--ln-dark);cursor:pointer;
+  font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;
+  color:var(--drift);transition:all .35s var(--ease);
+}
+.filter:hover{border-color:var(--teak);color:var(--teak)}
+.filter[aria-pressed="true"]{background:#337ACC;border-color:#337ACC;color:#fff}
+  display:grid;grid-template-columns:minmax(150px,.7fr) minmax(0,1.6fr) minmax(0,.7fr) minmax(0,.55fr);
+  gap:clamp(14px,2.4vw,40px);align-items:baseline;padding-block:clamp(20px,2.3vw,30px);
+  border-bottom:1px solid var(--ln-dark);transition:background .4s var(--ease);
+}
+.ledger-note{margin-top:20px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--drift);font-variation-settings:"wdth" 122}
+
+/* ————— deal flip cards ————— */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:clamp(16px,2vw,28px)}
+.fcard{position:relative;aspect-ratio:1/1;perspective:1500px;cursor:pointer;outline-offset:4px}
+.fc-in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.22,.85,.3,1)}
+.fcard:hover .fc-in,.fcard.flip .fc-in,.fcard:focus-visible .fc-in{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.fc-front{background:#081C31}
+.fc-front img{width:100%;height:100%;object-fit:cover}
+.fc-front::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,28,49,.9) 0%,rgba(8,28,49,.18) 48%,rgba(8,28,49,0) 100%)}
+.fc-tag{position:absolute;z-index:2;top:14px;left:14px;background:rgba(8,28,49,.66);backdrop-filter:blur(6px);color:#fff;padding:7px 12px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118}
+.fc-meta{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}
+.fc-meta b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.2vw,33px);letter-spacing:.01em;color:#fff;line-height:1}
+.fc-meta span{display:block;margin-top:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;color:var(--drift)}
+.fc-hint{position:absolute;z-index:2;right:16px;bottom:16px;width:34px;height:34px;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:19px;transition:background .3s,transform .3s}
+.fcard:hover .fc-hint{background:var(--teak-deep);border-color:var(--teak-deep)}
+.fc-back{transform:rotateY(180deg);background:var(--night-2);display:flex;flex-direction:column;padding:clamp(20px,2vw,28px);border:1px solid rgba(255,255,255,.13)}
+.fc-tag2{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;color:var(--teak);margin-bottom:14px}
+.fc-back h3{font-family:var(--serif);font-weight:400;font-size:clamp(21px,1.9vw,26px);line-height:1.1;margin:0 0 16px;letter-spacing:.002em}
+.fc-back ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.fc-back li{font-family:var(--text);font-size:14.5px;line-height:1.5;color:var(--drift);padding-left:18px;position:relative}
+.fc-back li::before{content:"—";position:absolute;left:0;color:var(--teak)}
+.fc-amt{margin-top:auto;font-family:var(--serif);font-weight:400;font-size:clamp(22px,1.9vw,27px);color:var(--teak);padding-top:14px}
+.fcard[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.fc-in{transition:none}}
+
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.7fr) auto;gap:clamp(16px,3vw,54px);
+  align-items:baseline;padding-block:clamp(26px,3vw,40px);border-bottom:1px solid var(--ln-light);
+  width:100%;text-align:left;background:none;border-inline:0;border-top:0;cursor:pointer;
+  transition:background .4s var(--ease);
+}
+
+
+  display:grid;grid-template-columns:minmax(90px,.22fr) minmax(0,1.1fr) minmax(0,1fr);
+  gap:clamp(16px,3vw,56px);padding-block:clamp(30px,3.4vw,46px);border-bottom:1px solid var(--ln-dark);
+  transition:background .4s var(--ease);
+}
+.press:hover{background:var(--night-2)}
+.press .dt{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--teak);font-variation-settings:"wdth" 122;font-weight:500;padding-top:8px}
+.press .t4{max-width:30ch}
+.press p{font-size:16px;line-height:1.62;color:var(--drift);margin:0;max-width:64ch}
+
+/* ————— contact ————— */
+.contact{display:flex;flex-direction:column;align-items:center;gap:clamp(34px,4.5vw,54px);text-align:center}
+.contact .sig{justify-content:center}
+.contact .form{width:100%;max-width:760px;text-align:left}
+.contact .t2{margin:20px 0 24px}
+.dir{margin-top:clamp(30px,3.4vw,44px);border-top:1px solid var(--ln-light)}
+.dir a{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-block:15px;border-bottom:1px solid var(--ln-light);transition:background .3s var(--ease),padding-inline .3s var(--ease)}
+.dir a:hover{background:var(--glass-2);padding-inline:10px}
+.dir .k{font-size:14.5px}
+.dir .v{font-size:13px;letter-spacing:.05em;color:var(--slate)}
+.form{display:grid;gap:16px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);font-variation-settings:"wdth" 122;font-weight:500}
+.field input,.field select,.field textarea{
+  background:transparent;border:0;border-bottom:1px solid var(--ln-light);border-radius:0;
+  padding:11px 2px;font-size:16px;color:var(--night);min-height:46px;width:100%;
+  transition:border-color .3s var(--ease);appearance:none;-webkit-appearance:none;
+}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' fill='none'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%2343607A'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;cursor:pointer}
+.field textarea{min-height:110px;resize:vertical}
+.field :is(input,select,textarea):focus{border-color:var(--night);outline:none}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#9B3A31}
+.err{font-size:13.5px;color:#9B3A31;min-height:0}
+.formnote{font-family:var(--sans);font-size:13.5px;margin:0}
+.formnote.ok{color:#337ACC}
+.formnote.bad{color:#9B3A31}
+
+/* ————— footer ————— */
+footer{background:var(--night);overflow:clip}
+.foot-mark{
+  font-family:var(--serif);font-size:clamp(64px,12.5vw,196px);line-height:.95;letter-spacing:-.02em;
+  padding:clamp(60px,8vw,120px) 0 clamp(40px,5vw,70px);color:var(--foam);
+  border-bottom:1px solid var(--ln-dark);
+}
+.foot-mark i{font-family:var(--text);font-style:italic;font-weight:450;font-size:.92em;letter-spacing:-.03em;color:var(--teak)}
+.fcols{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px);padding-block:clamp(44px,5vw,66px)}
+.fcols h3{font-size:13.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teak);font-variation-settings:"wdth" 122;font-weight:600;margin:0 0 20px}
+.fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.fcols a{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122;color:var(--drift);transition:color .3s}
+.fcols a:hover{color:var(--foam)}
+.fcols .about-f .tel{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122}
+.fcols .about-f p{font-size:15.5px;color:var(--drift);max-width:32ch;margin:0 0 16px}
+.social{display:flex;gap:22px;margin-top:22px}
+.social a{display:inline-flex;align-items:center;gap:9px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122;color:var(--drift);transition:color .3s}
+.social a:hover{color:var(--teak)}
+.social svg{width:16px;height:16px;flex:0 0 auto}
+.fbase{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;padding-block:24px 34px;border-top:1px solid var(--ln-dark);font-size:12.5px;letter-spacing:.1em;color:var(--drift)}
+
+/* ————— reveal defaults (final states; GSAP animates FROM) ————— */
+.gs-up,.gs-fade{will-change:transform,opacity}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* ————— responsive ————— */
+@media (max-width:1060px){
+  .f1{width:clamp(85px,11vw,130px);left:20%;top:24%}
+  .f2{width:clamp(85px,11vw,130px);right:18%;bottom:14%}
+  .f3{width:clamp(85px,11vw,130px);top:9%;right:31%}
+  .svc-grid{grid-template-columns:1fr}
+  .svc{min-height:0}
+  .svc .no{margin-bottom:18px}
+  .svc .t3{margin-top:0}
+  .tenets{grid-template-columns:1fr}
+  .tenet{border-right:0;border-bottom:1px solid var(--ln-light);padding-left:0!important;padding-block:30px}
+  .tenet:last-child{border-bottom:0}
+  .fcols{grid-template-columns:1fr 1fr}
+  .fcols .about-f{grid-column:1/-1}
+}
+@media (max-width:880px){
+  .menu,.nav-cta .tel,.nav-cta .pill{display:none}
+  .burger{display:block}
+  .m-only{display:block}
+  header.open{background:var(--night)}
+  header.open::after{opacity:1}
+  header.open .menu{
+    display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;
+    background:var(--night);border-bottom:1px solid var(--ln-dark);padding:6px var(--gut) 24px;
+  }
+  header.open .menu a{padding:16px 0;border-bottom:1px solid var(--ln-dark);font-size:14px;color:var(--foam)}
+  header.open .menu a:last-child{border-bottom:0}
+  .about,.contact{grid-template-columns:1fr}
+    .statement .inner{padding-block:clamp(90px,14vw,140px)}
+  .f1{top:2%}.f2{bottom:2%}
+  .arow{grid-template-columns:1fr;gap:8px 18px}
+  .arow p{grid-column:1/-1}
+    .press{grid-template-columns:1fr;gap:10px}
+  .press p{max-width:none}
+}
+@media (max-width:560px){
+    .frow{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr}
+  .foot-mark{font-size:clamp(44px,13vw,72px)}
+}
+
+/* ————— service cards: the tide comes in ————— */
+.svc-x{position:relative;overflow:hidden;isolation:isolate}
+.svc-x .tide{position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;
+  transform:translateY(calc(100% + 24px));transition:transform 1.05s cubic-bezier(.22,.9,.28,1)}
+.svc-x .tide::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(42,109,184,.82) 0%,rgba(20,64,116,.88) 45%,rgba(6,24,41,.95) 100%),
+             radial-gradient(circle 280px at var(--mx,50%) var(--my,40%),rgba(158,219,255,.16),rgba(158,219,255,0) 68%)}
+.svc-x .wv{position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:18px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 18' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q100 2 200 10T400 10V18H0Z' fill='%232A6DB8'/%3E%3C/svg%3E") repeat-x;background-size:400px 18px;animation:hv-tide 9s linear infinite}
+@keyframes hv-tide{to{background-position-x:400px}}
+.svc-x .no,.svc-x .t3,.svc-x p{transition:color .6s,transform .9s cubic-bezier(.22,.85,.3,1)}
+@media (hover:hover){
+  .svc-x:hover{background:var(--pine)}
+  .svc-x:hover .tide{transform:translateY(0)}
+  .svc-x:hover .no{color:#337ACC}
+  .svc-x:hover p{color:rgba(255,255,255,.92)}
+  .svc-x:hover .t3,.svc-x:hover p{transform:translateY(-4px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .svc-x .wv{animation:none}
+  .svc-x .tide{transition:opacity .25s;transform:none;opacity:0}
+  .svc-x:hover .tide{opacity:1}
+}
+/* ————— directory ————— */
+.dirsec{background:var(--glass)}
+.dir-main{display:flex;flex-wrap:wrap;border-top:1px solid var(--ln-light);border-bottom:1px solid var(--ln-light);margin-top:clamp(44px,5.5vw,70px)}
+.dir-main a{display:flex;align-items:baseline;gap:16px;padding:17px 38px 17px 0;background:none;transition:color .28s}
+.dir-main a:hover{color:var(--teak-deep)}
+.dir-main .k{font-family:var(--sans);font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 122;color:var(--slate);white-space:nowrap}
+.dir-main .v{font-size:14.5px}
+.dir-group+.dir-group{margin-top:clamp(40px,5vw,64px)}
+.dir-gh{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 122;color:var(--teak-deep);margin:0 0 4px;padding-bottom:16px;border-bottom:1px solid var(--ln-light)}
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
+.pc{background:none;padding:clamp(20px,2vw,26px);border-bottom:1px solid var(--ln-light);display:flex;flex-direction:column;border-radius:3px;transition:box-shadow .32s var(--ease),background .32s var(--ease),transform .32s var(--ease)}
+@media (hover:hover){
+  .pc:hover{box-shadow:inset 0 0 0 1.5px var(--teak);background:rgba(51,122,204,.10);transform:translateY(-2px)}
+  .pc:hover .pc-name{color:var(--teak)}
+}
+.pc:focus-within{box-shadow:inset 0 0 0 1.5px var(--teak);background:rgba(51,122,204,.10)}
+.pc-name{transition:color .32s var(--ease)}
+.pc-name{font-family:var(--sans);font-weight:600;font-size:clamp(14px,1.35vw,16px);line-height:1.3;margin:0 0 9px;letter-spacing:.15em;text-transform:uppercase;font-variation-settings:"wdth" 118;color:var(--night)}
+.pc-role{font-family:var(--sans);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:400;font-variation-settings:"wdth" 118;color:var(--slate);margin:0}
+.pc-links{list-style:none;margin:15px 0 0;padding:0;display:grid;gap:9px}
+.pc-links a{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--slate);transition:color .28s;word-break:break-word}
+.pc-links a:hover{color:var(--teak-deep)}
+.pc-links svg{width:14px;height:14px;flex:0 0 auto;opacity:.6}
+/* ————— live rates band ————— */
+.rates{background:var(--night-2);border-top:1px solid var(--ln-dark);border-bottom:1px solid var(--ln-dark);scroll-margin-top:70px}
+.rates-in{padding-block:clamp(26px,3vw,40px)}
+.rates-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:clamp(16px,2vw,24px)}
+.rates-date{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 118;color:var(--drift);margin:0}
+.rates-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1px;background:var(--ln-dark);border:1px solid var(--ln-dark)}
+.rate{background:var(--night-2);padding:clamp(14px,1.6vw,22px) clamp(10px,1.2vw,18px);text-align:center}
+.rate span{display:block;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 116;color:var(--drift);margin-bottom:10px}
+.rate b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.3vw,32px);line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.rate-gap{box-shadow:inset 2px 0 0 var(--teak-deep)}
+.rates-note{font-family:var(--sans);font-size:13.5px;letter-spacing:.04em;line-height:1.6;color:var(--drift);opacity:.8;margin:clamp(12px,1.4vw,18px) 0 0}
+.rates-note a{color:var(--teak);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1060px){.rates-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.rate-gap{box-shadow:none}.rate:last-child{grid-column:span 2}}
+@media (max-width:560px){.rates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rate:last-child{grid-column:span 2}}
+@media (max-width:1240px){.nav-cta .tel{display:none}.menu{gap:clamp(12px,1.7vw,22px)}.menu a{letter-spacing:.15em}.pill{padding-inline:18px}}
+/* ————— section titles outrank their statements ————— */
+.sig-lg{
+  color:var(--teak);font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.8vw,50px);line-height:1.04;
+  letter-spacing:.004em;text-transform:none;display:block;
+  font-variation-settings:normal;margin-bottom:14px;
+}
+.sig-lg::before{display:none}
+.t2.t2-sub{font-size:clamp(19px,1.9vw,25px);line-height:1.3;letter-spacing:0;font-weight:400}
+.t2.t2-sub .msk{padding:.02em .06em;margin:-.01em -.06em}
+@media (max-width:768px){
+  .pc-links{gap:2px}
+  .pc-links a{min-height:44px;align-items:center;padding:6px 0}
+  .dir-main a{min-height:48px;align-items:center}
+  .fcols a,.social a{display:inline-flex;align-items:center;min-height:40px}
+  .tk{padding-block:14px}
+}
+/* ————— FAQ ————— */
+.faq{border-top:1px solid var(--ln-dark);max-width:1000px}
+.qa{border-bottom:1px solid var(--ln-dark)}
+.qa-q{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;width:100%;text-align:left;
+  background:none;border:0;cursor:pointer;color:var(--drift);padding:clamp(20px,2.4vw,28px) 2px;
+  font-family:var(--serif);font-size:clamp(17px,1.8vw,22px);line-height:1.3;letter-spacing:.004em;
+  transition:color .3s var(--ease)}
+.qa-q:hover,.qa-q[aria-expanded="true"]{color:#fff}
+.qa-ico{position:relative;flex:0 0 auto;width:14px;height:14px;margin-top:.35em}
+.qa-ico::before,.qa-ico::after{content:"";position:absolute;background:var(--teak);transition:transform .4s var(--ease),opacity .3s}
+.qa-ico::before{left:0;top:6.5px;width:14px;height:1.5px}
+.qa-ico::after{left:6.5px;top:0;width:1.5px;height:14px}
+.qa-q[aria-expanded="true"] .qa-ico::after{transform:rotate(90deg);opacity:0}
+.qa-a{overflow:visible}
+.qa-a[hidden]{display:none}
+.qa-a p{font-family:var(--text);font-size:clamp(15.5px,1.3vw,17.5px);line-height:1.7;color:var(--drift);
+  margin:0;padding:0 clamp(40px,5vw,70px) clamp(22px,2.6vw,32px) 0;max-width:76ch}
+/* FAQ: key fact, chart, glossary, CTA */
+.qa-q{gap:20px}
+.qa-fact{flex:0 0 auto;margin-left:auto;font-family:var(--sans);font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 118;color:var(--teak);
+  white-space:nowrap;align-self:center;transition:opacity .3s var(--ease)}
+.qa-q[aria-expanded="true"] .qa-fact{opacity:.45}
+
+.tchart{margin:22px 0 4px;padding:18px 0 4px;border-top:1px solid var(--ln-dark);max-width:620px}
+.tc-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) auto;gap:14px;align-items:center;margin-bottom:11px}
+.tc-l{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--drift);font-variation-settings:"wdth" 118}
+.tc-track{position:relative;height:7px;background:rgba(255,255,255,.09);border-radius:4px}
+.tc-bar{position:absolute;top:0;height:7px;background:var(--teak);border-radius:4px;transform-origin:left;
+  animation:tcIn .7s var(--ease) both}
+@keyframes tcIn{from{transform:scaleX(0);opacity:.4}to{transform:scaleX(1);opacity:1}}
+.tc-v{font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;color:#fff;white-space:nowrap;font-variation-settings:"wdth" 118}
+.tc-axis{display:flex;justify-content:space-between;margin-top:4px;font-family:var(--sans);font-size:10.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--drift);opacity:.65}
+
+.gl{border-bottom:1px dotted var(--teak);cursor:help;position:relative;outline:none}
+.gl::after{content:attr(data-def);position:absolute;left:50%;transform:translateX(-50%) translateY(6px);
+  bottom:calc(100% + 9px);width:min(270px,70vw);background:#0A1F33;border:1px solid var(--teak);
+  padding:11px 13px;font-family:var(--text);font-size:13.5px;line-height:1.5;color:var(--drift);
+  text-transform:none;letter-spacing:0;opacity:0;pointer-events:none;z-index:40;
+  box-shadow:0 14px 34px rgba(0,0,0,.45);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.gl:hover::after,.gl:focus-visible::after{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.faq-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:clamp(28px,3.4vw,42px)}
+.faq-cta p{margin:0;font-family:var(--serif);font-size:clamp(17px,1.7vw,21px);color:#fff}
+@media (max-width:700px){
+  .qa-fact{display:none}
+  .tc-row{grid-template-columns:1fr;gap:5px}
+  .tc-track{order:3}
+}
+/* ————— paper texture on the light chapters ————— */
+.on-light{position:relative;isolation:isolate}
+.on-light::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='180'%20height='180'><filter%20id='g'><feTurbulence%20type='fractalNoise'%20baseFrequency='.65'%20numOctaves='4'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='180'%20height='180'%20filter='url(%23g)'/></svg>");background-size:180px 180px;
+  opacity:.45;mix-blend-mode:multiply;
+}
+.on-light::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(130% 75% at 15% -5%,rgba(255,255,255,.95),rgba(255,255,255,0) 62%),
+    linear-gradient(168deg,rgba(226,235,243,0) 42%,rgba(198,214,230,.72) 100%);
+}
+/* ————— hero: centered wordmark, blurred ground ————— */
+.hero-core{text-align:center}
+.hero-kick{justify-content:center}
+.hero-mark{margin:0;display:flex;justify-content:center}
+.hero-mark img{width:min(820px,78vw);height:auto;filter:drop-shadow(0 8px 34px rgba(8,28,49,.5))}
+.hero-between{flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero-lede{margin-inline:auto}
+.hero-media img{width:104%;left:-2%;filter:saturate(.72) contrast(1.02) brightness(.86) blur(3px)}
+.hero-media::after{background:
+  linear-gradient(to bottom,rgba(8,28,49,.80) 0%,rgba(8,28,49,.50) 30%,rgba(8,28,49,.58) 62%,rgba(8,28,49,.94) 100%),
+  linear-gradient(to top,rgba(8,28,49,.62) 0%,rgba(8,28,49,0) 34%)}
+
+/* ————— hero rate ticker ————— */
+.tkr{position:relative;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16);
+  background:rgba(8,28,49,.42);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tkr-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.tk{appearance:none;background:none;border:0;border-left:1px solid rgba(255,255,255,.12);cursor:pointer;
+  padding:clamp(12px,1.5vw,18px) clamp(6px,1vw,14px);text-align:center;color:inherit;transition:background .3s}
+.tk:first-child{border-left:0}
+.tk:hover,.tk:focus-visible{background:rgba(158,219,255,.12)}
+.tk span{display:block;font-family:var(--sans);font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:500;font-variation-settings:"wdth" 118;color:var(--drift);margin-bottom:7px;white-space:nowrap}
+.tk b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(17px,1.9vw,25px);line-height:1;
+  color:#fff;font-variant-numeric:tabular-nums}
+.tk i.tkd{display:block;margin-top:6px;font-family:var(--sans);font-size:12.5px;letter-spacing:.05em;
+  font-style:normal;font-variant-numeric:tabular-nums;min-height:12px}
+.tk i.up{color:#5FCB8E}
+.tk i.dn{color:#F2797F}
+.tk i.fl{color:var(--drift);opacity:.65}
+.tkr-note{margin:0;padding:9px 14px;font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  font-variation-settings:"wdth" 118;color:var(--drift);text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+.tkpop{position:absolute;bottom:calc(100% + 12px);z-index:30;width:270px;padding:16px 18px;
+  background:rgba(8,28,49,.96);border:1px solid rgba(158,219,255,.3);backdrop-filter:blur(14px);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);text-align:left;pointer-events:none}
+.tkpop h4{margin:0 0 2px;font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;font-variation-settings:"wdth" 120;color:var(--teak)}
+.tkpop .pr{font-family:var(--serif);font-size:26px;line-height:1.1;color:#fff;font-variant-numeric:tabular-nums}
+.tkpop .chg{font-family:var(--sans);font-size:12.5px;letter-spacing:.04em;margin-left:8px}
+.tkpop .up{color:#7FD6A0}.tkpop .dn{color:#F2969A}.tkpop .fl{color:var(--drift)}
+.tkpop svg{display:block;width:100%;height:56px;margin:10px 0 8px;overflow:visible}
+.tkpop .rng{display:flex;justify-content:space-between;font-family:var(--sans);font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--drift);font-variation-settings:"wdth" 118}
+@media (max-width:900px){
+  .tkr-row{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tk:nth-child(5){border-left:0}
+  .tk:nth-child(n+5){border-top:1px solid rgba(255,255,255,.12)}
+}
+@media (max-width:560px){
+  .tkr-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tk:nth-child(odd){border-left:0}
+  .tk:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .hero-mark img{width:86vw}
+  .tkpop{width:min(270px,88vw)}
+}
+/* ————— sans-serif type overrides (Navy/Channel scheme) ————— */
+.disp{font-size:clamp(46px,7.6vw,112px);font-weight:400;letter-spacing:-.01em;line-height:.99}
+.t2{font-size:clamp(32px,4.8vw,68px);font-weight:400;letter-spacing:-.008em;line-height:1.03}
+.t3{font-weight:400;letter-spacing:0}
+.t4{font-weight:400;letter-spacing:.002em;font-size:clamp(21px,2.1vw,27px)}
+.disp i,.t2 i{font-family:var(--text);font-style:italic;font-weight:450;font-size:.94em;letter-spacing:-.028em;color:var(--teak)}
+.on-light .t2 i{color:var(--teak-deep)}
+.statement .t2 i{color:var(--teak-deep)}
+p{font-weight:400}
+.pull{font-style:italic;font-weight:500;color:var(--night)!important}
+.prod-strip .lead{font-family:var(--text);font-style:italic;font-weight:500;font-size:17px;letter-spacing:0;text-transform:none;color:var(--teak)}
+.tenet .k{font-weight:400;text-transform:none}
+.svc .no{font-weight:400;text-transform:uppercase}
+.prod-strip .lead{font-size:19px;color:var(--teak)}
+
+.q summary{font-weight:400;letter-spacing:.004em;font-size:clamp(19px,2vw,25px)}
+.press .dt{color:var(--teak)}
+.foot-mark{font-weight:400;letter-spacing:.002em}
+.foot-mark i{font-family:var(--text);font-style:italic;font-weight:450;font-size:.92em;letter-spacing:-.03em;color:var(--teak)}
+.brand b{font-weight:400;font-size:21px;letter-spacing:.01em}
+
+/* ————— logo lockup ————— */
+.brand{display:block}
+.brand-logo{height:clamp(30px,3.2vw,38px);width:auto;display:block}
+.brand-sub{display:block;margin-top:6px;font-family:var(--serif);font-size:13.5px;letter-spacing:.36em;text-transform:uppercase;font-weight:400;color:#337ACC;opacity:.92}
+header.on .brand-sub{display:none}
+header.on .brand-logo{height:26px}
+.foot-mark{border-bottom:1px solid var(--ln-dark)}
+.foot-mark img{width:min(680px,86%);height:auto;margin-inline:auto}
+
+/* ── client memo 2026-10-13 ── */
+.sig-lg{font-size:clamp(34px,4.5vw,60px)}
+.wwd-head{display:block}
+.wwd-big{font-size:clamp(40px,6vw,92px);line-height:1}
+.wwd-big .wwd-blue{color:var(--teak);white-space:nowrap}
+.wwd-big .wwd-white{color:#fff;font-size:.56em;display:block;margin-top:.22em;letter-spacing:.02em}
+@media (max-width:760px){.wwd-big .wwd-blue{white-space:normal}}
+.caps{margin-top:clamp(48px,5.6vw,80px);padding:clamp(22px,2.6vw,36px) clamp(22px,2.8vw,40px);border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.025)}
+.caps-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 24px;margin-bottom:clamp(18px,2vw,26px)}
+.caps-k{color:var(--teak)}
+.caps-note{margin:0;font-family:var(--text);font-style:italic;font-size:14.5px;color:var(--drift)}
+.caps-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2px}
+.cap{display:inline-flex;align-items:center;gap:9px;padding:12px 11px;margin:0;font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1;letter-spacing:.01em;color:var(--foam);border:1px solid transparent;transition:background .25s,border-color .25s,color .25s;min-height:44px}
+.cap svg{width:16px;height:16px;flex:0 0 auto;opacity:0;transform:translateY(-5px);transition:opacity .25s,transform .25s}
+.cap:hover,.cap:focus-visible{background:var(--teak);border-color:var(--teak);color:#fff}
+.cap:hover svg,.cap:focus-visible svg{opacity:1;transform:none}
+@media (max-width:760px){.caps-row{justify-content:flex-start}.cap{font-size:20px;padding:10px 12px}}
+.foot-tel{display:flex;justify-content:center;align-items:center;gap:16px;margin:clamp(26px,3vw,40px) auto 0;font-family:var(--serif);font-size:clamp(30px,3.6vw,48px);line-height:1;letter-spacing:.02em;color:#fff;transition:color .3s}
+.foot-tel svg{width:.78em;height:.78em;color:var(--teak)}
+.foot-tel:hover{color:var(--teak)}
+html.serif{--serif:"Instrument Serif",Georgia,"Times New Roman",serif}
+html.serif .t2 i,html.serif .disp i,html.serif .t4 i,html.serif .sig-lg i{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+html.serif .wwd-big{letter-spacing:0;text-transform:none;font-size:clamp(38px,6.2vw,92px)}
+html.serif .cap,html.serif .foot-tel{letter-spacing:0}
+#process .t2.t2-sub{font-size:clamp(27px,3.1vw,42px);line-height:1.18}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <nav class="menu" id="menu" aria-label="Primary">
+      <a href="#about">About Us</a>
+      <a href="#process">Our Process</a>
+      <a href="#what">What We Do</a>
+      <a href="#transactions">Closed Deals</a>
+      <a href="#directory">Directory</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="pill" href="#contact"><span>Connect</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═════════ HERO ═════════ -->
+<section class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img id="heroImg"
+      src="img/harbor-hero3-1600.webp"
+      srcset="img/harbor-hero3-900.webp 900w, img/harbor-hero3-1600.webp 1600w, img/harbor-hero3-2560.webp 2560w"
+      sizes="100vw" alt="" width="2560" height="1440" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero-core">
+    <div class="wrap">
+      <div class="hero-kick gs-fade"><p class="sig" style="color:#C9D0D6">Top ten HUD lender since 2013 · Harborview and its partners</p></div>
+      <h1 class="hero-mark">
+        <img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" fetchpriority="high">
+      </h1>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <div class="hero-between">
+        <p class="hero-lede gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Providing unparalleled access to capital across every asset class.</p>
+        <a class="pill gs-fade" href="#contact"><span>Connect</span></a>
+      </div>
+      <div class="tkr" id="tkr" aria-label="Live interest rates">
+        <div class="tkr-row" id="tkrRow">
+          <button class="tk" data-r="sofr"><span>SOFR</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="sofr30"><span>SOFR 30-day</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="sofr90"><span>SOFR 90-day</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y5"><span>5-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y7"><span>7-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y10"><span>10-yr UST</span><b>—</b><i class="tkd"></i></button>
+          <button class="tk" data-r="y30"><span>30-yr UST</span><b>—</b><i class="tkd"></i></button>
+        </div>
+        <p class="tkr-note"><span id="tkrDate">Loading rates…</span> · NY Fed &amp; U.S. Treasury · indicative only</p>
+        <div class="tkpop" id="tkPop" hidden aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ WHO WE ARE ═════════ -->
+<section class="on-light chapter" id="about">
+  <div class="wrap about">
+    <figure class="about-fig gs-fade" style="margin:0">
+      <img class="prlx" data-speed="0.12" src="img/about-yaletown.webp" alt="Aerial view of a city marina ringed by residential towers." width="1200" height="1500" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <p class="sig sig-lg gs-fade">About us</p>
+      <h2 class="t2 t2-sub"><span class="msk"><span>An innovative <i>partner</i>,</span></span><span class="msk"><span>not a broker.</span></span></h2>
+      <p class="body-l gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes — multifamily, healthcare, office, retail, industrial and hospitality.</p>
+      <p class="pull gs-fade" style="margin-top:1.1em">Top ten HUD lender in the country since 2013. Harborview and its partners.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SIGNATURE STATEMENT ═════════ -->
+<section class="on-light statement" id="process" aria-label="Our process">
+  <div class="czone">
+  <div class="float f1 gs-fade" data-drift="-60" aria-hidden="true"><img src="img/process-tri-1.webp" alt="" width="600" height="1200" loading="lazy" decoding="async"></div>
+  <div class="float f3 gs-fade" data-drift="-100" aria-hidden="true"><img src="img/process-tri-2.webp" alt="" width="600" height="1200" loading="lazy" decoding="async"></div>
+  <div class="float f2 gs-fade" data-drift="-40" aria-hidden="true"><img src="img/process-tri-3.webp" alt="" width="600" height="1200" loading="lazy" decoding="async"></div>
+  <div class="wrap inner">
+    <p class="sig sig-lg gs-fade" style="margin-bottom:26px">Our process</p>
+    <h2 class="t2 t2-sub">
+      <span class="msk"><span>Clarity in <i>lending</i>.</span></span>
+      <span class="msk"><span>Certainty of <i>execution</i>.</span></span>
+    </h2>
+    <p class="body-l gs-fade">We work for you. Keeping you updated every step of the way.</p>
+  </div>
+  </div>
+  <div class="wrap">
+    <div class="tenets">
+      <div class="tenet gs-up">
+        <span class="k">Our clients</span>
+        <h3 class="t4">It starts and ends with you.</h3>
+        <p>Our process starts and ends with you. Your need drives every decision.</p>
+      </div>
+      <div class="tenet gs-up">
+        <span class="k">Clarity in lending</span>
+        <h3 class="t4">No silence. No surprises.</h3>
+        <p>We work closely with our borrowers and lenders, keeping everyone updated throughout the process.</p>
+      </div>
+      <div class="tenet gs-up">
+        <span class="k">Certainty of execution</span>
+        <h3 class="t4">Experience that closes.</h3>
+        <p>Combining decades of experience, relationships and creativity to deliver customized financing solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ WHAT WE DO ═════════ -->
+<section class="on-pine chapter" id="what">
+  <div class="wrap">
+    <div class="wwd-head">
+      <div>
+        <p class="sig sig-lg gs-fade" style="margin-bottom:22px">What we do</p>
+        <h2 class="disp wwd-big"><span class="msk"><span class="wwd-blue">Debt. Equity. Advisory.</span></span><span class="msk"><span class="wwd-white">We do it all.</span></span></h2>
+      </div>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-1.webp)"><i class="wv"></i></span>
+        <span class="no">Debt</span>
+        <h3 class="t3">Customized financing</h3>
+        <p>Long-standing relationships with all major real estate capital providers.</p>
+      </article>
+      <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-2.webp)"><i class="wv"></i></span>
+        <span class="no">Equity</span>
+        <h3 class="t3">Capital aligned to the horizon</h3>
+        <p>Trusted relationships with institutional equity providers and private equity sources. We spend the time not just to raise the equity required, but to ensure the provider is a productive match for a long-term relationship.</p>
+      </article>
+      <article class="svc gs-up svc-x"><span class="tide" aria-hidden="true" style="background-image:url(img/svc-3.webp)"><i class="wv"></i></span>
+        <span class="no">Advisory</span>
+        <h3 class="t3">Critical thinking, applied</h3>
+        <p>Helping clients navigate the unique challenges facing investors and operators with both critical thinking and creativity. Our relationships with owners across all asset classes open unique opportunities to further their portfolios.</p>
+      </article>
+    </div>
+
+    <div class="caps gs-fade" id="sources">
+      <div class="caps-head"><p class="sig caps-k">Capital sources</p><p class="caps-note">Select a source to request its tear sheet.</p></div>
+      <div class="caps-row">
+        <a class="cap" href="#contact" data-sheet="HUD / FHA" aria-label="Request the HUD / FHA tear sheet"><span>HUD / FHA</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Fannie Mae DUS" aria-label="Request the Fannie Mae DUS tear sheet"><span>Fannie Mae DUS</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Freddie Mac" aria-label="Request the Freddie Mac tear sheet"><span>Freddie Mac</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="CMBS" aria-label="Request the CMBS tear sheet"><span>CMBS</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Bank" aria-label="Request the Bank tear sheet"><span>Bank</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Life Company" aria-label="Request the Life Company tear sheet"><span>Life Company</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Bridge" aria-label="Request the Bridge tear sheet"><span>Bridge</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Mezzanine" aria-label="Request the Mezzanine tear sheet"><span>Mezzanine</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+        <a class="cap" href="#contact" data-sheet="Equity" aria-label="Request the Equity tear sheet"><span>Equity</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg></a>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(64px,8vw,110px)">
+      <p class="sig sig-lg gs-fade" style="margin-bottom:34px">Asset classes</p>
+      <div class="aidx">
+        <div class="arow gs-fade">
+          <h3 class="t3">Multifamily</h3>
+          <p>Creativity and expertise across conventional, affordable and student housing — leveraging lender relationships and decades of experience.</p>
+        </div>
+        <div class="arow gs-fade">
+          <h3 class="t3">Healthcare</h3>
+          <p>Billions arranged for skilled nursing, independent living, assisted living and memory care facilities across the country.</p>
+        </div>
+        <div class="arow gs-fade">
+          <h3 class="t3">Hospitality</h3>
+          <p>From limited service to full-service luxury hotels — tailor-made financing built on a deep understanding of the industry.</p>
+        </div>
+        <div class="arow gs-fade">
+          <h3 class="t3">Office &amp; Mixed-Use</h3>
+          <p>Diverse financing solutions for mixed-use and office properties nationwide, structured around each asset's tenancy and story.</p>
+        </div>
+        <div class="arow gs-fade">
+          <h3 class="t3">Retail</h3>
+          <p>Strip centers, grocery-anchored and big-box anchored shopping centers — unique financing solutions nationwide.</p>
+        </div>
+        <div class="arow gs-fade">
+          <h3 class="t3">Industrial</h3>
+          <p>Logistics, flex and self-storage assets, financed against the operating fundamentals that actually drive value.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ TRANSACTIONS ═════════ -->
+<section class="chapter" id="transactions">
+  <div class="wrap">
+    <div class="ledger-head">
+      <div>
+        <p class="sig sig-lg gs-fade" style="margin-bottom:22px">Closed deals</p>
+        <h2 class="t2 t2-sub"><span class="msk"><span><i>Closed</i>, not pitched.</span></span></h2>
+      </div>
+      <a class="pill gs-fade" href="#contact"><span>Request the tombstone book</span></a>
+    </div>
+
+    <div class="filters gs-fade" role="group" aria-label="Filter deals by asset class">
+      <button class="filter" data-f="all" aria-pressed="true">All</button>
+      <button class="filter" data-f="healthcare" aria-pressed="false">Healthcare</button>
+      <button class="filter" data-f="multifamily" aria-pressed="false">Multifamily</button>
+      <button class="filter" data-f="retail" aria-pressed="false">Retail</button>
+      <button class="filter" data-f="hospitality" aria-pressed="false">Hospitality</button>
+      <button class="filter" data-f="office" aria-pressed="false">Office</button>
+    </div>
+
+    <div class="cards" id="dealCards">
+      <article class="fcard gs-up" data-c="retail" tabindex="0" role="button" aria-pressed="false" aria-label="Anchored retail portfolio, $102,560,000, WV · PA · NJ · TX — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-1.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Retail</span>
+            <div class="fc-meta"><b>$102,560,000</b><span>WV · PA · NJ · TX</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Life company · WV · PA · NJ · TX</span>
+            <h3>Anchored retail portfolio</h3>
+            <ul><li>Four grocery- and big-box-anchored centers</li><li>Permanent non-recourse loans</li><li>Lengthy amortization with cash-out</li><li>Recapitalized a non-US borrower's equity</li></ul>
+            <b class="fc-amt">$102,560,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="19-facility senior living portfolio, $68,300,000, Tennessee · Kentucky — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-2.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Healthcare</span>
+            <div class="fc-meta"><b>$68,300,000</b><span>Tennessee · Kentucky</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Bank · Tennessee · Kentucky</span>
+            <h3>19-facility senior living portfolio</h3>
+            <ul><li>910 beds — assisted, memory care, independent</li><li>Libor + 155 with a fee cap</li><li>Five-year term, 17-year amortization</li><li>Additional proceeds for expansion</li></ul>
+            <b class="fc-amt">$68,300,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Independent living pair, $19,168,000, Michigan · Texas — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-3.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Healthcare</span>
+            <div class="fc-meta"><b>$19,168,000</b><span>Michigan · Texas</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Balance sheet · Michigan · Texas</span>
+            <h3>Independent living pair</h3>
+            <ul><li>320 beds across two facilities</li><li>Non-recourse bridge, interest-only</li><li>Libor + 325 with a $4M cash-out</li><li>Positioned for an agency takeout</li></ul>
+            <b class="fc-amt">$19,168,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="Historic mixed-use redevelopment, $22,000,000, Dallas, Texas — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-4.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Office &amp; Mixed-Use</span>
+            <div class="fc-meta"><b>$22,000,000</b><span>Dallas, Texas</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Construction · Dallas, Texas</span>
+            <h3>Historic mixed-use redevelopment</h3>
+            <ul><li>105-year-old building, 100,000 SF</li><li>Construction loan at Libor + 3.25</li><li>Three years interest-only</li><li>National Register + LEED path</li></ul>
+            <b class="fc-amt">$22,000,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Multifamily apartments, $15,000,000, Washington — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-5.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Multifamily</span>
+            <div class="fc-meta"><b>$15,000,000</b><span>Washington</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">CMBS · Washington</span>
+            <h3>Multifamily apartments</h3>
+            <ul><li>196 stabilized units</li><li>Non-recourse with full cash-out</li><li>Near-doubled leverage at a stellar rate</li><li>Closed through the 2016 rate hikes</li></ul>
+            <b class="fc-amt">$15,000,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Boutique skilled nursing build, $14,500,000, California — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-6.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Healthcare</span>
+            <div class="fc-meta"><b>$14,500,000</b><span>California</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Construction · California</span>
+            <h3>Boutique skilled nursing build</h3>
+            <ul><li>40-bed luxury short-stay rehab</li><li>Close to 80% leverage</li><li>Prime + 1, two years interest-only</li><li>Bank syndication led by Harborview</li></ul>
+            <b class="fc-amt">$14,500,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="hospitality" tabindex="0" role="button" aria-pressed="false" aria-label="Comfort Inn refinance, $12,000,000, Washington, D.C. — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-7.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Hospitality</span>
+            <div class="fc-meta"><b>$12,000,000</b><span>Washington, D.C.</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Bank · Washington, D.C.</span>
+            <h3>Comfort Inn refinance</h3>
+            <ul><li>100 rooms in a top-50 MSA</li><li>3.9% fixed, 10-year term</li><li>25-year amortization</li><li>Relationship bank execution</li></ul>
+            <b class="fc-amt">$12,000,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Garden style apartments, $11,600,000, Oklahoma — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-8.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Multifamily</span>
+            <div class="fc-meta"><b>$11,600,000</b><span>Oklahoma</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Bridge to HUD · Oklahoma</span>
+            <h3>Garden style apartments</h3>
+            <ul><li>304 units</li><li>100% of purchase price financed</li><li>Libor + 300, 24 months interest-only</li><li>Now heading to permanent HUD debt</li></ul>
+            <b class="fc-amt">$11,600,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Skilled nursing refinance, $11,440,000, Massachusetts — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-9.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Healthcare</span>
+            <div class="fc-meta"><b>$11,440,000</b><span>Massachusetts</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">HUD 232/223(f) · Massachusetts</span>
+            <h3>Skilled nursing refinance</h3>
+            <ul><li>120 beds outside Boston</li><li>Non-recourse</li><li>Rate fixed for 35 years</li><li>Originated by Jonathan Kutner</li></ul>
+            <b class="fc-amt">$11,440,000</b>
+          </div>
+        </div>
+      </article>
+      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="New construction office, $8,200,000, New York — activate to see deal points">
+        <div class="fc-in">
+          <div class="fc-front">
+            <img src="img/deal-10.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="fc-tag">Office &amp; Mixed-Use</span>
+            <div class="fc-meta"><b>$8,200,000</b><span>New York</span></div>
+            <span class="fc-hint" aria-hidden="true">+</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-tag2">Bank · New York</span>
+            <h3>New construction office</h3>
+            <ul><li>Newly completed building</li><li>Refinanced with no operating history</li><li>30-year amortization</li><li>Closed on relationship strength</li></ul>
+            <b class="fc-amt">$8,200,000</b>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="ledger-note" id="dealCount" role="status">10 deals shown</p>
+  </div>
+</section>
+
+
+
+<!-- ═════════ NEWS + FAQ ═════════ -->
+<section class="chapter" id="news">
+  <div class="wrap">
+    <div>
+      <p class="sig sig-lg gs-fade" style="margin-bottom:22px">Clarity in lending</p>
+      <h2 class="t2 t2-sub" style="margin-bottom:clamp(36px,4.4vw,56px)"><span class="msk"><span>Asked, <i>answered</i>.</span></span></h2>
+      <div class="faq">
+        <div class="qa">
+          <button class="qa-q" id="qq0" aria-expanded="false" aria-controls="qa0">
+            <span>What separates you from your competition?</span>
+            <span class="qa-fact">One-stop shop</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa0" role="region" aria-labelledby="qq0" hidden>
+            <p>Harborview is a true one-stop shop for all commercial real estate capital. Our wide variety of debt, equity and advisory products and services truly separates us from the competition — as does our proprietary <span class="gl" tabindex="0" data-def="Subordinate debt that sits behind the senior loan, used to raise total leverage.">mezzanine</span> financing platform.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq1" aria-expanded="false" aria-controls="qa1">
+            <span>How do I get higher leverage on my transaction?</span>
+            <span class="qa-fact">+5–20 points</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa1" role="region" aria-labelledby="qq1" hidden>
+            <p>It depends on the asset class, but HUD loans offer higher leverage in general, and mezzanine options for an additional 5–20% leverage points are available from our Harborview Funding balance sheet product and our relationship lenders for most asset classes and transaction sizes. For smaller deals — under a $10M mezz check — be prepared for recourse. We always add a creative layer to the structuring, weighing leverage against rate and terms to craft the best loan for your needs.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq2" aria-expanded="false" aria-controls="qa2">
+            <span>Will an interest-only period be available, and for how long?</span>
+            <span class="qa-fact">6–24 months</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa2" role="region" aria-labelledby="qq2" hidden>
+            <p>Interest-only is typically given in new construction and substantial rehabilitation as a matter of course. The same can be had on value-add, turnaround or repositioning transactions if the need is demonstrated to the lender — generally 6 to 24 months from a bank, proportionate to the need. CMBS lenders will structure interest-only periods of 2, 3, 5 or even 7 years or longer for projects with a particularly strong credit profile.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq3" aria-expanded="false" aria-controls="qa3">
+            <span>How long does a HUD deal really take?</span>
+            <span class="qa-fact">2–4 months</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa3" role="region" aria-labelledby="qq3" hidden>
+            <p>For an <span class="gl" tabindex="0" data-def="HUD's 223(a)(7) streamlined refinance of an existing HUD-insured loan.">A7</span> refinance, either MAP or LEAN, figure 2 to 4 months including all processing and closing. A healthcare refinance into HUD — a LEAN 232(f) deal — adds about a month due to the diligence, underwriting and third parties involved. A multifamily MAP 223(f) is simpler, with timing similar to an A7. Timing is also affected by HUD office workload, which varies by season — choose a lender with a good HUD relationship, and ask about early rate lock.</p>
+          <div class="tchart" role="img" aria-label="Typical timelines: conventional loan 45–60 days; HUD A7 refinance 2–4 months; multifamily MAP 223(f) 2–4 months; healthcare LEAN 232(f) 3–5 months">
+            <div class="tc-row"><span class="tc-l">Conventional loan</span><span class="tc-track"><span class="tc-bar" style="left:25%;width:8.3%"></span></span><span class="tc-v">45–60 days</span></div>
+            <div class="tc-row"><span class="tc-l">HUD A7 refinance</span><span class="tc-track"><span class="tc-bar" style="left:33.3%;width:33.4%"></span></span><span class="tc-v">2–4 mo</span></div>
+            <div class="tc-row"><span class="tc-l">Multifamily MAP 223(f)</span><span class="tc-track"><span class="tc-bar" style="left:33.3%;width:33.4%"></span></span><span class="tc-v">2–4 mo</span></div>
+            <div class="tc-row"><span class="tc-l">Healthcare LEAN 232(f)</span><span class="tc-track"><span class="tc-bar" style="left:50%;width:33.3%"></span></span><span class="tc-v">3–5 mo</span></div>
+            <div class="tc-axis"><span>0</span><span>2</span><span>4</span><span>6 months</span></div>
+          </div>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq4" aria-expanded="false" aria-controls="qa4">
+            <span>How long does it take to close a loan?</span>
+            <span class="qa-fact">45–60 days</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa4" role="region" aria-labelledby="qq4" hidden>
+            <p>It depends on the type of loan — typically 45 to 60 days, with the exception of a HUD execution.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq5" aria-expanded="false" aria-controls="qa5">
+            <span>Is it possible to get a non-recourse loan?</span>
+            <span class="qa-fact">Yes</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa5" role="region" aria-labelledby="qq5" hidden>
+            <p>Yes. HUD, Fannie Mae, Freddie Mac, CMBS and life company loans are all <span class="gl" tabindex="0" data-def="The lender's remedy is limited to the property; the borrower isn't personally liable, subject to standard carve-outs.">non-recourse</span>, and there are banks that may offer non-recourse in certain cases.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq6" aria-expanded="false" aria-controls="qa6">
+            <span>What do you need from us to source an equity partner?</span>
+            <span class="qa-fact">Three things</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa6" role="region" aria-labelledby="qq6" hidden>
+            <p>A clear, concise overview of the deal itself; resume, background and completed-deal information on the sponsor; and an underwriting model showing current and proposed financials with equity splits and returns. We have many partners — large and small, with different appetites, target markets and return profiles — eager to see new deals from quality sponsors.</p>
+          </div>
+        </div>
+        <div class="qa">
+          <button class="qa-q" id="qq7" aria-expanded="false" aria-controls="qa7">
+            <span>What are your typical fees?</span>
+            <span class="qa-fact">Market based</span><span class="qa-ico" aria-hidden="true"></span>
+          </button>
+          <div class="qa-a" id="qa7" role="region" aria-labelledby="qq7" hidden>
+            <p>Our fees are market based, and we have never lost a deal based on fees. We offer transparency and clarity in every aspect of your transaction from start to finish, including all fees. Many of our clients tell us their savings from reduced rates, cash-out to investors or better leverage utilization far exceed any deal costs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-cta gs-fade">
+        <p>Didn't find your answer?</p>
+        <a class="pill" href="#contact" id="faqAsk"><span>Ask a principal directly</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ DIRECTORY ═════════
+     To add contact details: fill the href + <span> on the matching <li>.
+     Pattern for links: mailto:name@harborviewcp.com · tel:+15164539400 · LinkedIn profile URL.
+     People with no details yet simply render as name + title. -->
+<section class="on-light chapter dirsec" id="directory">
+  <div class="wrap">
+    <p class="sig sig-lg gs-fade" style="margin-bottom:clamp(28px,3.2vw,40px)">Directory</p>
+
+
+      <div class="dir-group">
+        <h3 class="dir-gh">Executive Team</h3>
+        <div class="pc-grid">
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Jonathan Kutner</h4>
+          <p class="pc-role">Co-Chief Executive Officer</p>
+          <ul class="pc-links"><li><a href="mailto:jkutner@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>jkutner@harborviewcp.com</span></a></li><li><a href="tel:+15164539403"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.9403</span></a></li><li><a href="https://www.linkedin.com/in/jonathan-kutner-236a5962" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Ephraim Kutner</h4>
+          <p class="pc-role">Co-Chief Executive Officer</p>
+          <ul class="pc-links"><li><a href="mailto:ekutner@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>ekutner@harborviewcp.com</span></a></li><li><a href="tel:+15164539402"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.9402</span></a></li><li><a href="https://www.linkedin.com/in/ephraim-kutner-77410894" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Morris Goldstein</h4>
+          <p class="pc-role">Chief Financial Officer</p>
+          <ul class="pc-links"><li><a href="mailto:mgoldstein@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>mgoldstein@harborviewcp.com</span></a></li><li><a href="tel:+15164539400"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.9400</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Eli Kutner</h4>
+          <p class="pc-role">Partner &amp; Managing Director</p>
+          <ul class="pc-links"><li><a href="mailto:elikutner@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>elikutner@harborviewcp.com</span></a></li><li><a href="tel:+15164539406"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.9406</span></a></li><li><a href="https://www.linkedin.com/in/eli-kutner-b07b2277" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Joseph Leitman</h4>
+          <p class="pc-role">Vice President</p>
+          <ul class="pc-links"><li><a href="mailto:jleitman@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>jleitman@harborviewcp.com</span></a></li><li><a href="tel:+15164530615"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.0615</span></a></li><li><a href="https://www.linkedin.com/in/joseph-leitman-b74228337" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Aaron Kutner</h4>
+          <p class="pc-role">Director of Operations</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/aaron-kutner-6178a374" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Shifra Leitman</h4>
+          <p class="pc-role">Director of Human Resources</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/shifra-leitman-713299111" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Rayzee Brecher</h4>
+          <p class="pc-role">Director of Marketing</p>
+          <ul class="pc-links"><li><a href="mailto:rkutner@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>rkutner@harborviewcp.com</span></a></li><li><a href="tel:+15164530602"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.0602</span></a></li><li><a href="https://www.linkedin.com/in/rayzee-kutner-5b31927b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        </div>
+      </div>
+      <div class="dir-group">
+        <h3 class="dir-gh">Originators</h3>
+        <div class="pc-grid">
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Eli Osdoba</h4>
+          <ul class="pc-links"><li><a href="mailto:eosdoba@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>eosdoba@harborviewcp.com</span></a></li><li><a href="tel:+15164530610"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.0610</span></a></li><li><a href="https://www.linkedin.com/in/eli-n-osdoba-88168075" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Sender Galbut</h4>
+          <ul class="pc-links"><li><a href="mailto:sgalbut@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>sgalbut@harborviewcp.com</span></a></li><li><a href="tel:+15619456159"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>561.945.6159</span></a></li><li><a href="https://www.linkedin.com/in/sender-galbut-083ab429a" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Eli Stahler</h4>
+          <ul class="pc-links"><li><a href="mailto:estahler@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>estahler@harborviewcp.com</span></a></li><li><a href="tel:+13052390995"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>305.239.0995</span></a></li><li><a href="https://www.linkedin.com/in/eli-stahler-91438835b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Dean Ofer</h4>
+          <ul class="pc-links"><li><a href="mailto:dofer@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>dofer@harborviewcp.com</span></a></li><li><a href="tel:+15162061805"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.206.1805</span></a></li><li><a href="https://www.linkedin.com/in/dean-ofer-7a7195a5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Mordy Kadosh</h4>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/mordy-kadosh-4b20582a5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Joseph Cavalier</h4>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/joey-cavalier-3272849" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        </div>
+      </div>
+      <div class="dir-group">
+        <h3 class="dir-gh">Underwriting &amp; Capital Markets</h3>
+        <div class="pc-grid">
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Gershon Yarmush</h4>
+          <p class="pc-role">Chief Healthcare &amp; Underwriting</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/gershonyarmush" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Raynaldo Florez</h4>
+          <p class="pc-role">Chief Underwriter, Multifamily</p>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">David Nussbaum</h4>
+          <p class="pc-role">Director of Capital Markets</p>
+          <ul class="pc-links"><li><a href="mailto:dnussbaum@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>dnussbaum@harborviewcp.com</span></a></li><li><a href="tel:+15164539411"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.9411</span></a></li><li><a href="https://www.linkedin.com/in/david-nussbaum-a186716" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Rafael Urbach</h4>
+          <p class="pc-role">Senior Analyst</p>
+          <ul class="pc-links"><li><a href="mailto:rurbach@harborviewcp.com"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="m1.9 4.2 6.1 4.3 6.1-4.3"/></svg><span>rurbach@harborviewcp.com</span></a></li><li><a href="tel:+15164530609"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5.2 2.3 6.8 5 5.5 6.4a8 8 0 0 0 4.1 4.1L11 9.2l2.7 1.6-.5 2.3a1 1 0 0 1-1.1.8C6.8 13.3 2.7 9.2 2.2 3.9a1 1 0 0 1 .8-1.1l2.2-.5Z"/></svg><span>516.453.0609</span></a></li><li><a href="https://www.linkedin.com/in/rafaelurbach" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Ben Silver</h4>
+          <p class="pc-role">Director of Equity Markets</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/silverben" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Nina Muller</h4>
+          <p class="pc-role">Director of Servicing</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/nina-lazerow-muller-8a9a0184" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        <article class="pc gs-fade">
+          <h4 class="pc-name">Ben Dickman</h4>
+          <p class="pc-role">Data Analyst</p>
+          <ul class="pc-links"><li><a href="https://www.linkedin.com/in/ben-dickman-784878207" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg><span>LinkedIn</span></a></li></ul>
+        </article>
+        </div>
+      </div>
+
+    <div class="dir-main gs-fade">
+      <a href="tel:+15164539400"><span class="k">Main line</span><span class="v">516.453.9400</span></a>
+      <a href="https://www.linkedin.com/company/harborview-capital-partners" target="_blank" rel="noopener"><span class="k">Company LinkedIn</span><span class="v">Harborview Capital Partners</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CONTACT ═════════ -->
+<section class="on-light chapter" id="contact">
+  <div class="wrap contact">
+    <div>
+      <p class="sig sig-lg gs-fade">Connect</p>
+      <h2 class="t2 t2-sub"><span class="msk"><span>Tell us about</span></span><span class="msk"><span>the <i>deal</i>.</span></span></h2>
+    </div>
+    <form class="form gs-fade" id="dealForm" novalidate>
+      <div class="frow">
+        <div class="field"><label for="nm">Name</label><input id="nm" name="name" autocomplete="name" required><span class="err" id="nm-e" aria-live="polite"></span></div>
+        <div class="field"><label for="co">Company</label><input id="co" name="company" autocomplete="organization"></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label for="em">Email</label><input id="em" type="email" name="email" autocomplete="email" required><span class="err" id="em-e" aria-live="polite"></span></div>
+        <div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="phone" autocomplete="tel"></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label for="ac">Asset class</label>
+          <select id="ac" name="asset">
+            <option>Multifamily</option><option>Healthcare</option><option>Hospitality</option>
+            <option>Office &amp; Mixed-Use</option><option>Retail</option><option>Industrial</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="ln">What you need</label>
+          <select id="ln" name="line"><option>Debt</option><option>Equity</option><option>Advisory</option><option>Not sure yet</option></select>
+        </div>
+      </div>
+      <div class="field"><label for="ms">The deal</label><textarea id="ms" name="message" placeholder="Location, size, loan request, timing…" required></textarea><span class="err" id="ms-e" aria-live="polite"></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:8px">
+        <button class="pill" type="submit"><span>Send it over</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></button>
+        <p class="formnote" id="formnote" role="status"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-mark"><img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" loading="lazy" decoding="async"></div>
+    <div class="fcols">
+      <div class="about-f">
+        <p>A full-service commercial real estate finance, equity and advisory firm. Clarity in lending. Certainty of execution.</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/company/harborview-capital-partners" target="_blank" rel="noopener" aria-label="Harborview Capital Partners on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.86v6.59h-4v-5.84c0-1.39-.03-3.18-2.02-3.18-2.02 0-2.33 1.52-2.33 3.08v5.94h-4v-11Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://wa.me/15164539400" target="_blank" rel="noopener" aria-label="Message Harborview on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.85-1.27A9.5 9.5 0 1 0 12 2.5Zm0 1.7a7.8 7.8 0 1 1-3.98 14.5l-.28-.17-2.88.75.77-2.8-.18-.29A7.8 7.8 0 0 1 12 4.2Zm-3.1 4.1c-.2 0-.5.07-.77.36-.26.29-1 .98-1 2.4s1.03 2.78 1.17 2.97c.14.19 1.98 3.03 4.8 4.24 2.36 1.01 2.84.81 3.35.76.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.07-.12-.26-.19-.54-.33-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.33.21-.6.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.23-.55-.46-.47-.63-.48h-.56Z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Who we are</h3>
+        <ul><li><a href="#about">About us</a></li><li><a href="#process">Our process</a></li></ul>
+      </div>
+      <div>
+        <h3>What we do</h3>
+        <ul><li><a href="#what">What we do</a></li><li><a href="#sources">Capital sources</a></li><li><a href="#transactions">Closed deals</a></li></ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul><li><a href="#directory">Directory</a></li><li><a href="#contact">Contact us</a></li><li><a href="#news">FAQs</a></li></ul>
+      </div>
+    </div>
+    <div class="fbase">
+      <span>© <span id="yr">2026</span> Harborview Capital Partners LLC. All rights reserved.</span>
+      <span>Debt · Equity · Advisory</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FinancialService",
+  "name":"Harborview Capital Partners",
+  "description":"Full-service commercial real estate finance, equity and advisory firm — debt, equity and advisory across multifamily, healthcare, office, retail, industrial and hospitality.",
+  "telephone":"+1-516-453-9400",
+  "foundingDate":"2013-04",
+  "slogan":"Clarity in lending. Certainty of execution.",
+  "areaServed":"US",
+  "employee":[
+    {"@type":"Person","name":"Ephraim Kutner","jobTitle":"Co-Chief Executive Officer"},
+    {"@type":"Person","name":"Jonathan Kutner","jobTitle":"Co-Chief Executive Officer"}
+  ]
+}
+</script>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ————— nav ————— */
+  var hdr = document.getElementById("hdr");
+  var burger = document.getElementById("burger");
+  window.addEventListener("scroll", function(){
+    hdr.classList.toggle("on", (window.scrollY || 0) > 30);
+  }, {passive:true});
+  hdr.classList.toggle("on", (window.scrollY || 0) > 30);
+  burger.addEventListener("click", function(){
+    var open = hdr.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  document.getElementById("menu").addEventListener("click", function(e){
+    if(e.target.tagName === "A"){ hdr.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && hdr.classList.contains("open")){
+      hdr.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.focus();
+    }
+  });
+
+  /* ————— ledger filter ————— */
+  var filters = document.querySelectorAll(".filter");
+  var deals = Array.prototype.slice.call(document.querySelectorAll(".fcard"));
+  var counter = document.getElementById("dealCount");
+  filters.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var f = btn.getAttribute("data-f");
+      filters.forEach(function(b){ b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      var shown = 0;
+      deals.forEach(function(d){
+        var match = (f === "all" || d.getAttribute("data-c") === f);
+        d.hidden = !match;
+        if(match) shown++;
+      });
+      counter.textContent = shown + (shown === 1 ? " deal shown" : " deals shown");
+      if(window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+  });
+
+  /* ————— deal card flip (tap + keyboard) ————— */
+  document.querySelectorAll(".fcard").forEach(function(card){
+    function toggle(){
+      var on = card.classList.toggle("flip");
+      card.setAttribute("aria-pressed", on ? "true" : "false");
+    }
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  /* ————— FAQ: jump to the form and focus it ————— */
+  (function(){
+    var ask = document.getElementById("faqAsk");
+    if(!ask) return;
+    ask.addEventListener("click", function(){
+      setTimeout(function(){ var n = document.getElementById("nm"); if(n) n.focus({preventScroll:true}); }, 700);
+    });
+  })();
+
+  /* ————— FAQ accordion ————— */
+  (function(){
+    var rows = Array.prototype.slice.call(document.querySelectorAll(".qa"));
+    if(!rows.length) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var animate = !!window.gsap && !reduce;
+
+    function close(row, instant){
+      var btn = row.querySelector(".qa-q"), panel = row.querySelector(".qa-a");
+      btn.setAttribute("aria-expanded","false");
+      if(instant || !animate){ panel.hidden = true; return; }
+      panel.style.overflow = "hidden";
+      gsap.to(panel, {height:0, opacity:0, duration:.32, ease:"power2.inOut",
+        onComplete:function(){ panel.hidden = true; gsap.set(panel,{clearProps:"all"}); panel.style.overflow = ""; }});
+    }
+    function open(row){
+      var btn = row.querySelector(".qa-q"), panel = row.querySelector(".qa-a");
+      btn.setAttribute("aria-expanded","true");
+      panel.hidden = false;
+      if(!animate) return;
+      panel.style.overflow = "hidden";
+      gsap.fromTo(panel, {height:0, opacity:0}, {height:"auto", opacity:1, duration:.42, ease:"power2.out",
+        onComplete:function(){ gsap.set(panel,{clearProps:"height"}); panel.style.overflow = ""; }});
+    }
+
+    rows.forEach(function(row){
+      row.querySelector(".qa-q").addEventListener("click", function(){
+        var isOpen = row.querySelector(".qa-q").getAttribute("aria-expanded") === "true";
+        if(isOpen){ close(row); return; }
+        rows.forEach(function(o){ if(o !== row && o.querySelector(".qa-q").getAttribute("aria-expanded") === "true") close(o, true); });
+        open(row);
+      });
+    });
+  })();
+
+  /* ————— form (demo validation — wire to a real endpoint before launch) ————— */
+  var form = document.getElementById("dealForm");
+  var note = document.getElementById("formnote");
+  function setErr(id, msg){
+    var input = document.getElementById(id);
+    var slot = document.getElementById(id + "-e");
+    if(slot) slot.textContent = msg || "";
+    input.setAttribute("aria-invalid", msg ? "true" : "false");
+    return !msg;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var ok = true;
+    ok = setErr("nm", document.getElementById("nm").value.trim() ? "" : "Please tell us your name.") && ok;
+    var em = document.getElementById("em").value.trim();
+    ok = setErr("em", /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em) ? "" : "Please enter a valid email address.") && ok;
+    ok = setErr("ms", document.getElementById("ms").value.trim().length > 9 ? "" : "A sentence or two about the deal helps.") && ok;
+    if(!ok){
+      note.textContent = "Please check the highlighted fields.";
+      note.className = "formnote bad";
+      form.querySelector('[aria-invalid="true"]').focus();
+      return;
+    }
+    note.textContent = "Thank you — a principal will be in touch shortly.";
+    note.className = "formnote ok";
+    form.reset();
+  });
+  form.addEventListener("input", function(e){
+    if(e.target.getAttribute("aria-invalid") === "true") setErr(e.target.id, "");
+  });
+
+  /* ————— service cards: light glint follows the cursor ————— */
+  document.querySelectorAll(".svc-x").forEach(function(card){
+    card.addEventListener("pointermove", function(e){
+      var r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      card.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
+
+  /* ————— hero rate ticker + hover history (NY Fed SOFR, U.S. Treasury) ————— */
+  (function(){
+    var row=document.getElementById("tkrRow"); if(!row) return;
+    var pop=document.getElementById("tkPop"), dateEl=document.getElementById("tkrDate");
+    var LBL={sofr:"SOFR",sofr30:"SOFR 30-day avg",sofr90:"SOFR 90-day avg",
+             y5:"5-year Treasury",y7:"7-year Treasury",y10:"10-year Treasury",y30:"30-year Treasury"};
+    var DP={sofr:2,sofr30:3,sofr90:3,y5:2,y7:2,y10:2,y30:2};
+    var series={}, latestDate=null;
+
+    function setVal(k,v){ var b=row.querySelector('[data-r="'+k+'"] b'); if(b&&v!=null) b.textContent=Number(v).toFixed(DP[k])+"%"; }
+    function nice(iso){ return new Date(iso.slice(0,10)+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+    function ym(off){ var d=new Date(); d.setDate(1); d.setMonth(d.getMonth()-off); return ""+d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2); }
+
+    function fedJSON(path){ return fetch("https://markets.newyorkfed.org/api/rates/secured/"+path).then(function(r){ if(!r.ok) throw 0; return r.json(); }); }
+
+    var jobs=[
+      fedJSON("sofr/last/120.json").then(function(j){
+        series.sofr=j.refRates.map(function(x){return {d:x.effectiveDate,v:x.percentRate};}).filter(function(x){return x.v!=null;}).reverse();
+      }),
+      fedJSON("sofrai/last/120.json").then(function(j){
+        var a=j.refRates.slice().reverse();
+        series.sofr30=a.map(function(x){return {d:x.effectiveDate,v:x.average30day};}).filter(function(x){return x.v!=null;});
+        series.sofr90=a.map(function(x){return {d:x.effectiveDate,v:x.average90day};}).filter(function(x){return x.v!=null;});
+      }),
+      Promise.all([0,1,2].map(function(off){
+        return fetch("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month="+ym(off))
+          .then(function(r){ return r.ok?r.text():""; }).catch(function(){ return ""; });
+      })).then(function(parts){
+        var map={y5:"BC_5YEAR",y7:"BC_7YEAR",y10:"BC_10YEAR",y30:"BC_30YEAR"};
+        Object.keys(map).forEach(function(k){ series[k]=[]; });
+        parts.reverse().forEach(function(t){
+          t.split("<entry>").slice(1).forEach(function(e){
+            var dm=e.match(/<d:NEW_DATE[^>]*>([^<]+)</); if(!dm) return;
+            Object.keys(map).forEach(function(k){
+              var m=e.match(new RegExp("<d:"+map[k]+"[^>]*>([^<]+)<"));
+              if(m && m[1]!=="") series[k].push({d:dm[1], v:parseFloat(m[1])});
+            });
+          });
+        });
+      })
+    ];
+
+    Promise.allSettled(jobs).then(function(){
+      Object.keys(LBL).forEach(function(k){
+        var a=series[k];
+        if(!a || !a.length) return;
+        var last=a[a.length-1];
+        setVal(k, last.v);
+        if(!latestDate || last.d>latestDate) latestDate=last.d;
+        var slot=row.querySelector('[data-r="'+k+'"] .tkd');
+        if(slot && a.length>1){
+          var d=last.v-a[a.length-2].v, eps=Math.pow(10,-DP[k])/2;
+          var cls=d>eps?"up":(d<-eps?"dn":"fl");
+          var arrow=d>eps?"\u25B2":(d<-eps?"\u25BC":"\u2014");
+          slot.className="tkd "+cls;
+          slot.textContent=(cls==="fl")?"":(arrow+" "+Math.abs(d).toFixed(DP[k]));
+        }
+      });
+      dateEl.textContent = latestDate ? ("As of "+nice(latestDate)) : "Rates unavailable";
+    });
+
+    function spark(a){
+      var w=234,h=56,vs=a.map(function(x){return x.v;});
+      var lo=Math.min.apply(null,vs), hi=Math.max.apply(null,vs), sp=(hi-lo)||1;
+      var pts=a.map(function(x,i){ return [(i/(a.length-1||1))*w, h-((x.v-lo)/sp)*h]; });
+      var d=pts.map(function(p,i){ return (i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1); }).join(" ");
+      var area=d+" L"+w+" "+h+" L0 "+h+" Z";
+      return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-hidden="true">'+
+        '<path d="'+area+'" fill="rgba(158,219,255,.14)"/>'+
+        '<path d="'+d+'" fill="none" stroke="#337ACC" stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'+
+        '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.6" fill="#337ACC"/></svg>';
+    }
+
+    function show(btn){
+      var k=btn.getAttribute("data-r"), a=series[k];
+      if(!a || a.length<2){ return; }
+      var last=a[a.length-1], first=a[0], diff=last.v-first.v;
+      var vs=a.map(function(x){return x.v;});
+      var cls=diff>0.001?"up":(diff<-0.001?"dn":"fl"), arrow=diff>0.001?"▲":(diff<-0.001?"▼":"—");
+      pop.innerHTML='<h4>'+LBL[k]+'</h4>'+
+        '<div><span class="pr">'+last.v.toFixed(DP[k])+'%</span>'+
+        '<span class="chg '+cls+'">'+arrow+" "+Math.abs(diff).toFixed(DP[k])+'</span></div>'+
+        spark(a)+
+        '<div class="rng"><span>'+nice(first.d)+'</span><span>Low '+Math.min.apply(null,vs).toFixed(DP[k])+' · High '+Math.max.apply(null,vs).toFixed(DP[k])+'</span></div>';
+      pop.hidden=false; pop.setAttribute("aria-hidden","false");
+      var tw=document.getElementById("tkr").getBoundingClientRect(), br=btn.getBoundingClientRect();
+      var x=br.left-tw.left+br.width/2-pop.offsetWidth/2;
+      pop.style.left=Math.max(8,Math.min(x,tw.width-pop.offsetWidth-8))+"px";
+    }
+    function hide(){ pop.hidden=true; pop.setAttribute("aria-hidden","true"); }
+
+    row.querySelectorAll(".tk").forEach(function(btn){
+      btn.addEventListener("pointerenter",function(){ show(btn); });
+      btn.addEventListener("focus",function(){ show(btn); });
+      btn.addEventListener("pointerleave",hide);
+      btn.addEventListener("blur",hide);
+      btn.addEventListener("click",function(){ pop.hidden ? show(btn) : hide(); });
+    });
+  })();
+
+  /* ————— motion ————— */
+  if(!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  var mm = gsap.matchMedia();
+
+  mm.add("(prefers-reduced-motion: reduce)", function(){
+    gsap.set(".msk > span, .gs-up, .gs-fade", {clearProps:"all"});
+  });
+
+  mm.add("(prefers-reduced-motion: no-preference)", function(){
+
+    /* hero entrance */
+    var intro = gsap.timeline({defaults:{ease:"power4.out"}});
+    intro
+      .from("#heroImg", {scale:1.12, duration:2.4, ease:"power2.out"}, 0)
+      .from(".hero-mark img", {opacity:0, y:26, scale:.965, duration:1.5, ease:"power3.out"}, .25)
+      .from(".hero-kick", {opacity:0, y:14, duration:.9}, .55)
+      .from(".hero-between > *", {opacity:0, y:18, duration:.9, stagger:.1}, .8)
+      .from(".tkr", {opacity:0, y:22, duration:1, ease:"power3.out"}, .95);
+
+    /* hero settles back as you scroll away */
+    gsap.to(".hero-media img", {
+      yPercent:-10, ease:"none",
+      scrollTrigger:{trigger:".hero", start:"top top", end:"bottom top", scrub:true}
+    });
+
+    /* masked headline lines everywhere below the hero */
+    document.querySelectorAll("section:not(.hero) .msk > span").forEach(function(line){
+      gsap.from(line, {
+        yPercent:112, duration:1.15, ease:"power4.out",
+        scrollTrigger:{trigger:line.parentNode, start:"top 86%"}
+      });
+    });
+
+    /* generic rises + fades, batched */
+    ScrollTrigger.batch(".gs-up", {
+      start:"top 88%",
+      once:true,
+      onEnter:function(els){ gsap.fromTo(els, {opacity:0, y:34}, {opacity:1, y:0, duration:1.1, stagger:.09, ease:"power3.out", overwrite:true}); }
+    });
+    ScrollTrigger.batch(".gs-fade", {
+      start:"top 90%",
+      once:true,
+      onEnter:function(els){ gsap.fromTo(els, {opacity:0, y:16}, {opacity:1, y:0, duration:1.0, stagger:.07, ease:"power2.out", overwrite:true}); }
+    });
+
+    /* signature: drifting collage crops (scrubbed, per-image speed) */
+    document.querySelectorAll(".statement [data-drift]").forEach(function(f){
+      gsap.to(f, {
+        y: parseFloat(f.getAttribute("data-drift") || "-60"),
+        ease:"none",
+        scrollTrigger:{trigger:".statement", start:"top bottom", end:"bottom top", scrub:.6}
+      });
+    });
+
+    /* interior photo parallax */
+    document.querySelectorAll("img.prlx").forEach(function(img){
+      var speed = parseFloat(img.getAttribute("data-speed") || "0.12");
+      gsap.fromTo(img, {yPercent:-speed*100/2}, {
+        yPercent:speed*100/2, ease:"none",
+        scrollTrigger:{trigger:img.parentNode, start:"top bottom", end:"bottom top", scrub:true}
+      });
+    });
+
+    /* footer wordmark eases up */
+    gsap.from(".foot-mark", {
+      yPercent:30, opacity:0, duration:1.2, ease:"power3.out",
+      scrollTrigger:{trigger:"footer", start:"top 82%"}
+    });
+  });
+
+  window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
+})();
+
+(function(){var caps=document.querySelectorAll(".cap");if(!caps.length)return;
+caps.forEach(function(a){a.addEventListener("click",function(){var ta=document.querySelector("#contact textarea");if(!ta)return;
+var want="Please send the "+a.getAttribute("data-sheet")+" tear sheet.";if(ta.value.indexOf(want)===-1)ta.value=(ta.value?ta.value.trim()+"\n":"")+want;
+setTimeout(function(){ta.focus()},700);});});})();
+</script>
+</body>
+</html>
