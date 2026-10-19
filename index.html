@@ -517,8 +517,8 @@ footer{background:var(--night);overflow:clip}
 .on-light{position:relative;isolation:isolate}
 .on-light::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='180'%20height='180'><filter%20id='g'><feTurbulence%20type='fractalNoise'%20baseFrequency='.65'%20numOctaves='4'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='180'%20height='180'%20filter='url(%23g)'/></svg>");background-size:180px 180px;
-  opacity:.45;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='210' viewBox='0 0 420 210' fill='none' stroke='%23081C31' stroke-width='.8' stroke-opacity='.085' stroke-linecap='round'%3E%3Cpath d='M-420 18C-315 3 -315 3 -210 18S-105 32 0 18M0 18C105 3 105 3 210 18S315 32 420 18M420 18C525 3 525 3 630 18S735 32 840 18'/%3E%3Cpath d='M-575 52C-470 34 -470 34 -365 52S-260 71 -155 52M-155 52C-50 34 -50 34 55 52S160 71 265 52M265 52C370 34 370 34 475 52S580 71 685 52'/%3E%3Cpath d='M-731 88C-626 65 -626 65 -521 88S-416 110 -311 88M-311 88C-206 65 -206 65 -101 88S4 110 109 88M109 88C214 65 214 65 319 88S424 110 529 88'/%3E%3Cpath d='M-466 122C-361 108 -361 108 -256 122S-151 137 -46 122M-46 122C59 108 59 108 164 122S269 137 374 122M374 122C479 108 479 108 584 122S689 137 794 122'/%3E%3Cpath d='M-622 158C-517 139 -517 139 -412 158S-307 176 -202 158M-202 158C-97 139 -97 139 8 158S113 176 218 158M218 158C323 139 323 139 428 158S533 176 638 158'/%3E%3Cpath d='M-777 192C-672 170 -672 170 -567 192S-462 215 -357 192M-357 192C-252 170 -252 170 -147 192S-42 215 63 192M63 192C168 170 168 170 273 192S378 215 483 192'/%3E%3C/svg%3E");background-size:420px 210px;
+  opacity:1;mix-blend-mode:multiply;
 }
 .on-light::after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
@@ -635,6 +635,18 @@ html.serif .t2 i,html.serif .disp i,html.serif .t4 i,html.serif .sig-lg i{font-f
 html.serif .wwd-big{letter-spacing:0;text-transform:none;font-size:clamp(38px,6.2vw,92px)}
 html.serif .cap,html.serif .foot-tel{letter-spacing:0}
 #process .t2.t2-sub{font-size:clamp(27px,3.1vw,42px);line-height:1.18}
+
+/* ── Rikki notes 2026-10-18 ── */
+.wwd-head{text-align:center}
+.wwd-head .sig-lg{text-align:center}
+.tenet .k{font-size:clamp(30px,3.3vw,44px);margin-bottom:12px}
+.tenet .t4{font-size:clamp(17px,1.6vw,20px)}
+.tenet p{font-size:17px}
+.statement .inner{position:relative}
+.statement .inner::before{content:"";position:absolute;z-index:-1;inset:6% -6%;pointer-events:none;
+  background:radial-gradient(52% 50% at 50% 50%,rgba(238,243,247,.80) 0%,rgba(238,243,247,.50) 40%,rgba(238,243,247,0) 72%)}
+.statement .sig-lg,.statement .t2,.statement .body-l{text-shadow:0 0 10px rgba(238,243,247,1),0 0 22px rgba(238,243,247,.95),0 2px 34px rgba(238,243,247,.9)}
+.statement .body-l{color:var(--night);font-weight:450}
 </style>
 </head>
 <body>
@@ -849,7 +861,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="retail" tabindex="0" role="button" aria-pressed="false" aria-label="Anchored retail portfolio, $102,560,000, WV · PA · NJ · TX — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-1.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-1.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Retail</span>
             <div class="fc-meta"><b>$102,560,000</b><span>WV · PA · NJ · TX</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -865,7 +877,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="19-facility senior living portfolio, $68,300,000, Tennessee · Kentucky — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-2.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-2.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$68,300,000</b><span>Tennessee · Kentucky</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -881,7 +893,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Independent living pair, $19,168,000, Michigan · Texas — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-3.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-3.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$19,168,000</b><span>Michigan · Texas</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -897,7 +909,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="Historic mixed-use redevelopment, $22,000,000, Dallas, Texas — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-4.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-4.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Office &amp; Mixed-Use</span>
             <div class="fc-meta"><b>$22,000,000</b><span>Dallas, Texas</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -913,7 +925,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Multifamily apartments, $15,000,000, Washington — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-5.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-5.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Multifamily</span>
             <div class="fc-meta"><b>$15,000,000</b><span>Washington</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -929,7 +941,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Boutique skilled nursing build, $14,500,000, California — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-6.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-6.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$14,500,000</b><span>California</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -945,7 +957,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="hospitality" tabindex="0" role="button" aria-pressed="false" aria-label="Comfort Inn refinance, $12,000,000, Washington, D.C. — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-7.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-7.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Hospitality</span>
             <div class="fc-meta"><b>$12,000,000</b><span>Washington, D.C.</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -961,7 +973,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Garden style apartments, $11,600,000, Oklahoma — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-8.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-8.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Multifamily</span>
             <div class="fc-meta"><b>$11,600,000</b><span>Oklahoma</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -977,7 +989,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Skilled nursing refinance, $11,440,000, Massachusetts — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-9.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-9.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$11,440,000</b><span>Massachusetts</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -993,7 +1005,7 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
       <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="New construction office, $8,200,000, New York — activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-10.webp?v=3" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            <img src="img/deal-10.webp?v=4" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Office &amp; Mixed-Use</span>
             <div class="fc-meta"><b>$8,200,000</b><span>New York</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
