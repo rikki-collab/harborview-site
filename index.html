@@ -714,6 +714,17 @@ footer .fcols .about-f{grid-column:1/-1}
 footer .fcols .social{justify-content:center;margin-top:0}
 footer .fbase{justify-content:center;text-align:center}
 @media (max-width:700px){footer .fcols{grid-template-columns:1fr}}
+
+/* ————— service cards: title sinks into the tide ————— */
+.svc-x{--tide:#1D4A7E}
+.svc-x .tide::after{background:
+  linear-gradient(to bottom,var(--tide) 0%,var(--tide) 30%,rgba(16,46,82,.9) 62%,rgba(6,24,41,.96) 100%),
+  radial-gradient(circle 280px at var(--mx,50%) var(--my,40%),rgba(158,219,255,.12),rgba(158,219,255,0) 68%)}
+.svc-x .wv{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 18' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q100 2 200 10T400 10V18H0Z' fill='%231D4A7E'/%3E%3C/svg%3E")}
+.svc-x .no{transition:color .5s .35s}
+@media (hover:hover){
+  .svc-grid .svc-x:hover .no{color:var(--tide)}
+}
 </style>
 </head>
 <body>
