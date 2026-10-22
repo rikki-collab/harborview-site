@@ -513,20 +513,16 @@ footer{background:var(--night);overflow:clip}
   .tc-row{grid-template-columns:1fr;gap:5px}
   .tc-track{order:3}
 }
-/* ————— paper texture on the light chapters ————— */
-.on-light{position:relative;isolation:isolate}
+/* ————— water texture on the light chapters ————— */
+.on-light{position:relative;isolation:isolate;background:#DEE9F3}
 .on-light::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='210' viewBox='0 0 420 210' fill='none' stroke='%23081C31' stroke-width='.8' stroke-opacity='.04' stroke-linecap='round'%3E%3Cpath d='M-420 18C-315 3 -315 3 -210 18S-105 32 0 18M0 18C105 3 105 3 210 18S315 32 420 18M420 18C525 3 525 3 630 18S735 32 840 18'/%3E%3Cpath d='M-575 52C-470 34 -470 34 -365 52S-260 71 -155 52M-155 52C-50 34 -50 34 55 52S160 71 265 52M265 52C370 34 370 34 475 52S580 71 685 52'/%3E%3Cpath d='M-731 88C-626 65 -626 65 -521 88S-416 110 -311 88M-311 88C-206 65 -206 65 -101 88S4 110 109 88M109 88C214 65 214 65 319 88S424 110 529 88'/%3E%3Cpath d='M-466 122C-361 108 -361 108 -256 122S-151 137 -46 122M-46 122C59 108 59 108 164 122S269 137 374 122M374 122C479 108 479 108 584 122S689 137 794 122'/%3E%3Cpath d='M-622 158C-517 139 -517 139 -412 158S-307 176 -202 158M-202 158C-97 139 -97 139 8 158S113 176 218 158M218 158C323 139 323 139 428 158S533 176 638 158'/%3E%3Cpath d='M-777 192C-672 170 -672 170 -567 192S-462 215 -357 192M-357 192C-252 170 -252 170 -147 192S-42 215 63 192M63 192C168 170 168 170 273 192S378 215 483 192'/%3E%3C/svg%3E");background-size:420px 210px;
-  opacity:1;mix-blend-mode:multiply;
-  -webkit-mask-image:linear-gradient(168deg,#000 0%,#000 38%,rgba(0,0,0,.45) 58%,transparent 78%);
-  mask-image:linear-gradient(168deg,#000 0%,#000 38%,rgba(0,0,0,.45) 58%,transparent 78%);
+  background-image:url("img/water-light.webp"),url("img/water-shade.webp");
+  background-size:840px 840px;background-repeat:repeat;
 }
 .on-light::after{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:
-    radial-gradient(130% 75% at 15% -5%,rgba(255,255,255,.95),rgba(255,255,255,0) 62%),
-    linear-gradient(168deg,rgba(226,235,243,0) 42%,rgba(198,214,230,.72) 100%);
+  background:linear-gradient(180deg,rgba(222,233,243,0) 60%,rgba(200,217,233,.45) 100%);
 }
 /* ————— hero: centered wordmark, blurred ground ————— */
 .hero-core{text-align:center}
