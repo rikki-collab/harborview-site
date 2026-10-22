@@ -707,6 +707,13 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
 .fc-amt{padding-top:12px;font-size:clamp(21px,1.8vw,26px)}
 .fc-tag2{margin-bottom:12px}
 .social{flex-wrap:wrap;gap:14px 22px}
+
+/* ————— footer: centered, no paragraph ————— */
+footer .fcols{grid-template-columns:repeat(3,auto);justify-content:center;column-gap:clamp(56px,9vw,150px);row-gap:clamp(30px,3.4vw,44px);text-align:center}
+footer .fcols .about-f{grid-column:1/-1}
+footer .fcols .social{justify-content:center;margin-top:0}
+footer .fbase{justify-content:center;text-align:center}
+@media (max-width:700px){footer .fcols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1253,7 +1260,6 @@ html.serif .cap,html.serif .foot-tel{letter-spacing:0}
     <div class="foot-mark"><img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" loading="lazy" decoding="async"></div>
     <div class="fcols">
       <div class="about-f">
-        <p>A full-service commercial real estate finance, equity and advisory firm. Clarity in lending. Certainty of execution.</p>
         <div class="social">
           <a href="tel:+15164539400" aria-label="Call the Harborview main line">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>
