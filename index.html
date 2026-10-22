@@ -745,6 +745,15 @@ header .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
 header .menu{margin-left:0;justify-self:center}
 header .nav-cta{justify-self:end}
 @media (max-width:880px){header .nav{grid-template-columns:auto auto;justify-content:space-between}}
+
+/* ————— hero: grey lede in the label font, compact rates bar ————— */
+.hero-between .hero-lede{font-family:var(--sans);font-variation-settings:"wdth" 112;font-size:clamp(16px,1.2vw,18px);letter-spacing:.04em;line-height:1.7;color:#A3AEB8;max-width:50ch}
+.hero-core .hero-between{margin:clamp(22px,2.6vw,36px) 0 0}
+.tkr .tk{padding:clamp(8px,1vw,12px) clamp(6px,.8vw,12px)}
+.tkr .tk span{font-size:11px;margin-bottom:5px}
+.tkr .tk b{font-size:clamp(15px,1.4vw,19px)}
+.tkr .tk i.tkd{font-size:11px;margin-top:4px}
+.tkr .tkr-note{font-size:11px;padding:7px 14px}
 </style>
 </head>
 <body>
@@ -787,14 +796,11 @@ header .nav-cta{justify-self:end}
       <h1 class="hero-mark">
         <img src="img/logo-blue-light.png?v=2" alt="Harborview Capital Partners" width="1013" height="256" fetchpriority="high">
       </h1>
+      <div class="hero-between"><p class="hero-lede gs-fade">A full-service commercial real estate finance, equity and advisory firm. Providing unparalleled access to capital across every asset class.</p></div>
     </div>
   </div>
   <div class="hero-foot">
     <div class="wrap">
-      <div class="hero-between">
-        <p class="hero-lede gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Providing unparalleled access to capital across every asset class.</p>
-        <a class="pill gs-fade" href="#contact"><span>Connect</span></a>
-      </div>
       <div class="tkr" id="tkr" aria-label="Live interest rates">
         <div class="tkr-row" id="tkrRow">
           <button class="tk" data-r="sofr"><span>SOFR</span><b>—</b><i class="tkd"></i></button>
