@@ -904,21 +904,26 @@ header .nav-cta{justify-self:end}
   #process.statement{padding-bottom:64px}
   #process .czone .inner{padding:64px 0 26px}
   #process .inner .body-l{font-size:16px;max-width:none}
-  /* three photo cards you swipe through */
-  #process .tenets{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;border:0;
+  /* three cards, one wide photo running across them, waves that line up */
+  #process .tenets{--cw:calc(100vw - 70px);display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;border:0;
     margin-inline:calc(-1*var(--gut));padding:0 var(--gut) 4px;scroll-padding-inline:var(--gut);scrollbar-width:none}
   #process .tenets::-webkit-scrollbar{display:none}
-  #process .tenets .tenet{flex:0 0 82%;scroll-snap-align:start;border:0!important;padding:0 0 24px!important;
-    background:rgba(255,255,255,.55);border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(8,28,49,.10)}
-  #process .tenets .tenet::before{content:"";display:block;height:210px;margin-bottom:20px;background-size:cover;background-position:center;
-    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V22C330 2 270 2 200 20S70 40 0 18Z' fill='black'/%3E%3C/svg%3E") bottom/100% 22% no-repeat,linear-gradient(#000,#000) top/100% 79% no-repeat;
-    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V22C330 2 270 2 200 20S70 40 0 18Z' fill='black'/%3E%3C/svg%3E") bottom/100% 22% no-repeat,linear-gradient(#000,#000) top/100% 79% no-repeat}
-  #process .tenets .tenet:nth-child(1)::before{background-image:url(img/process-tri-1.webp)}
-  #process .tenets .tenet:nth-child(2)::before{background-image:url(img/process-tri-2.webp)}
-  #process .tenets .tenet:nth-child(3)::before{background-image:url(img/process-tri-3.webp)}
+  #process .tenets .tenet{flex:0 0 var(--cw);scroll-snap-align:start;border:0!important;padding:0 0 24px!important;
+    background:rgba(255,255,255,.55);border-radius:4px;overflow:hidden;position:relative;isolation:isolate;box-shadow:none;
+    outline:1px solid rgba(8,28,49,.08);outline-offset:-1px}
+  #process .tenets .tenet::before{content:"";display:block;position:relative;z-index:-2;height:210px;margin-bottom:20px;
+    background:url(img/process-pano.webp) no-repeat;background-size:calc(3 * var(--cw) + 24px) auto;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V20C333 0 267 0 200 20S67 40 0 20Z' fill='black'/%3E%3C/svg%3E") bottom/100% 22% no-repeat,linear-gradient(#000,#000) top/100% 79% no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V20C333 0 267 0 200 20S67 40 0 20Z' fill='black'/%3E%3C/svg%3E") bottom/100% 22% no-repeat,linear-gradient(#000,#000) top/100% 79% no-repeat}
+  #process .tenets .tenet:nth-child(1)::before{background-position:0 100%}
+  #process .tenets .tenet:nth-child(2)::before{background-position:calc(-1 * var(--cw) - 12px) 100%}
+  #process .tenets .tenet:nth-child(3)::before{background-position:calc(-2 * var(--cw) - 24px) 100%}
   #process .tenets .tenet>*{padding-inline:20px}
   #process .tenets .tenet .k{white-space:normal;font-size:24px}
   .tenet-swipe{display:flex;justify-content:space-between;margin-top:10px;font-size:9.5px;opacity:.7;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-variation-settings:"wdth" 118}
+  /* slimmer top bar once scrolled */
+  header.on .nav{height:54px}
+  header.on .hv-icon{height:30px}
 }
 </style>
 </head>
