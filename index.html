@@ -870,6 +870,31 @@ header .nav-cta{justify-self:end}
   body>#tkr .tkr-sep{display:none}
   body>#tkr .tkr-src{display:block;letter-spacing:.06em;text-transform:none;font-size:11px}
 }
+
+/* ═════════ PHONE: what we do ═════════ */
+.svc-swipe{display:none}
+@media (max-width:700px){
+  /* debt / equity / advisory: swipe cards */
+  #what .svc-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;background:none;border:0;
+    margin-inline:calc(-1*var(--gut));padding:0 var(--gut) 4px;scroll-padding-inline:var(--gut);scrollbar-width:none}
+  #what .svc-grid::-webkit-scrollbar{display:none}
+  #what .svc-grid .svc{flex:0 0 84%;scroll-snap-align:start;border:1px solid rgba(255,255,255,.16)}
+  .svc-swipe{display:flex;justify-content:space-between;margin-top:14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--drift);font-variation-settings:"wdth" 118}
+  /* capital sources: tidy two-column grid of buttons */
+  #what .caps{padding:22px 18px}
+  #what .caps-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  #what .cap{justify-content:center;text-align:center;font-size:17px;padding:13px 6px;border:1px solid rgba(255,255,255,.18);border-radius:3px}
+  #what .cap svg{display:none}
+  #what .cap:last-child:nth-child(odd){grid-column:1/-1}
+  /* asset classes: tap to open */
+  #what .arow{display:block;padding:0;cursor:pointer}
+  #what .arow .t3{display:flex;justify-content:space-between;align-items:center;margin:0;padding:18px 0;font-size:22px}
+  #what .arow .t3::after{content:"+";font-family:var(--serif);font-size:26px;line-height:1;color:var(--teak);transition:transform .3s}
+  #what .arow.open .t3::after{transform:rotate(45deg)}
+  #what .arow p{display:none;padding:0 0 20px;margin:0}
+  #what .arow.open p{display:block}
+  #what .arow:hover .t3{transform:none}
+}
 </style>
 </head>
 <body>
@@ -977,6 +1002,7 @@ header .nav-cta{justify-self:end}
         <p>Helping clients navigate the unique challenges facing investors and operators with critical thinking and creativity. Our relationships with owners across every asset class open unique opportunities to grow their portfolios.</p>
       </article>
     </div>
+    <div class="svc-swipe" aria-hidden="true"><span>Swipe for more &rarr;</span><span id="svcSwipeN">1 / 3</span></div>
 
     <div class="caps gs-fade" id="sources">
       <div class="caps-head"><p class="sig caps-k">Capital sources</p><p class="caps-note">Select a source to request its tear sheet.</p></div>
@@ -1827,6 +1853,22 @@ setTimeout(function(){ta.focus()},700);});});})();
   scrim.addEventListener('click',function(){ setRates(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') setRates(false); });
   (mq.addEventListener?mq.addEventListener('change',place):mq.addListener(place)); place();
+})();
+</script>
+
+<script>
+/* phone: what we do swipe counter + asset classes tap to open */
+(function(){
+  var g=document.querySelector('#what .svc-grid'), n=document.getElementById('svcSwipeN');
+  if(g&&n){ g.addEventListener('scroll',function(){ var cs=g.querySelectorAll('.svc'), best=0, bd=1e9;
+    cs.forEach(function(c,i){ var d=Math.abs(c.offsetLeft-g.offsetLeft-g.scrollLeft-parseFloat(getComputedStyle(g).paddingLeft||0)); if(d<bd){bd=d;best=i;} });
+    n.textContent=(best+1)+' / '+cs.length; },{passive:true}); }
+  var mq=window.matchMedia('(max-width:700px)');
+  document.querySelectorAll('#what .arow').forEach(function(r){
+    r.setAttribute('tabindex','0');
+    function t(){ if(!mq.matches) return; var o=r.classList.toggle('open'); r.setAttribute('aria-expanded',o?'true':'false'); }
+    r.addEventListener('click',t); r.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();t();} });
+  });
 })();
 </script>
 </body>
