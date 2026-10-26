@@ -851,7 +851,7 @@ header .nav-cta{justify-self:end}
   body.rates-open header{background:var(--night)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
   .m-scrim{position:fixed;inset:0;z-index:85;background:rgba(4,12,22,.6);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s linear .35s}
   body.rates-open .m-scrim{opacity:1;visibility:visible;transition:opacity .35s}
-  body>#tkr{position:fixed!important;z-index:88;top:96px;bottom:auto;left:auto;right:14px;width:250px;height:auto;margin:0;padding:16px 18px 14px;border-radius:10px;
+  body>#tkr{position:fixed!important;z-index:88;top:96px;bottom:auto;left:auto;right:14px;width:min(300px,calc(100vw - 28px));height:auto;margin:0;padding:16px 18px 14px;border-radius:10px;
     background:#fff!important;color:var(--night);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:0!important;overflow:visible;
     box-shadow:0 18px 50px rgba(0,0,0,.35);transform-origin:top right;opacity:0!important;visibility:hidden;
     transform:translateY(-8px) scale(.98)!important;transition:transform .3s,opacity .25s,visibility 0s linear .3s}
@@ -865,7 +865,10 @@ header .nav-cta{justify-self:end}
   body>#tkr .tk i.tkd{display:none}
   body>#tkr .tkpop{display:none!important}
   body>#tkr .tk{cursor:default}
-  body>#tkr .tkr-note{padding:10px 0 0;font-size:9.5px;line-height:1.5;color:var(--slate);border:0;text-align:left}
+  body>#tkr .tkr-note{padding:12px 0 0;font-size:10px;line-height:1.6;letter-spacing:.1em;color:var(--slate);border:0;text-align:left}
+  body>#tkr .tkr-note #tkrDate{display:block;color:var(--night);font-weight:600}
+  body>#tkr .tkr-sep{display:none}
+  body>#tkr .tkr-src{display:block;letter-spacing:.06em;text-transform:none;font-size:11px}
 }
 </style>
 </head>
@@ -925,7 +928,7 @@ header .nav-cta{justify-self:end}
           <button class="tk" data-r="y10"><span>10-yr UST</span><b>—</b><i class="tkd"></i></button>
           <button class="tk" data-r="y30"><span>30-yr UST</span><b>—</b><i class="tkd"></i></button>
         </div>
-        <p class="tkr-note"><span id="tkrDate">Loading rates…</span> · NY Fed &amp; U.S. Treasury · indicative only</p>
+        <p class="tkr-note"><span id="tkrDate">Loading rates…</span><span class="tkr-sep"> · </span><span class="tkr-src">NY Fed &amp; U.S. Treasury · indicative only</span></p>
         <div class="tkpop" id="tkPop" hidden aria-hidden="true"></div>
       </div>
     </div>
