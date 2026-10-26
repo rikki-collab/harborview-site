@@ -797,6 +797,28 @@ header .nav-cta{justify-self:end}
   .hero-between .hero-lede.hero-services{font-size:13px;letter-spacing:.2em;white-space:nowrap}
 }
 @media (min-width:701px){#menu .m-connect{display:none}}
+
+/* ═════════ PHONE: about us ═════════ */
+@media (max-width:700px){
+  /* about: heading, headline, Top 10, wave-cut photo, paragraph */
+  #about .about{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  #about .about>div{display:contents}
+  #about .sig-lg{order:1;text-align:left;justify-content:flex-start}
+  #about .t2{order:2;margin:14px 0 22px}
+  #about .t2.t2-sub{font-size:32px;line-height:1.15;white-space:normal}
+  #about .t10{order:3;margin:0 0 30px;border:0;padding:0;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:16px;align-items:center}
+  #about .t10-row{display:contents}
+  #about .t10-row .t10-k:first-child{display:none}
+  #about .t10-n{grid-row:1/3;font-size:92px;line-height:.78;color:var(--teak);font-family:"Instrument Serif",Georgia,serif}
+  #about .t10-n::before{content:"Top";display:block;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;line-height:1;margin-bottom:6px;color:var(--night);font-variation-settings:"wdth" 122;font-weight:600}
+  #about .t10-row .t10-k:last-child{grid-column:2;align-self:end;font-size:12.5px;line-height:1.5;padding-left:16px;border-left:1px solid var(--teak)}
+  #about .t10-p{grid-column:2;align-self:start;padding:6px 0 0 16px;border-left:1px solid var(--teak);font-size:17px}
+  #about .about-fig{order:4;aspect-ratio:4/3.4;overflow:hidden;margin:0 calc(-1*var(--gut)) 30px!important;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V22C330 2 270 2 200 20S70 40 0 18Z' fill='black'/%3E%3C/svg%3E") bottom/100% 18% no-repeat,linear-gradient(#000,#000) top/100% 83% no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0H400V22C330 2 270 2 200 20S70 40 0 18Z' fill='black'/%3E%3C/svg%3E") bottom/100% 18% no-repeat,linear-gradient(#000,#000) top/100% 83% no-repeat}
+  #about .about-fig img{width:100%;height:100%;object-fit:cover;transform:none!important}
+  #about .body-l{order:5;margin-top:0}
+}
 </style>
 </head>
 <body>
