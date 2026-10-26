@@ -835,6 +835,12 @@ header .nav-cta{justify-self:end}
   .tk span{font-size:12px}
 }
 @media (min-width:701px){.deal-swipe{display:none}#menu .m-connect{display:none}}
+
+/* phone: menu stays full-page even after scrolling (frosted bar was trapping it) */
+@media (max-width:700px){
+  header.open,header.open.on{background:var(--night)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  header.open .menu{min-height:100vh;min-height:100dvh}
+}
 </style>
 </head>
 <body>
