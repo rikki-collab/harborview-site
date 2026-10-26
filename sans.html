@@ -144,7 +144,7 @@ header.on .nav{height:66px}
 .arr{width:13px;height:13px;flex:0 0 auto;transition:transform .4s var(--ease)}
 .pill:hover .arr{transform:translateX(4px)}
 .burger{display:none;background:none;border:0;padding:12px;margin-right:-12px;cursor:pointer;color:var(--foam)}
-.burger svg{width:22px;height:22px}
+.burger svg{width:26px;height:26px}
 .m-only{display:none}
 
 /* ————— hero ————— */
@@ -781,6 +781,22 @@ header .nav-cta{justify-self:end}
 /* ————— hero: services line under the logo ————— */
 .hero-between .hero-lede.hero-services{font-family:var(--sans);font-variation-settings:"wdth" 122;text-transform:uppercase;letter-spacing:.32em;font-size:clamp(16px,1.7vw,24px);font-weight:500;color:#337ACC;max-width:none;line-height:1.4}
 
+
+/* ═════════ PHONE: homepage + menu ═════════ */
+@media (max-width:700px){
+  header.open .menu{position:fixed;inset:0;top:0;z-index:-1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    background:var(--night);padding:90px var(--gut) 40px;border:0}
+  header.open .menu{justify-self:stretch;align-self:stretch}
+  header.open .menu a{border:0;padding:14px 0;font-size:17px;letter-spacing:.2em;color:#fff}
+  header.open .menu .m-connect{display:block;color:var(--teak)}
+  header.open .menu a{display:block;width:100%;text-align:center;padding:14px 0 0}
+  header.open .menu a:last-child{padding-top:22px}
+  header.open .menu a:last-child::after{display:none}
+  header.open .menu a:not(:last-child)::after{content:"";position:static;inset:auto;transition:none;display:block;width:52px;height:9px;margin:22px auto 0;opacity:.75;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 10'%3E%3Cpath d='M1 5c6.5-5 12-5 18.5 0s12 5 18.5 0 12-5 18.5 0' fill='none' stroke='%23337ACC' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+  .menu .m-connect{display:none}
+  .hero-between .hero-lede.hero-services{font-size:13px;letter-spacing:.2em;white-space:nowrap}
+}
+@media (min-width:701px){#menu .m-connect{display:none}}
 </style>
 </head>
 <body>
@@ -797,11 +813,12 @@ header .nav-cta{justify-self:end}
       <a href="#process">Our Process</a>
       <a href="#transactions">Closed Deals</a>
       <a href="#directory">Directory</a>
+      <a class="m-connect" href="#contact">Connect</a>
     </nav>
     <div class="nav-cta">
       <a class="pill" href="#contact"><span>Connect</span></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8c1.6-1.6 3.2-1.6 4.8 0s3.2 1.6 4.8 0 3.2-1.6 4.8 0 3.2 1.6 4.8 0M2.5 16c1.6-1.6 3.2-1.6 4.8 0s3.2 1.6 4.8 0 3.2-1.6 4.8 0 3.2 1.6 4.8 0" stroke-linecap="round"/></svg>
       </button>
     </div>
   </div>
