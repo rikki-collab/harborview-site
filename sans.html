@@ -771,25 +771,6 @@ header .nav-cta{justify-self:end}
 #process .tenets .tenet .k{font-size:clamp(24px,2.4vw,35px)}
 #process .tenets .tenet .t4{font-size:clamp(21px,1.9vw,27px)}
 #process .tenets .tenet p{font-size:clamp(17px,1.3vw,19px);max-width:36ch}
-
-/* ————— Our process columns: same tide hover as What we do ————— */
-.tenet.tx{position:relative;overflow:hidden;isolation:isolate;--tide:#1D4A7E}
-@media (min-width:901px){.tenets .tenet.tx:first-child{padding-left:clamp(22px,2.6vw,44px)}}
-.tenet.tx .tide{position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;
-  transform:translateY(calc(100% + 24px));transition:transform 1.05s cubic-bezier(.22,.9,.28,1)}
-.tenet.tx .tide::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(to bottom,var(--tide) 0%,var(--tide) 50%,rgba(16,46,82,.92) 78%,rgba(6,24,41,.96) 100%)}
-.tenet.tx .wv{position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:18px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 18' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q100 2 200 10T400 10V18H0Z' fill='%231D4A7E'/%3E%3C/svg%3E") repeat-x;background-size:400px 18px;animation:hv-tide 9s linear infinite}
-.tenets .tenet.tx .k{transition:color .5s .35s}
-.tenets .tenet.tx .t4,.tenets .tenet.tx p{transition:color .6s,transform .9s cubic-bezier(.22,.85,.3,1)}
-@media (hover:hover){
-  .tenets .tenet.tx:hover .tide{transform:translateY(0)}
-  .tenets .tenet.tx:hover .k{color:var(--tide)}
-  .tenets .tenet.tx:hover .t4{color:#fff;transform:translateY(-4px)}
-  .tenets .tenet.tx:hover p{color:rgba(255,255,255,.92);transform:translateY(-4px)}
-}
-@media (prefers-reduced-motion:reduce){.tenet.tx .wv{animation:none}.tenet.tx .tide{transition:opacity .25s;transform:none;opacity:0}.tenets .tenet.tx:hover .tide{opacity:1}}
 </style>
 </head>
 <body>
@@ -961,17 +942,17 @@ header .nav-cta{justify-self:end}
   </div>
   <div class="wrap">
     <div class="tenets">
-      <div class="tenet tx gs-up"><span class="tide" aria-hidden="true" style="background-image:url(img/process-tri-1.webp)"><i class="wv"></i></span>
+      <div class="tenet gs-up">
         <span class="k">Our clients</span>
         <h3 class="t4">It starts and ends with you.</h3>
         <p>Our process starts and ends with you. Your need drives every decision.</p>
       </div>
-      <div class="tenet tx gs-up"><span class="tide" aria-hidden="true" style="background-image:url(img/process-tri-2.webp)"><i class="wv"></i></span>
+      <div class="tenet gs-up">
         <span class="k">Clarity in lending</span>
         <h3 class="t4">No silence. No surprises.</h3>
         <p>We work closely with our borrowers and lenders, keeping everyone updated throughout the process.</p>
       </div>
-      <div class="tenet tx gs-up"><span class="tide" aria-hidden="true" style="background-image:url(img/process-tri-3.webp)"><i class="wv"></i></span>
+      <div class="tenet gs-up">
         <span class="k">Certainty of execution</span>
         <h3 class="t4">Experience that closes.</h3>
         <p>Combining decades of experience, relationships and creativity to deliver customized financing solutions.</p>
