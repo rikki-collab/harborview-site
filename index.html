@@ -754,6 +754,16 @@ header .nav-cta{justify-self:end}
 .tkr .tk b{font-size:clamp(15px,1.4vw,19px)}
 .tkr .tk i.tkd{font-size:11px;margin-top:4px}
 .tkr .tkr-note{font-size:11px;padding:7px 14px}
+
+/* ————— deal card backs: amount first, everything fits ————— */
+#dealCards .fcard{container-type:inline-size}
+#dealCards .fc-back{justify-content:center;gap:0;padding:7cqi 7cqi;overflow:hidden}
+#dealCards .fc-tag2{order:0;font-size:max(10.5px,3.6cqi);letter-spacing:.14em;line-height:1.4;margin:0 0 3cqi}
+#dealCards .fc-amt{order:1;margin:0 0 3.4cqi;padding:0;font-size:max(24px,10.5cqi);line-height:1}
+#dealCards .fc-back h3{order:2;font-size:max(17px,6.6cqi);line-height:1.12;margin:0 0 4.4cqi}
+#dealCards .fc-back ul{order:3;gap:1.6cqi}
+#dealCards .fc-back li{font-size:max(12px,4.2cqi);line-height:1.38}
+#dealCards .fc-back li+li::before{width:14px;margin:0 auto 1.6cqi}
 </style>
 </head>
 <body>
@@ -967,7 +977,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="retail" tabindex="0" role="button" aria-pressed="false" aria-label="Anchored retail portfolio, $102,560,000, WV · PA · NJ · TX. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-1.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-1.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Retail</span>
             <div class="fc-meta"><b>$102,560,000</b><span>WV · PA · NJ · TX</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -983,7 +993,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="19-facility senior living portfolio, $68,300,000, Tennessee · Kentucky. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-2.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-2.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$68,300,000</b><span>Tennessee · Kentucky</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -999,7 +1009,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Independent living pair, $19,168,000, Michigan · Texas. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-3.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-3.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$19,168,000</b><span>Michigan · Texas</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1015,7 +1025,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="Historic mixed-use redevelopment, $22,000,000, Dallas, Texas. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-4.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-4.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Office &amp; Mixed-Use</span>
             <div class="fc-meta"><b>$22,000,000</b><span>Dallas, Texas</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1031,7 +1041,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Multifamily apartments, $15,000,000, Washington. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-5.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-5.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Multifamily</span>
             <div class="fc-meta"><b>$15,000,000</b><span>Washington</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1047,7 +1057,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Boutique skilled nursing build, $14,500,000, California. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-6.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-6.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$14,500,000</b><span>California</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1063,7 +1073,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="hospitality" tabindex="0" role="button" aria-pressed="false" aria-label="Comfort Inn refinance, $12,000,000, Washington, D.C.. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-7.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-7.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Hospitality</span>
             <div class="fc-meta"><b>$12,000,000</b><span>Washington, D.C.</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1079,7 +1089,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Garden style apartments, $11,600,000, Oklahoma. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-8.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-8.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Multifamily</span>
             <div class="fc-meta"><b>$11,600,000</b><span>Oklahoma</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1095,7 +1105,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Skilled nursing refinance, $11,440,000, Massachusetts. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-9.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-9.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
             <div class="fc-meta"><b>$11,440,000</b><span>Massachusetts</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
@@ -1111,7 +1121,7 @@ header .nav-cta{justify-self:end}
       <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="New construction office, $8,200,000, New York. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
-            <img src="img/deal-10.webp?v=5" alt="" width="1400" height="1400" loading="lazy" decoding="async">
+            <img src="img/deal-10.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Office &amp; Mixed-Use</span>
             <div class="fc-meta"><b>$8,200,000</b><span>New York</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
