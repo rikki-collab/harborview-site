@@ -825,6 +825,30 @@ header .nav-cta{justify-self:end}
   header.open,header.open.on{background:var(--night)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
   header.open .menu{min-height:100vh;min-height:100dvh}
 }
+
+/* ═════════ PHONE: live rates panel (like Meridian) ═════════ */
+.m-rates{display:none}
+@media (max-width:700px){
+  .m-rates{display:block;background:none;border:0;padding:6px 4px;margin-right:8px;color:#fff;cursor:pointer;
+    font-family:var(--sans);font-size:10.5px;line-height:1.15;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 118;text-align:center}
+  body.rates-open .m-rates{color:var(--teak)}
+  body.rates-open header{background:var(--night)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .m-scrim{position:fixed;inset:0;z-index:85;background:rgba(4,12,22,.6);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s linear .35s}
+  body.rates-open .m-scrim{opacity:1;visibility:visible;transition:opacity .35s}
+  body>#tkr{position:fixed!important;z-index:88;top:96px;bottom:auto;left:auto;right:14px;width:250px;height:auto;margin:0;padding:16px 18px 14px;border-radius:10px;
+    background:#fff!important;color:var(--night);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:0!important;overflow:visible;
+    box-shadow:0 18px 50px rgba(0,0,0,.35);transform-origin:top right;opacity:0!important;visibility:hidden;
+    transform:translateY(-8px) scale(.98)!important;transition:transform .3s,opacity .25s,visibility 0s linear .3s}
+  body.rates-open>#tkr{transform:none!important;opacity:1!important;visibility:visible;transition:transform .3s,opacity .25s}
+  body>#tkr::before{content:"Live interest rates";display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--teak-deep);font-variation-settings:"wdth" 122;font-weight:600;margin-bottom:8px}
+  body>#tkr .tkr-row{display:block!important;overflow:visible!important;border-top:0}
+  body>#tkr .tk{display:grid!important;grid-template-columns:1fr auto;align-items:baseline;column-gap:12px;width:100%;flex:none!important;
+    padding:8px 0!important;border:0!important;border-bottom:1px solid rgba(8,28,49,.08)!important;text-align:left;color:var(--night)}
+  body>#tkr .tk span{grid-column:1;margin:0;font-size:10.5px;letter-spacing:.1em;color:var(--slate)}
+  body>#tkr .tk b{grid-column:2;font-family:var(--serif);font-weight:400;font-size:17px;color:var(--night);font-variant-numeric:tabular-nums}
+  body>#tkr .tk i.tkd{display:none}
+  body>#tkr .tkr-note{padding:10px 0 0;font-size:9.5px;line-height:1.5;color:var(--slate);border:0;text-align:left}
+}
 </style>
 </head>
 <body>
@@ -845,6 +869,7 @@ header .nav-cta{justify-self:end}
     </nav>
     <div class="nav-cta">
       <a class="pill" href="#contact"><span>Connect</span></a>
+      <button class="m-rates" id="mRates" aria-expanded="false" aria-controls="tkr">Live<br>rates</button>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8c1.6-1.6 3.2-1.6 4.8 0s3.2 1.6 4.8 0 3.2-1.6 4.8 0 3.2 1.6 4.8 0M2.5 16c1.6-1.6 3.2-1.6 4.8 0s3.2 1.6 4.8 0 3.2-1.6 4.8 0 3.2 1.6 4.8 0" stroke-linecap="round"/></svg>
       </button>
@@ -1746,6 +1771,23 @@ header .nav-cta{justify-self:end}
 caps.forEach(function(a){a.addEventListener("click",function(){var ta=document.querySelector("#contact textarea");if(!ta)return;
 var want="Please send the "+a.getAttribute("data-sheet")+" tear sheet.";if(ta.value.indexOf(want)===-1)ta.value=(ta.value?ta.value.trim()+"\n":"")+want;
 setTimeout(function(){ta.focus()},700);});});})();
+</script>
+<script>
+/* phone: live rates move off the opening screen into a slide-out panel */
+(function(){
+  var btn=document.getElementById('mRates'), hdr=document.getElementById('hdr'), burger=document.getElementById('burger'), tkr=document.getElementById('tkr');
+  if(!btn||!tkr) return;
+  var home=tkr.parentNode, next=tkr.nextSibling, mq=window.matchMedia('(max-width:700px)');
+  var scrim=document.createElement('div'); scrim.className='m-scrim'; document.body.appendChild(scrim);
+  function place(){ if(mq.matches){ if(tkr.parentNode!==document.body) document.body.appendChild(tkr); } else { setRates(false); if(tkr.parentNode!==home) home.insertBefore(tkr,next); } }
+  function setRates(o){ document.body.classList.toggle('rates-open',o); btn.setAttribute('aria-expanded',o?'true':'false'); }
+  btn.addEventListener('click',function(){ var o=!document.body.classList.contains('rates-open');
+    if(o&&hdr.classList.contains('open')) burger.click(); setRates(o); });
+  burger.addEventListener('click',function(){ setRates(false); });
+  scrim.addEventListener('click',function(){ setRates(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setRates(false); });
+  (mq.addEventListener?mq.addEventListener('change',place):mq.addListener(place)); place();
+})();
 </script>
 </body>
 </html>
