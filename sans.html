@@ -960,6 +960,31 @@ header .nav-cta{justify-self:end}
   #what .caps::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:url("img/water-light.webp"),url("img/water-shade.webp");background-size:480px 480px;mix-blend-mode:soft-light;opacity:.9}
   #what .cap{background:rgba(6,24,41,.45)!important;border-color:rgba(255,255,255,.2)!important}
 }
+/* ═════════ PHONE: Our process — navy water page, three stacked glass cards ═════════ */
+@media (max-width:700px){
+body.m-pages #process.statement{min-height:100svh;padding:34px 0 26px!important;display:flex;flex-direction:column;justify-content:center;background:#0A2440!important}
+body.m-pages #process.statement::before{background-image:url("img/water-light.webp"),url("img/water-shade.webp")!important;background-size:480px 480px!important;background-repeat:repeat!important;mix-blend-mode:soft-light;opacity:.9;-webkit-mask:linear-gradient(#000 75%,transparent);mask:linear-gradient(#000 75%,transparent)}
+body.m-pages #process.statement::after{display:none}
+body.m-pages #process .czone .inner{padding:30px var(--gut) 24px!important}
+body.m-pages #process .sig-lg{color:var(--teak)!important;margin-bottom:14px!important}
+body.m-pages #process .t2.t2-sub{font-size:30px;line-height:1.15;color:#fff}
+body.m-pages #process .inner .body-l{color:rgba(255,255,255,.8)!important;font-size:15px!important;margin-top:14px}
+body.m-pages #process .tenets{display:grid!important;gap:10px;overflow:visible;margin:0;padding:0}
+body.m-pages #process .tenets .tenet{padding:16px 18px!important;border-radius:6px;background:rgba(255,255,255,.07);outline:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+body.m-pages #process .tenets .tenet::before{display:none}
+body.m-pages #process .tenets .tenet>*{padding:0!important}
+body.m-pages #process .tenets .tenet .k{font-size:11px!important;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans);font-weight:600;font-variation-settings:"wdth" 122;color:var(--teak)!important;margin-bottom:6px}
+body.m-pages #process .tenets .tenet .t4{font-size:20px!important;color:#fff;margin-bottom:4px}
+body.m-pages #process .tenets .tenet p{font-size:14px!important;line-height:1.5;margin:0;color:rgba(255,255,255,.72)!important}
+body.m-pages #process .tenet-swipe{display:none}
+}
+@media (max-width:700px){
+body.m-pages[data-mpage="process"] footer,body.m-pages[data-mpage="process"],html:has(body.m-pages[data-mpage="process"]){background:#0A2440}
+body.m-pages #process .tenets .tenet{background:rgba(6,24,41,.45)!important;outline-color:rgba(255,255,255,.18)!important;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+
+/* phone: footer logo always visible (its fade-in can miss on short pages) */
+@media (max-width:700px){ footer .foot-mark,footer .foot-mark img{opacity:1!important;visibility:visible!important;transform:none!important} }
 </style>
 </head>
 <body>
