@@ -953,6 +953,12 @@ header .nav-cta{justify-self:end}
   body.m-pages[data-mpage="what"] footer{background:#061829}
   body.m-pages[data-mpage="what"] #what.chapter{padding-bottom:28px}
 }
+/* phone: capital sources box with navy-tinted water */
+@media (max-width:700px){
+  #what .caps{position:relative;isolation:isolate;overflow:hidden;background:#0B2742!important;border:1px solid rgba(120,170,220,.25)!important;border-radius:4px}
+  #what .caps::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:url("img/water-light.webp"),url("img/water-shade.webp");background-size:480px 480px;mix-blend-mode:soft-light;opacity:.9}
+  #what .cap{background:rgba(6,24,41,.45)!important;border-color:rgba(255,255,255,.2)!important}
+}
 </style>
 </head>
 <body>
