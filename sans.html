@@ -984,6 +984,20 @@ body.m-pages #process .tenets .tenet{background:rgba(6,24,41,.45)!important;outl
 
 /* phone: footer logo always visible (its fade-in can miss on short pages) */
 @media (max-width:700px){ footer .foot-mark,footer .foot-mark img{opacity:1!important;visibility:visible!important;transform:none!important} }
+/* ═════════ PHONE: footer is a slim bar, same navy and feel as the top bar ═════════ */
+@media (max-width:700px){
+  footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;padding-block:0}
+  footer .foot-mark{display:none!important}
+  footer .fcols{order:2}
+  footer .fcols .social{padding:0!important;gap:4px!important}
+  footer .social a{min-height:44px;min-width:40px;justify-content:center;gap:0!important}
+  footer .social a span{display:none}
+  footer .social svg{width:17px;height:17px;color:#fff}
+  footer .fbase{order:1;border:0!important;padding:0!important;font-size:9.5px;letter-spacing:.12em;white-space:nowrap}
+  footer .fbase span:first-child{font-size:0;letter-spacing:0}
+  footer .fbase span:first-child::before{content:"\00A9  Harborview Capital Partners";font-size:9.5px;letter-spacing:.12em}
+  footer .fcols{flex:none}
+}
 </style>
 </head>
 <body>
