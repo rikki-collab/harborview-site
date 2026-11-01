@@ -1124,6 +1124,21 @@ body.m-pages main>section:not(.m-cur){display:none!important}
 body.m-pages:not(.m-sub) footer{display:none!important}
 body.m-pages .gs-fade,body.m-pages .gs-up,body.m-pages .msk>span{opacity:1!important;visibility:visible!important;transform:none!important}
 #menu a[aria-current="page"]{color:var(--teak)!important}
+/* ═════════ DESKTOP: Our process on the navy water (matches mobile) ═════════ */
+@media (min-width:701px){
+  #process.statement{background:#0A2440!important;color:#fff}
+  #process.statement::before{background-image:url("img/water-light.webp"),url("img/water-shade.webp")!important;background-size:480px 480px!important;background-repeat:repeat!important;mix-blend-mode:soft-light;opacity:.9}
+  #process.statement::after{display:none}
+  #process .float{display:none!important}
+  #process .inner::before{display:none}
+  #process .sig-lg,#process .t2,#process .body-l{text-shadow:none!important}
+  #process .sig{color:var(--teak)!important}
+  #process .t2,#process .t4{color:#fff}
+  #process .body-l,#process .tenet p{color:rgba(255,255,255,.75)!important}
+  #process .tenets,#process .tenet{border-color:rgba(255,255,255,.14)!important}
+}
+/* footer logo always visible (its fade-in can miss on single pages) */
+body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!important;visibility:visible!important;transform:none!important}
 </style>
 </head>
 <body>
