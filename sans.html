@@ -984,19 +984,16 @@ body.m-pages #process .tenets .tenet{background:rgba(6,24,41,.45)!important;outl
 
 /* phone: footer logo always visible (its fade-in can miss on short pages) */
 @media (max-width:700px){ footer .foot-mark,footer .foot-mark img{opacity:1!important;visibility:visible!important;transform:none!important} }
-/* ═════════ PHONE: footer is a slim bar, same navy and feel as the top bar ═════════ */
+/* ═════════ PHONE: mini footer — small logo on the left, contact row + copyright stacked on the right ═════════ */
 @media (max-width:700px){
-  footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;padding-block:0}
-  footer .foot-mark{display:none!important}
-  footer .fcols{order:2}
-  footer .fcols .social{padding:0!important;gap:4px!important}
-  footer .social a{min-height:44px;min-width:40px;justify-content:center;gap:0!important}
-  footer .social a span{display:none}
-  footer .social svg{width:17px;height:17px;color:#fff}
-  footer .fbase{order:1;border:0!important;padding:0!important;font-size:9.5px;letter-spacing:.12em;white-space:nowrap}
-  footer .fbase span:first-child{font-size:0;letter-spacing:0}
-  footer .fbase span:first-child::before{content:"\00A9  Harborview Capital Partners";font-size:9.5px;letter-spacing:.12em}
-  footer .fcols{flex:none}
+  footer .wrap{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:16px;align-items:center;padding-block:14px 12px}
+  footer .foot-mark{grid-row:1/3;grid-column:1;padding:0!important;margin:0!important;border:0!important}
+  footer .foot-mark img{width:92px!important;margin:0!important}
+  footer .fcols{grid-column:2;grid-row:1}
+  footer .fcols .social{justify-content:flex-end!important;flex-wrap:nowrap;gap:12px!important;padding:0!important}
+  footer .social a{font-size:8.5px;letter-spacing:.1em;gap:4px;min-height:30px}
+  footer .social svg{width:11px;height:11px}
+  footer .fbase{grid-column:2;grid-row:2;justify-content:flex-end!important;text-align:right!important;border-top:1px solid var(--ln-dark)!important;padding:6px 0 0!important;font-size:7.5px;letter-spacing:.06em}
 }
 </style>
 </head>
