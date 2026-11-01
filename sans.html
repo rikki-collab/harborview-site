@@ -1151,6 +1151,20 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   footer .social svg{width:13px;height:13px}
   footer .fbase{grid-column:2;grid-row:2;justify-content:flex-end!important;text-align:right!important;padding:8px 0 0!important;font-size:10.5px;gap:24px}
 }
+/* ═════════ DESKTOP: Closed deals cards in the mobile style (clean photo, details underneath, still flips) ═════════ */
+@media (min-width:701px){
+#dealCards .fcard{aspect-ratio:auto}
+#dealCards .fc-in{position:relative;inset:auto}
+#dealCards .fc-front{position:relative;inset:auto;overflow:visible;background:none}
+#dealCards .fc-front::after{display:none}
+#dealCards .fc-front img{display:block;aspect-ratio:1;border-radius:6px}
+#dealCards .fc-tag{top:12px;left:12px;padding:5px 9px;font-size:10px;letter-spacing:.12em;border-radius:3px}
+#dealCards .fc-meta{position:static;text-align:left;padding:12px 2px 0}
+#dealCards .fc-meta b{font-size:26px}
+#dealCards .fc-meta span{margin-top:6px;font-size:11px;padding:0}
+#dealCards .fc-hint{top:12px;right:12px;bottom:auto;width:28px;height:28px;border-radius:50%;background:rgba(8,28,49,.55);font-size:16px}
+#dealCards .fc-back{border-radius:6px}
+}
 </style>
 </head>
 <body>
