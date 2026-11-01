@@ -1059,6 +1059,42 @@ body.m-pages #dealCards .fc-meta span{margin-top:4px;font-size:9px!important;let
   body.m-pages #directory .pc-links a{color:rgba(255,255,255,.82)!important}
   body.m-pages #directory .pc-links svg{opacity:.75;color:var(--teak)}
 }
+/* ═════════ PHONE: Directory — 2-per-row team grid (initials now, photos later) + tap-to-open contact panel ═════════ */
+@media (max-width:700px){
+body.m-pages #directory .dir-gh{margin-bottom:12px!important}
+body.m-pages #directory .pc-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:18px 10px!important}
+body.m-pages #directory .pc{padding:0!important;border:0!important;background:none!important}
+body.m-pages #directory .pc .ini{display:grid;place-items:center;aspect-ratio:1;border-radius:6px;margin-bottom:9px;
+  background:linear-gradient(160deg,rgba(51,122,204,.28),rgba(8,28,49,.55));outline:1px solid rgba(255,255,255,.14);outline-offset:-1px;
+  font-family:"Instrument Serif",Georgia,serif;font-size:44px;letter-spacing:.02em;color:rgba(255,255,255,.88)}
+body.m-pages #directory .pc-name{font-size:11.5px!important;letter-spacing:.12em!important;margin:0 0 4px!important}
+body.m-pages #directory .pc-role{font-size:9px!important;letter-spacing:.1em!important;line-height:1.4}
+body.m-pages #directory .pc-links{display:none!important}
+}
+
+.pc .ini,.tsheet,.tscrim{display:none}
+@media (max-width:700px){
+  body.m-pages #directory .pc{cursor:pointer}
+  body.m-pages #directory .pc .ini{display:grid}
+  body.m-pages #directory .pc .ini img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+  .tscrim{display:block;position:fixed;inset:0;z-index:120;background:rgba(4,12,22,.6);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s linear .3s}
+  .tsheet{display:block;position:fixed;left:0;right:0;bottom:0;z-index:121;max-height:88svh;overflow:auto;background:#0B2240;color:#fff;border-radius:16px 16px 0 0;
+    transform:translateY(100%);transition:transform .38s cubic-bezier(.22,.85,.3,1);box-shadow:0 -12px 40px rgba(0,0,0,.4);padding:0 22px max(24px,env(safe-area-inset-bottom))}
+  body.team-open .tscrim{opacity:1;visibility:visible;transition:opacity .3s}
+  body.team-open .tsheet{transform:none}
+  body.team-open{overflow:hidden}
+  .tsheet .ds-grab{width:38px;height:4px;border-radius:2px;background:rgba(255,255,255,.3);margin:9px auto 0}
+  .tsheet .ds-x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:20px;line-height:1;cursor:pointer}
+  .tsheet .ts-ph{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;margin:22px 0 16px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(51,122,204,.35),rgba(8,28,49,.6));outline:1px solid rgba(255,255,255,.16);font-family:"Instrument Serif",Georgia,serif;font-size:38px;color:#fff}
+  .tsheet .ts-ph img{width:100%;height:100%;object-fit:cover}
+  .tsheet .ts-gr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 118;color:var(--teak)}
+  .tsheet h3{font-family:var(--sans);font-weight:600;font-size:17px;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 118;margin:8px 0 6px;color:#fff}
+  .tsheet .ts-role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:0 0 16px}
+  .tsheet ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.12)}
+  .tsheet li a{display:flex;align-items:center;gap:12px;min-height:52px;font-size:15px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+  .tsheet li svg{width:16px;height:16px;flex:none;color:var(--teak)}
+}
 </style>
 </head>
 <body>
@@ -2074,6 +2110,45 @@ setTimeout(function(){ta.focus()},700);});});})();
     if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' ') return;
     e.preventDefault(); e.stopPropagation(); open(c); }
   grid.addEventListener('click',hit,true); grid.addEventListener('keydown',hit,true);
+  scrim.addEventListener('click',close); sh.querySelector('.ds-x').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('hashchange',close);
+  var y0=null; sh.addEventListener('touchstart',function(e){ y0=sh.scrollTop<=0?e.touches[0].clientY:null; },{passive:true});
+  sh.addEventListener('touchend',function(e){ if(y0!==null&&e.changedTouches[0].clientY-y0>70) close(); y0=null; });
+})();
+</script>
+<script>
+/* PHONE ONLY: team grid squares (initials until photos are added) + tap a person to open their contact panel.
+   To add a photo later: put data-photo="img/team/name.webp" on that person's <article class="pc">. */
+(function(){
+  var mq=window.matchMedia('(max-width:700px)'), sec=document.getElementById('directory'); if(!sec) return;
+  var people=Array.prototype.slice.call(sec.querySelectorAll('.pc'));
+  people.forEach(function(pc){
+    var n=pc.querySelector('.pc-name').textContent.trim().split(/\s+/), sq=document.createElement('span');
+    sq.className='ini'; sq.setAttribute('aria-hidden','true');
+    var ph=pc.getAttribute('data-photo');
+    if(ph){ var im=document.createElement('img'); im.src=ph; im.alt=''; im.loading='lazy'; sq.appendChild(im); }
+    else sq.textContent=(n[0][0]+n[n.length-1][0]).toUpperCase();
+    pc.insertBefore(sq,pc.firstChild); pc.setAttribute('tabindex','0');
+  });
+  var scrim=document.createElement('div'); scrim.className='tscrim';
+  var sh=document.createElement('div'); sh.className='tsheet'; sh.setAttribute('role','dialog'); sh.setAttribute('aria-modal','true'); sh.setAttribute('aria-label','Contact details');
+  sh.innerHTML='<div class="ds-grab"></div><button class="ds-x" aria-label="Close">&times;</button><div class="ts-ph"></div><span class="ts-gr"></span><h3></h3><p class="ts-role"></p><ul></ul>';
+  document.body.appendChild(scrim); document.body.appendChild(sh);
+  var last=null;
+  function open(pc){
+    sh.querySelector('.ts-ph').innerHTML=pc.querySelector('.ini').innerHTML;
+    var g=pc.closest('.dir-group'); sh.querySelector('.ts-gr').textContent=g?g.querySelector('.dir-gh').textContent:'';
+    sh.querySelector('h3').textContent=pc.querySelector('.pc-name').textContent;
+    sh.querySelector('.ts-role').textContent=pc.querySelector('.pc-role').textContent;
+    sh.querySelector('ul').innerHTML=pc.querySelector('.pc-links').innerHTML;
+    sh.scrollTop=0; last=pc; document.body.classList.add('team-open'); sh.querySelector('.ds-x').focus({preventScroll:true});
+  }
+  function close(){ if(!document.body.classList.contains('team-open')) return; document.body.classList.remove('team-open'); if(last) last.focus({preventScroll:true}); }
+  function hit(e){ if(!mq.matches) return; var pc=e.target.closest('.pc'); if(!pc||!sec.contains(pc)) return;
+    if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' ') return;
+    e.preventDefault(); open(pc); }
+  sec.addEventListener('click',hit); sec.addEventListener('keydown',hit);
   scrim.addEventListener('click',close); sh.querySelector('.ds-x').addEventListener('click',close);
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
   window.addEventListener('hashchange',close);
