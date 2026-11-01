@@ -995,6 +995,51 @@ body.m-pages #process .tenets .tenet{background:rgba(6,24,41,.45)!important;outl
   footer .social svg{width:11px;height:11px}
   footer .fbase{grid-column:2;grid-row:2;justify-content:flex-end!important;text-align:right!important;border-top:1px solid var(--ln-dark)!important;padding:6px 0 0!important;font-size:7.5px;letter-spacing:.06em}
 }
+/* ═════════ PHONE: Closed deals — 2-per-row shopping grid + tap-to-open detail panel ═════════ */
+@media (max-width:700px){
+body.m-pages #transactions.chapter{padding:58px 0 40px!important}
+body.m-pages #transactions .sig-lg{margin-bottom:6px!important}
+body.m-pages #transactions .t2.t2-sub{font-size:24px!important}
+body.m-pages #transactions .ledger-head{margin-bottom:16px!important}
+body.m-pages #transactions .filters{flex-wrap:nowrap;overflow-x:auto;gap:6px;margin:0 calc(-1*var(--gut)) 16px;padding:0 var(--gut);scrollbar-width:none}
+body.m-pages #transactions .filters::-webkit-scrollbar{display:none}
+body.m-pages #transactions .filter{flex:none;padding:8px 14px!important;font-size:10px!important;letter-spacing:.14em;border-radius:999px;min-height:0}
+body.m-pages #dealCards .fcard{aspect-ratio:auto;perspective:none}
+body.m-pages #dealCards .fc-in{position:static;transform:none!important}
+body.m-pages #dealCards .fc-back{display:none}
+body.m-pages #dealCards .fc-front{position:relative;inset:auto;overflow:visible;background:none}
+body.m-pages #dealCards .fc-front img{display:block;aspect-ratio:1;border-radius:6px}
+body.m-pages #dealCards .fc-hint{display:none}
+}
+@media (max-width:700px){
+body.m-pages #dealCards{grid-template-columns:1fr 1fr!important;gap:18px 10px!important}
+body.m-pages #dealCards .fc-front::after{display:none}
+body.m-pages #dealCards .fc-tag{top:8px;left:8px;padding:4px 7px;font-size:8.5px;letter-spacing:.12em;border-radius:3px}
+body.m-pages #dealCards .fc-meta{position:static;text-align:left;padding:8px 2px 0}
+body.m-pages #dealCards .fc-meta b{font-size:19px!important}
+body.m-pages #dealCards .fc-meta span{margin-top:4px;font-size:9px!important;letter-spacing:.1em;padding:0;line-height:1.35}
+}
+
+.dsheet,.dscrim{display:none}
+@media (max-width:700px){
+  body.m-pages #dealCards .fcard{outline:none}
+  .dscrim{display:block;position:fixed;inset:0;z-index:120;background:rgba(4,12,22,.6);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s linear .3s}
+  .dsheet{display:block;position:fixed;left:0;right:0;bottom:0;z-index:121;max-height:88svh;overflow:auto;background:#0B2240;color:#fff;border-radius:16px 16px 0 0;
+    transform:translateY(100%);transition:transform .38s cubic-bezier(.22,.85,.3,1);box-shadow:0 -12px 40px rgba(0,0,0,.4);padding-bottom:max(22px,env(safe-area-inset-bottom))}
+  body.deal-open .dscrim{opacity:1;visibility:visible;transition:opacity .3s}
+  body.deal-open .dsheet{transform:none}
+  body.deal-open{overflow:hidden}
+  .dsheet .ds-grab{width:38px;height:4px;border-radius:2px;background:rgba(255,255,255,.3);margin:9px auto 0}
+  .dsheet .ds-x{position:absolute;top:14px;right:14px;z-index:2;width:34px;height:34px;border-radius:50%;border:0;background:rgba(8,28,49,.7);color:#fff;font-size:20px;line-height:1;cursor:pointer}
+  .dsheet .ds-img{display:block;width:calc(100% - 36px);aspect-ratio:16/10;object-fit:cover;border-radius:8px;margin:12px 18px 0}
+  .dsheet .ds-body{padding:18px 22px 0}
+  .dsheet .ds-tag{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 118;color:var(--teak)}
+  .dsheet .ds-amt{display:block;font-family:var(--serif);font-size:32px;line-height:1;margin:10px 0 8px;color:#fff}
+  .dsheet h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.2;margin:0 0 14px;color:#fff}
+  .dsheet ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.12)}
+  .dsheet li{font-size:14.5px;line-height:1.45;color:var(--drift);padding:10px 0 10px 18px;border-bottom:1px solid rgba(255,255,255,.08);position:relative}
+  .dsheet li::before{content:"";position:absolute;left:0;top:18px;width:8px;height:1px;background:var(--teak)}
+}
 </style>
 </head>
 <body>
@@ -1984,6 +2029,36 @@ setTimeout(function(){ta.focus()},700);});});})();
   (mq.addEventListener?mq.addEventListener('change',show):mq.addListener(show));
   show();
   window.addEventListener('load',function(){ if(mq.matches) show(); });
+})();
+</script>
+<script>
+/* PHONE ONLY: tapping a closed deal slides up a detail panel instead of flipping the card */
+(function(){
+  var mq=window.matchMedia('(max-width:700px)'), grid=document.getElementById('dealCards'); if(!grid) return;
+  var scrim=document.createElement('div'); scrim.className='dscrim';
+  var sh=document.createElement('div'); sh.className='dsheet'; sh.setAttribute('role','dialog'); sh.setAttribute('aria-modal','true'); sh.setAttribute('aria-label','Deal details');
+  sh.innerHTML='<div class="ds-grab"></div><button class="ds-x" aria-label="Close">&times;</button><img class="ds-img" alt=""><div class="ds-body"><span class="ds-tag"></span><b class="ds-amt"></b><h3></h3><ul></ul></div>';
+  document.body.appendChild(scrim); document.body.appendChild(sh);
+  var last=null;
+  function open(card){
+    var back=card.querySelector('.fc-back'), img=card.querySelector('.fc-front img');
+    sh.querySelector('.ds-img').src=img.currentSrc||img.src;
+    sh.querySelector('.ds-tag').textContent=(card.querySelector('.fc-tag')||{}).textContent+' \u00b7 '+back.querySelector('.fc-tag2').textContent;
+    sh.querySelector('.ds-amt').textContent=back.querySelector('.fc-amt').textContent;
+    sh.querySelector('h3').textContent=back.querySelector('h3').textContent;
+    sh.querySelector('ul').innerHTML=back.querySelector('ul').innerHTML;
+    sh.scrollTop=0; last=card; document.body.classList.add('deal-open'); sh.querySelector('.ds-x').focus({preventScroll:true});
+  }
+  function close(){ if(!document.body.classList.contains('deal-open')) return; document.body.classList.remove('deal-open'); if(last) last.focus({preventScroll:true}); }
+  function hit(e){ if(!mq.matches) return; var c=e.target.closest('.fcard'); if(!c) return;
+    if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' ') return;
+    e.preventDefault(); e.stopPropagation(); open(c); }
+  grid.addEventListener('click',hit,true); grid.addEventListener('keydown',hit,true);
+  scrim.addEventListener('click',close); sh.querySelector('.ds-x').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('hashchange',close);
+  var y0=null; sh.addEventListener('touchstart',function(e){ y0=sh.scrollTop<=0?e.touches[0].clientY:null; },{passive:true});
+  sh.addEventListener('touchend',function(e){ if(y0!==null&&e.changedTouches[0].clientY-y0>70) close(); y0=null; });
 })();
 </script>
 </body>
