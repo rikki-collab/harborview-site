@@ -1152,6 +1152,21 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
 #dealCards .fc-hint{top:12px;right:12px;bottom:auto;width:28px;height:28px;border-radius:50%;background:rgba(8,28,49,.55);font-size:16px}
 #dealCards .fc-back{border-radius:6px}
 }
+/* ═════════ DESKTOP: Our process — content moved down to center it; the three points as frosted cards ═════════ */
+@media (min-width:701px){
+#process .czone{padding-top:80px}
+#process.statement{padding-bottom:80px!important}
+#process .float{margin-top:56px}
+#process .tenets{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:22px;border:0!important;margin-top:10px;margin-bottom:0;counter-reset:tn}
+#process .tenets .tenet{counter-increment:tn;position:relative;padding:34px 32px 36px!important;border:0!important;border-radius:10px;
+  background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  box-shadow:0 14px 40px rgba(8,28,49,.08);outline:1px solid rgba(255,255,255,.7);outline-offset:-1px}
+#process .tenets .tenet::before{content:"0" counter(tn);display:block;font-family:"Instrument Serif",Georgia,serif;font-size:44px;line-height:1;color:var(--teak);margin-bottom:14px}
+#process .tenets .tenet .k{font-family:var(--sans)!important;font-size:12px!important;letter-spacing:.2em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 122;color:var(--teak-deep)!important;margin-bottom:10px;white-space:normal}
+#process .tenets .tenet .k::after{content:"";display:block;width:46px;height:9px;margin-top:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 10'%3E%3Cpath d='M1 5c6.5-5 12-5 18.5 0s12 5 18.5 0 12-5 18.5 0' fill='none' stroke='%23337ACC' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") left/contain no-repeat}
+#process .tenets .tenet .t4{font-size:25px!important;margin:4px 0 10px;color:var(--night)}
+#process .tenets .tenet p{font-size:16px!important;line-height:1.6;margin:0}
+}
 </style>
 </head>
 <body>
