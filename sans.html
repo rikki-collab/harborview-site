@@ -1095,6 +1095,15 @@ body.m-pages #directory .pc-links{display:none!important}
   .tsheet li a{display:flex;align-items:center;gap:12px;min-height:52px;font-size:15px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
   .tsheet li svg{width:16px;height:16px;flex:none;color:var(--teak)}
 }
+/* phone: closed slide-up panels are fully hidden (no peeking when the browser toolbar resizes the screen) */
+@media (max-width:700px){
+  .dsheet,.tsheet{visibility:hidden;transition:transform .38s cubic-bezier(.22,.85,.3,1),visibility 0s linear .38s}
+  body.deal-open .dsheet,body.team-open .tsheet{visibility:visible;transition:transform .38s cubic-bezier(.22,.85,.3,1)}
+}
+/* phone: page content always visible (scroll fade-ins can miss on short single-section pages) */
+@media (max-width:700px){
+  body.m-pages .gs-fade,body.m-pages .gs-up,body.m-pages .msk>span{opacity:1!important;visibility:visible!important;transform:none!important}
+}
 </style>
 </head>
 <body>
