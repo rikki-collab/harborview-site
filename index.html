@@ -1118,15 +1118,6 @@ body.m-pages #directory .pc-links{display:none!important}
 html{scroll-behavior:smooth}
 main>section{scroll-margin-top:64px}
 #menu a[aria-current="page"]{color:var(--teak)!important}
-/* ═════════ ALL SIZES: hovering a word sweeps a soft blue highlighter behind it ═════════ */
-.menu a,.nav-cta .tel,.arow .t3,.pc-links a,.dir-main a,.foot-tel,footer .fcols a,#contact a:not(.pill){
-  background-image:linear-gradient(rgba(51,122,204,.30),rgba(51,122,204,.30));background-repeat:no-repeat;
-  background-position:0 90%;background-size:0% 45%;-webkit-box-decoration-break:clone;box-decoration-break:clone;
-  transition:background-size .35s cubic-bezier(.22,.85,.3,1),color .25s,transform .5s cubic-bezier(.22,.85,.3,1)}
-@media (min-width:701px){.arow .t3{width:fit-content;justify-self:start;align-self:start}}
-@media (hover:hover){
-  .menu a:hover,.nav-cta .tel:hover,.arow:hover .t3,.pc-links a:hover,.dir-main a:hover,.foot-tel:hover,footer .fcols a:hover,#contact a:not(.pill):hover{background-size:100% 45%}
-}
 /* footer logo always visible (its fade-in can miss on single pages) */
 body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!important;visibility:visible!important;transform:none!important}
 /* ═════════ DESKTOP: slim footer — small logo left, contacts + copyright right ═════════ */
