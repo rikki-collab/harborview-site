@@ -1161,6 +1161,31 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
 #process .tenets .tenet .t4{font-size:25px!important;margin:4px 0 10px;color:var(--night)}
 #process .tenets .tenet p{font-size:16px!important;line-height:1.6;margin:0}
 }
+/* ═════════ DESKTOP: About Us — centered statement, wave-topped photo, Top 10 seal (phone keeps its own layout) ═════════ */
+.abd{display:none}
+@media (min-width:701px){
+  #about .about{display:none!important}
+  #about .abd{display:block}
+  #about.chapter{padding:clamp(80px,8vw,120px) 0 0!important}
+  .abd-top{text-align:center;max-width:1000px}
+  #about .abd .t2.t2-sub{white-space:normal;font-size:clamp(40px,4.4vw,68px);line-height:1.05;margin:0 0 26px}
+  #about .abd .body-l{font-size:clamp(17px,1.3vw,18.5px);line-height:1.7;max-width:46em;margin:0 auto}
+  .abd-fig{position:relative;height:clamp(360px,34vw,520px);margin-top:clamp(50px,5vw,70px)}
+  .abd-fig>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V18C70 0 130 0 200 20S330 40 400 18V40Z' fill='black'/%3E%3C/svg%3E") top/100% 20% no-repeat,linear-gradient(#000,#000) bottom/100% 80.5% no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V18C70 0 130 0 200 20S330 40 400 18V40Z' fill='black'/%3E%3C/svg%3E") top/100% 20% no-repeat,linear-gradient(#000,#000) bottom/100% 80.5% no-repeat}
+  .abd-seal{position:absolute;z-index:3;left:50%;top:-40px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 14px 30px rgba(8,28,49,.35))}
+  .abd-disc{width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#123A63,#081C31 70%);
+    box-shadow:inset 0 0 0 5px #081C31,inset 0 0 0 6.5px rgba(158,219,255,.55),inset 0 0 0 12px #081C31,inset 0 0 0 13px rgba(158,219,255,.25);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;font-family:var(--sans)}
+  .abd-ico{width:24px;height:auto;margin-bottom:4px}
+  .abd-k{font-size:11px;letter-spacing:.42em;text-transform:uppercase;font-weight:600;margin-right:-.42em;color:#9EDBFF}
+  .abd-ten{font-family:"Instrument Serif",Georgia,serif;font-size:76px;line-height:.82;color:#fff}
+  .abd-hud{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;line-height:1.45;margin-top:6px}
+  .abd-since{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#9EDBFF;margin:5px 0 14px;font-weight:500}
+  .abd-ribbon{margin-top:-12px;background:#337ACC;color:#fff;padding:9px 34px;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;
+    clip-path:polygon(0 0,100% 0,calc(100% - 14px) 50%,100% 100%,0 100%,14px 50%)}
+}
 </style>
 </head>
 <body>
@@ -1237,6 +1262,21 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
       <h2 class="t2 t2-sub"><span class="msk"><span>An innovative&nbsp;<i>partner</i>, not a broker.</span></span></h2>
       <p class="body-l gs-fade">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes: multifamily, healthcare, office, retail, industrial and hospitality.</p>
       <div class="t10 gs-fade" role="img" aria-label="Top 10 HUD lender in the country since 2013, Harborview and its partners"><span class="t10-row"><span class="t10-k">Top</span><span class="t10-n">10</span><span class="t10-k">HUD lender in the country since 2013</span></span><span class="t10-p">Harborview and its partners</span></div>
+    </div>
+  </div>
+
+  <!-- DESKTOP About: centered statement, wide wave-topped photo, Top 10 seal -->
+  <div class="abd">
+    <div class="wrap abd-top">
+      <h2 class="t2 t2-sub">An innovative <i>partner</i>, not a broker.</h2>
+      <p class="body-l">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes: multifamily, healthcare, office, retail, industrial and hospitality.</p>
+    </div>
+    <div class="abd-fig">
+      <img src="img/process-pano.webp?v=5" alt="Chicago lakefront skyline across the water" loading="lazy" decoding="async">
+      <div class="abd-seal" role="img" aria-label="Top 10 HUD lender in the country since 2013, Harborview and its affiliates">
+        <div class="abd-disc"><img src="img/hv-icon-white.svg?v=2" alt="" class="abd-ico"><span class="abd-k">Top</span><span class="abd-ten">10</span><span class="abd-hud">HUD lender<br>in the country</span><span class="abd-since">Since 2013</span></div>
+        <div class="abd-ribbon">Harborview &amp; its affiliates</div>
+      </div>
     </div>
   </div>
 </section>
