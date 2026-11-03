@@ -1234,18 +1234,9 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
 #dealCards .fc-back li{text-align:left;padding-left:15px!important;position:relative}
 #dealCards .fc-back li::before,#dealCards .fc-back li+li::before{content:"";display:block;position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--teak);margin:0}
 .dsheet li::before{width:6px!important;height:6px!important;border-radius:50%;top:18px!important;left:2px!important}
-/* ═════════ PHONE: compact floating pill while scrolling (boat left, waves menu right) + full-screen menu ═════════ */
+/* ═════════ PHONE: full-screen menu ═════════ */
 .nm{display:none}
 @media (max-width:700px){
-  header.on{top:12px!important;left:50%!important;right:auto!important;width:200px!important;transform:translateX(-50%)!important;border-radius:999px!important;
-    background:linear-gradient(120deg,#16406F,#0A2440 70%)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-    box-shadow:0 10px 30px -8px rgba(0,0,0,.55),inset 0 0 0 1px rgba(158,219,255,.22)!important;border:0!important}
-  header.on::before,header.on::after{display:none!important}
-  header.on .nav{padding:6px 14px 6px 18px!important;min-height:0!important;height:auto!important;width:auto!important;max-width:none!important;margin:0!important}
-  header.on .hv-icon{height:24px!important;transform:none!important}
-  header.on .m-rates{display:none!important}
-  header.on .burger{padding:4px!important;transform:none!important}
-  header.on .burger svg{width:22px;height:22px}
   body.nm-open{overflow:hidden}
   .nm{position:fixed;inset:0;z-index:1000;background:#081C31;color:#fff;flex-direction:column;padding:26px 26px calc(26px + env(safe-area-inset-bottom));overflow-y:auto;
     opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility 0s linear .3s}
@@ -1268,7 +1259,6 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
     font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;cursor:pointer}
   .nm-rates::before{content:"";width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
 }
-@media (max-width:700px){ body.hdr-on>#tkr, header.on~#tkr{top:68px!important} }
 </style>
 </head>
 <body>
