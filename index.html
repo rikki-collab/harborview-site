@@ -1208,6 +1208,25 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
 }
 /* DESKTOP: capital sources as an even 4 × 2 grid */
 @media (min-width:761px){ .caps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 10px} .cap{justify-content:flex-start} }
+/* ═════════ PHONE: dark / light / dark rhythm like desktop — Our process and Directory back on the light water; About photo meets the hero ═════════ */
+@media (max-width:700px){
+  body.m-pages #about.chapter{padding-top:0!important}
+  body.m-pages #about .about-fig{margin-top:0!important}
+  body.m-pages #process.statement,body.m-pages #directory.dirsec{background:#DEE9F3!important}
+  body.m-pages #process.statement::before,body.m-pages #directory.dirsec::before{mix-blend-mode:normal!important;opacity:1!important}
+  body.m-pages #process .sig-lg,body.m-pages #directory .sig-lg{color:var(--teak)!important}
+  body.m-pages #process .t2.t2-sub{color:var(--night)!important}
+  body.m-pages #process .inner .body-l{color:var(--slate)!important}
+  body.m-pages #process .tenets .tenet{background:rgba(255,255,255,.78)!important;outline:1px solid rgba(51,122,204,.22)!important;box-shadow:0 10px 26px -18px rgba(8,28,49,.45)}
+  body.m-pages #process .tenets .tenet .k{color:var(--teak-deep)!important}
+  body.m-pages #process .tenets .tenet .t4{color:var(--night)!important}
+  body.m-pages #process .tenets .tenet p{color:var(--slate)!important}
+  body.m-pages #directory.dirsec{color:var(--night)}
+  body.m-pages #directory .dir-gh{color:var(--teak-deep)!important;border-color:rgba(8,28,49,.14)!important}
+  body.m-pages #directory .pc-name{color:var(--night)!important}
+  body.m-pages #directory .pc-role{color:var(--slate)!important}
+  body.m-pages #directory .pc .ini{background:linear-gradient(160deg,#1C4F86,#081C31 78%)!important;outline:none!important;color:rgba(255,255,255,.92)!important}
+}
 </style>
 </head>
 <body>
