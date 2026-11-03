@@ -1234,6 +1234,41 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
 #dealCards .fc-back li{text-align:left;padding-left:15px!important;position:relative}
 #dealCards .fc-back li::before,#dealCards .fc-back li+li::before{content:"";display:block;position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--teak);margin:0}
 .dsheet li::before{width:6px!important;height:6px!important;border-radius:50%;top:18px!important;left:2px!important}
+/* ═════════ PHONE: compact floating pill while scrolling (boat left, waves menu right) + full-screen menu ═════════ */
+.nm{display:none}
+@media (max-width:700px){
+  header.on{top:12px!important;left:50%!important;right:auto!important;width:200px!important;transform:translateX(-50%)!important;border-radius:999px!important;
+    background:linear-gradient(120deg,#16406F,#0A2440 70%)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    box-shadow:0 10px 30px -8px rgba(0,0,0,.55),inset 0 0 0 1px rgba(158,219,255,.22)!important;border:0!important}
+  header.on::before,header.on::after{display:none!important}
+  header.on .nav{padding:12px 16px 12px 20px!important;min-height:0!important;height:auto!important;width:auto!important;max-width:none!important;margin:0!important}
+  header.on .hv-icon{height:30px!important;transform:none!important}
+  header.on .m-rates{display:none!important}
+  header.on .burger{padding:6px 4px!important;transform:none!important}
+  header.on .burger svg{width:26px;height:26px}
+  body.nm-open{overflow:hidden}
+  .nm{position:fixed;inset:0;z-index:1000;background:#081C31;color:#fff;flex-direction:column;padding:26px 26px calc(26px + env(safe-area-inset-bottom));overflow-y:auto;
+    opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility 0s linear .3s}
+  .nm{display:flex}
+  body.nm-open .nm{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s}
+  .nm::before{content:"";position:absolute;inset:0;background:url(img/water-light.webp) 0 0/480px 480px repeat;mix-blend-mode:soft-light;opacity:.18;pointer-events:none}
+  .nm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;position:relative}
+  .nm-brand{display:flex;align-items:center;gap:12px}.nm-brand img:first-child{height:44px;width:auto}.nm-brand img:last-child{height:30px;width:auto}
+  .nm-x{width:44px;height:44px;display:grid;place-items:center;color:#337ACC;background:none;border:0;padding:0;cursor:pointer}
+  .nm-x svg{width:30px;height:30px}
+  .nm-list{list-style:none;margin:0;padding:0;position:relative}
+  .nm-list a{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(158,219,255,.14);color:#fff;text-decoration:none;
+    font-family:"Instrument Serif",Georgia,serif;font-size:36px;line-height:1}
+  .nm-list a svg{width:22px;height:22px;color:#337ACC;flex:0 0 auto}
+  .nm-list a[aria-current="page"]{color:#9EDBFF}
+  .nm-info{margin-top:auto;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:22px 16px;padding-top:26px}
+  .nm-k{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#337ACC;margin-bottom:8px}
+  .nm-v,.nm-v a{font-family:var(--sans);font-size:16px;color:#fff;text-decoration:none}
+  .nm-rates{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(158,219,255,.35);border-radius:999px;padding:13px;background:none;color:#fff;
+    font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;cursor:pointer}
+  .nm-rates::before{content:"";width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+}
+@media (max-width:700px){ body.hdr-on>#tkr, header.on~#tkr{top:84px!important} }
 </style>
 </head>
 <body>
@@ -1262,6 +1297,18 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   </div>
 </header>
 
+
+<!-- PHONE: full-screen menu -->
+<div class="nm" id="nm" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="nm-top"><a class="nm-brand" href="#top" aria-label="Harborview Capital Partners, home"><img src="img/hv-icon-white.svg?v=2" alt=""><img src="img/logo-white.png?v=2" alt=""></a>
+    <button class="nm-x" id="nmX" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+  <ul class="nm-list"><li><a href="#about">About Us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="#what">What We Do<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="#process">Our Process<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="#transactions">Closed Deals<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="#directory">Directory<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="#contact">Connect<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul>
+  <div class="nm-info">
+    <div><div class="nm-k">Call</div><div class="nm-v"><a href="tel:+15164539400">516.453.9400</a></div></div>
+    <div><div class="nm-k">Socials</div><div class="nm-v"><a href="https://www.linkedin.com/company/harborview-capital-partners" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://wa.me/15164539400" target="_blank" rel="noopener">WhatsApp</a></div></div>
+    <button class="nm-rates" id="nmRates">Live rates</button>
+  </div>
+</div>
 <main id="main">
 
 <!-- ═════════ HERO ═════════ -->
@@ -1859,10 +1906,17 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   /* ————— nav ————— */
   var hdr = document.getElementById("hdr");
   var burger = document.getElementById("burger");
-  function hdrOn(){ hdr.classList.toggle("on", (window.scrollY || 0) > 30 || document.body.classList.contains("m-sub")); }
+  function hdrOn(){ var on=(window.scrollY || 0) > 30 || document.body.classList.contains("m-sub"); hdr.classList.toggle("on", on); document.body.classList.toggle("hdr-on", on); }
   window.addEventListener("scroll", hdrOn, {passive:true});
   hdrOn();
+  var nm=document.getElementById("nm"), phone=window.matchMedia("(max-width:700px)");
+  function nmSet(on){ document.body.classList.toggle("nm-open",on); nm.setAttribute("aria-hidden",on?"false":"true"); burger.setAttribute("aria-expanded",on?"true":"false"); if(on) document.getElementById("nmX").focus({preventScroll:true}); else burger.focus({preventScroll:true}); }
+  document.getElementById("nmX").addEventListener("click",function(){ nmSet(false); });
+  nm.addEventListener("click",function(e){ if(e.target.closest("a")) nmSet(false); });
+  document.getElementById("nmRates").addEventListener("click",function(){ nmSet(false); setTimeout(function(){ var r=document.getElementById("mRates"); if(r) r.click(); },320); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&document.body.classList.contains("nm-open")) nmSet(false); });
   burger.addEventListener("click", function(){
+    if(phone.matches){ nmSet(true); return; }
     var open = hdr.classList.toggle("open");
     burger.setAttribute("aria-expanded", open ? "true" : "false");
     burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
@@ -2216,7 +2270,7 @@ setTimeout(function(){ta.focus()},700);});});})();
 (function(){
   var body=document.body, hdr=document.getElementById('hdr'), burger=document.getElementById('burger');
   var secs=Array.prototype.slice.call(document.querySelectorAll('main>section'));
-  var links=Array.prototype.slice.call(document.querySelectorAll('#menu a'));
+  var links=Array.prototype.slice.call(document.querySelectorAll('#menu a, .nm-list a'));
   body.classList.add('m-pages');
   function spy(){
     var line=window.innerHeight*0.4, cur=null;
