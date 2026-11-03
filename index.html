@@ -1186,6 +1186,24 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   .abd-ribbon{margin-top:-12px;background:#337ACC;color:#fff;padding:9px 34px;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;
     clip-path:polygon(0 0,100% 0,calc(100% - 14px) 50%,100% 100%,0 100%,14px 50%)}
 }
+/* ═════════ DESKTOP: Directory flip cards — headshot on the front, contact details on the back (phone keeps its grid + panel) ═════════ */
+@media (max-width:700px){ .pc-in,.pc-f,.pc-b{display:contents} .pc-cap{display:none!important} }
+@media (min-width:701px){
+  #directory .pc-grid{gap:22px}
+  #directory .pc{padding:0!important;border:0!important;background:none!important;box-shadow:none!important;transform:none!important;perspective:1400px;cursor:pointer;outline:none}
+  #directory .pc-in{position:relative;height:340px;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.22,.85,.3,1)}
+  @media (hover:hover){ #directory .pc:hover .pc-in{transform:rotateY(180deg)} }
+  #directory .pc.flip .pc-in,#directory .pc:focus-visible .pc-in{transform:rotateY(180deg)}
+  #directory .pc-f,#directory .pc-b{position:absolute;inset:0;border-radius:8px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  #directory .pc-f .ini{display:grid!important;place-items:center;position:absolute;inset:0;margin:0;
+    background:linear-gradient(160deg,#1C4F86,#081C31 78%);font-family:"Instrument Serif",Georgia,serif;font-size:96px;letter-spacing:.02em;color:rgba(255,255,255,.9);padding-bottom:60px}
+  #directory .pc-f .ini img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  #directory .pc-cap{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;background:linear-gradient(rgba(8,28,49,0),rgba(8,28,49,.88) 55%);color:#fff}
+  #directory .pc-cap b{display:block;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  #directory .pc-cap i{display:block;font-style:normal;font-family:"Instrument Serif",Georgia,serif;font-size:16px;color:#9EDBFF;margin-top:4px}
+  #directory .pc-b{transform:rotateY(180deg);background:#fff;box-shadow:inset 0 0 0 1.5px rgba(51,122,204,.45);padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+  #directory .pc-b .pc-name{margin-top:0}
+}
 </style>
 </head>
 <body>
@@ -2231,7 +2249,20 @@ setTimeout(function(){ta.focus()},700);});});})();
     var ph=pc.getAttribute('data-photo');
     if(ph){ var im=document.createElement('img'); im.src=ph; im.alt=''; im.loading='lazy'; sq.appendChild(im); }
     else sq.textContent=(n[0][0]+n[n.length-1][0]).toUpperCase();
-    pc.insertBefore(sq,pc.firstChild); pc.setAttribute('tabindex','0');
+    /* flip card: front = headshot (initials until a photo is added), back = name, role and contact links */
+    var inn=document.createElement('div'); inn.className='pc-in';
+    var fr=document.createElement('div'); fr.className='pc-f';
+    var bk=document.createElement('div'); bk.className='pc-b';
+    while(pc.firstChild) bk.appendChild(pc.firstChild);
+    var cap=document.createElement('span'); cap.className='pc-cap'; cap.setAttribute('aria-hidden','true');
+    cap.innerHTML='<b></b><i></i>'; cap.firstChild.textContent=bk.querySelector('.pc-name').textContent; cap.lastChild.textContent=(bk.querySelector('.pc-role')||{textContent:''}).textContent;
+    fr.appendChild(sq); fr.appendChild(cap); inn.appendChild(fr); inn.appendChild(bk); pc.appendChild(inn);
+    pc.setAttribute('tabindex','0');
+  });
+  /* DESKTOP: click or Enter flips a card (hover flips too) */
+  people.forEach(function(pc){
+    function t(e){ if(mq.matches) return; if(e.target.closest('a')) return; if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' ') return; e.preventDefault(); pc.classList.toggle('flip'); }
+    pc.addEventListener('click',t); pc.addEventListener('keydown',t);
   });
   var scrim=document.createElement('div'); scrim.className='tscrim';
   var sh=document.createElement('div'); sh.className='tsheet'; sh.setAttribute('role','dialog'); sh.setAttribute('aria-modal','true'); sh.setAttribute('aria-label','Contact details');
