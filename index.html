@@ -1227,6 +1227,13 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   body.m-pages #directory .pc-role{color:var(--slate)!important}
   body.m-pages #directory .pc .ini{background:linear-gradient(160deg,#1C4F86,#081C31 78%)!important;outline:none!important;color:rgba(255,255,255,.92)!important}
 }
+/* PHONE: homepage a bit longer than one screen */
+@media (max-width:700px){ .hero{min-height:115svh} }
+/* Closed deals: bullet points instead of dashes (desktop tile backs + phone detail panel) */
+#dealCards .fc-back ul{width:auto;max-width:100%;margin-inline:auto}
+#dealCards .fc-back li{text-align:left;padding-left:15px!important;position:relative}
+#dealCards .fc-back li::before,#dealCards .fc-back li+li::before{content:"";display:block;position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--teak);margin:0}
+.dsheet li::before{width:6px!important;height:6px!important;border-radius:50%;top:18px!important;left:2px!important}
 </style>
 </head>
 <body>
