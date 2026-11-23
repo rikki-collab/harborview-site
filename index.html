@@ -1371,18 +1371,20 @@ html body #what .ac-head,html body #what .ac-head *{font-size:clamp(30px,3.2vw,4
 html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)!important;line-height:1.02!important;white-space:normal!important}
 /* Closed deals (phone): "Closed," on line one, "not pitched." on line two */
 @media (max-width:700px){html body #transactions .ledger-head .np{display:block;white-space:nowrap}}
-/* ═════ PHONE: Our process — desktop design scaled down: three photos around the heading; boxes swipe like Debt / Equity / Advisory (Rikki 2026-11-23) ═════ */
+/* ═════ PHONE: Our process — same composition as desktop, scaled to the phone: two-line heading over three photos; boxes swipe like Debt / Equity / Advisory (Rikki 2026-11-23) ═════ */
 @media (max-width:700px){
   html body #process .czone{display:block!important;position:relative!important;padding:0 var(--gut)!important}
-  html body #process .czone .float{display:block!important;position:absolute!important;width:24vw!important;height:auto!important;aspect-ratio:1/2!important;margin:0!important;inset:auto!important;transform:none!important;box-shadow:0 14px 34px rgba(8,28,49,.18)!important;z-index:0!important}
-  html body #process .czone .float.f1{left:4%!important;top:70px!important}
-  html body #process .czone .float.f3{right:30%!important;top:24px!important}
-  html body #process .czone .float.f2{right:4%!important;top:150px!important}
-  html body #process .czone .inner{position:relative!important;z-index:3!important;padding:110px 0 40px!important}
-  html body #process .czone .inner .body-l{position:relative;margin-top:150px!important}
+  html body #process .czone .float{display:block!important;position:absolute!important;width:21.8vw!important;height:auto!important;aspect-ratio:1/2!important;margin:0!important;inset:auto!important;transform:none!important;box-shadow:0 10px 26px rgba(8,28,49,.18)!important;z-index:0!important}
+  html body #process .czone .float.f1{left:calc(50% - 49vw)!important;top:23.5vw!important}
+  html body #process .czone .float.f3{left:calc(50% + 11.8vw)!important;top:10vw!important}
+  html body #process .czone .float.f2{left:calc(50% + 26vw)!important;top:30vw!important}
+  html body #process .czone div.inner.inner{position:relative!important;z-index:3!important;padding:32vw 0 22vw!important}
+  html body #process .czone .inner::before{display:block!important}
+  html body #process .czone .inner .t2.t2-sub,html body.m-pages #process .czone .inner .t2.t2-sub{font-size:6vw!important;line-height:1.12!important;margin:0!important}
+  html body #process .czone .inner .t2 .msk{display:block!important;white-space:nowrap!important}
+  html body #process .czone .inner .body-l,html body.m-pages #process .czone .inner .body-l{font-size:3.4vw!important;line-height:1.5!important;margin:4.5vw auto 0!important;color:var(--night)!important;max-width:none!important}
   html body #process.statement{min-height:0!important}
   html body #process{padding-bottom:56px!important}
-  html body #process .czone .inner::before{display:block!important}
   html body #process div.tenets.tenets{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px!important;margin:0 calc(-1*var(--gut)) 0 0!important;padding:0 var(--gut) 4px 0!important;scrollbar-width:none;grid-template-columns:none!important}
   html body #process div.tenets.tenets::-webkit-scrollbar{display:none}
   html body #process div.tenets.tenets .tenet.tenet{flex:0 0 80%!important;width:auto!important;max-width:none!important;scroll-snap-align:start}
