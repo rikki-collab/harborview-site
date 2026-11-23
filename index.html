@@ -1400,6 +1400,8 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
   html body #about .aba-note{display:block!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important;clip:auto!important;white-space:normal!important;
     margin:22px 0 0!important;text-align:center;font-family:var(--sans)!important;font-size:14px!important;font-weight:600!important;font-variation-settings:"wdth" 118!important;letter-spacing:.02em!important;color:var(--night)!important}
 }
+/* PHONE About photo (Rikki 2026-11-23): just the building in the wave, like desktop */
+@media (max-width:700px){html body #about .aba-fig img{object-position:50% 100%!important;transform:scale(2.3)!important;transform-origin:55% 100%!important}}
 </style>
 </head>
 <body>
@@ -1506,7 +1508,7 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
       <p class="aba-note">Harborview and its affiliate FACG</p>
     </div>
     <svg class="aba-note-wave" aria-hidden="true" height="90"><path id="abaNoteCurve" fill="none" d=""/><text><textPath href="#abaNoteCurve" startOffset="50%" text-anchor="middle">Harborview and its affiliate FACG</textPath></text></svg>
-    <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
+    <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="(max-width:700px) 230vw, 100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
