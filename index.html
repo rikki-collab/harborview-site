@@ -1317,6 +1317,12 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
   html body #about .abd .body-l{font-variation-settings:"wdth" 100!important;font-weight:400!important}
   #about .aba-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+/* About stats footnote (2026-11-23) */
+.aba-note{display:none}
+@media (min-width:701px){
+  #about .aba-note{display:block;margin:22px 0 0;text-align:center;font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.01em;color:var(--slate)}
+  #about .aba-stats b .aba-ast{font-size:.5em;vertical-align:super;line-height:0;margin-left:2px}
+}
 </style>
 </head>
 <body>
@@ -1416,10 +1422,11 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
       <p class="body-l">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes.</p>
       <ul class="aba-chips" aria-label="Asset classes"><li>Multifamily</li><li>Healthcare</li><li>Office</li><li>Retail</li><li>Industrial</li><li>Hospitality</li></ul>
       <div class="aba-stats">
-        <div class="aba-top"><b>TOP 10</b><span>HUD lender in the country</span></div>
+        <div class="aba-top"><b>TOP 10<sup class="aba-ast">*</sup></b><span>HUD lender in the country</span></div>
         <div><b>2013</b><span>Top 10 HUD lender since</span></div>
         <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$15B+</b><span>Closed</span></div>
       </div>
+      <p class="aba-note">*Harborview and its affiliate FACG</p>
     </div>
     <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
   </div>
@@ -2420,14 +2427,16 @@ setTimeout(function(){ta.focus()},700);});});})();
   sh.addEventListener('touchend',function(e){ if(y0!==null&&e.changedTouches[0].clientY-y0>70) close(); y0=null; });
 })();
 </script>
-<script>/* $15B+ counts up from 0 the first time it scrolls into view */
+<script>/* $15B+ climbs from $0 while you scroll to it, then lands and holds at $15B+; replays each time the section comes back into view */
 (function(){var els=document.querySelectorAll('.countup');if(!els.length)return;
-function run(el){var to=+el.dataset.to,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',t0=null,d=1600;
+function run(el){var to=+el.dataset.to,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',t0=null,d=2600;
+ cancelAnimationFrame(el._raf);
  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=pre+to+suf;return}
- function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(to*e)+suf;if(k<1)requestAnimationFrame(f)}
- el.textContent=pre+'0'+suf;requestAnimationFrame(f)}
+ function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,2.2);el.textContent=pre+Math.floor(to*e+(k>=1?0.5:0))+suf;if(k<1)el._raf=requestAnimationFrame(f)}
+ el.textContent=pre+'0'+suf;el._raf=requestAnimationFrame(f)}
 if(!('IntersectionObserver' in window))return;
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);run(e.target)}})},{threshold:.6});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;
+  if(e.isIntersecting&&!el._on){el._on=true;run(el)}else if(!e.isIntersecting){el._on=false;cancelAnimationFrame(el._raf);el.textContent=(el.dataset.prefix||'')+'0'+(el.dataset.suffix||'')}})},{threshold:.9});
 els.forEach(function(el){io.observe(el)})})();
 </script>
 </body>
