@@ -1264,11 +1264,26 @@ html.serif .disp,html.serif .t2,html.serif .t3,html.serif .t4,html.serif .sig-lg
   #about .abd .sig{display:none}
   #about .aba-fig img{object-position:50% 100%}
 }
+/* ── Mobile About = phone version of the desktop About (2026-11-23) ── */
 @media (max-width:700px){
-  #about .about .sig-lg{display:none!important}
-  #about .about .body-l{font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:600;color:var(--night);font-variation-settings:"wdth" 118}
-  #about .about-fig img,body.m-pages #about .about-fig img{object-position:50% 100%!important;filter:none}
+  #about .about{display:none!important}
+  #about .abd{display:block;width:100%}
+  #about.chapter,body.m-pages #about.chapter{padding:clamp(84px,12vh,104px) 0 0!important;justify-content:flex-start}
+  #about .aba-wrap{text-align:center}
+  #about .abd .sig{display:none}
+  #about .abd .t2.t2-sub{white-space:normal;text-wrap:balance;font-size:clamp(31px,8.6vw,38px);line-height:1.08;margin:0 auto!important;max-width:12em;order:0}
+  #about .abd .body-l{font-family:var(--sans);font-size:15.5px;line-height:1.6;font-weight:600;color:var(--night);font-variation-settings:"wdth" 108;max-width:34em;margin:20px auto 0!important;order:0}
+  .aba-chips{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .aba-chips li{white-space:nowrap;padding:7px 12px;border:1px solid var(--ln-light);border-radius:999px;font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 112;color:var(--night)}
+  .aba-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px;margin-top:30px;padding-top:24px;border-top:1px solid var(--ln-light);text-align:center}
+  .aba-stats b{display:block;font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(40px,11vw,48px);line-height:1;color:var(--teak)}
+  .aba-stats span{display:block;margin-top:6px;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 112;color:var(--slate);line-height:1.45}
+  .aba-fig{margin:34px 0 0;height:clamp(210px,58vw,280px);overflow:hidden;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40H400V18C330 38 270 38 200 20S70 0 0 22Z' fill='black'/%3E%3C/svg%3E") top/100% 46px no-repeat,linear-gradient(#000,#000) bottom/100% calc(100% - 45px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40H400V18C330 38 270 38 200 20S70 0 0 22Z' fill='black'/%3E%3C/svg%3E") top/100% 46px no-repeat,linear-gradient(#000,#000) bottom/100% calc(100% - 45px) no-repeat}
+  .aba-fig img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
 }
+/* About: every sans line (paragraph, asset classes, stat labels) shares one font, weight, width and color; serif lines share one weight + spacing */
+#about .abd .body-l,#about .aba-chips li,#about .aba-stats span{font-family:var(--sans)!important;font-weight:600!important;color:var(--night)!important;font-variation-settings:"wdth" 118!important}
+#about .abd .t2,#about .abd .t2 i,#about .aba-stats b{font-family:"Instrument Serif",Georgia,serif!important;font-weight:400!important;letter-spacing:.01em!important}
 </style>
 </head>
 <body>
