@@ -1328,6 +1328,12 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
   #about .aba-stats{border-top:0!important;position:relative;padding-top:96px!important;margin-top:clamp(30px,3vw,44px)!important}
   #about .aba-stats::before{content:"";position:absolute;left:calc(50% - 50vw);width:100vw;top:0;height:90px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 22C70 0 130 2 200 20S330 38 400 18' fill='none' stroke='%23337ACC' stroke-width='2.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
 }
+/* About (desktop): headline back to sentence case; asterisk sits before TOP */
+@media (min-width:701px){
+  html.serif #about .abd .t2.t2-sub,html.serif #about .abd .t2.t2-sub *{text-transform:none!important;letter-spacing:.01em!important}
+  html.serif #about .abd .t2.t2-sub{font-size:clamp(38px,5.2vw,82px)!important}
+  #about .aba-stats b .aba-ast-l{margin:0 3px 0 0}
+}
 </style>
 </head>
 <body>
@@ -1427,11 +1433,11 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
       <p class="body-l">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes.</p>
       <ul class="aba-chips" aria-label="Asset classes"><li>Multifamily</li><li>Healthcare</li><li>Office</li><li>Retail</li><li>Industrial</li><li>Hospitality</li></ul>
       <div class="aba-stats">
-        <div class="aba-top"><b>TOP 10<sup class="aba-ast">*</sup></b><span>HUD lender in the country</span></div>
+        <div class="aba-top"><b><sup class="aba-ast aba-ast-l">*</sup>TOP 10</b><span>HUD lender in the country</span></div>
         <div><b>2013</b><span>Top 10 HUD lender since</span></div>
         <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$15B+</b><span>Closed</span></div>
       </div>
-      <p class="aba-note">*Harborview and its affiliate FACG</p>
+      <p class="aba-note">*Harborview and its affiliate FACG*</p>
     </div>
     <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
   </div>
