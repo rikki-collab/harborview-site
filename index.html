@@ -1334,6 +1334,13 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
   html.serif #about .abd .t2.t2-sub{font-size:clamp(38px,5.2vw,82px)!important}
   #about .aba-stats b .aba-ast-l{margin:0 3px 0 0}
 }
+/* About (desktop): FACG footnote runs along the same wave curve as the photo */
+.aba-note-wave{display:none}
+@media (min-width:701px){
+  #about .aba-note{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0!important}
+  #about .aba-note-wave{display:block;position:relative;left:calc(50% - 50vw);width:100vw;height:90px;margin:18px 0 -40px;overflow:visible}
+  #about .aba-note-wave text{font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.02em;fill:var(--slate)}
+}
 </style>
 </head>
 <body>
@@ -1438,6 +1445,7 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
         <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$15B+</b><span>Closed</span></div>
       </div>
       <p class="aba-note">*Harborview and its affiliate FACG*</p>
+      <svg class="aba-note-wave" aria-hidden="true" height="90"><path id="abaNoteCurve" fill="none" d=""/><text><textPath href="#abaNoteCurve" startOffset="50%" text-anchor="middle">*Harborview and its affiliate FACG*</textPath></text></svg>
     </div>
     <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
   </div>
@@ -2449,6 +2457,12 @@ if(!('IntersectionObserver' in window))return;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;
   if(e.isIntersecting&&!el._on){el._on=true;run(el)}else if(!e.isIntersecting){el._on=false;cancelAnimationFrame(el._raf);el.textContent=(el.dataset.prefix||'')+'0'+(el.dataset.suffix||'')}})},{threshold:.9});
 els.forEach(function(el){io.observe(el)})})();
+</script>
+<script>/* bend the FACG footnote along the photo's wave: same curve, rebuilt for the current width */
+(function(){var p=document.getElementById('abaNoteCurve');if(!p)return;var svg=p.ownerSVGElement;
+function draw(){var W=svg.getBoundingClientRect().width||innerWidth,H=90;svg.setAttribute('viewBox','0 0 '+W+' '+H);
+ p.setAttribute('d','M0 '+(.55*H)+'C'+(.175*W)+' 0 '+(.325*W)+' '+(.05*H)+' '+(.5*W)+' '+(.5*H)+'S'+(.825*W)+' '+(.95*H)+' '+W+' '+(.45*H))}
+draw();addEventListener('resize',draw)})();
 </script>
 </body>
 </html>
