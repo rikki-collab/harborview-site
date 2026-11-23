@@ -13,14 +13,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script>/*FONT-DEFAULT*/if(new URLSearchParams(location.search).get("font")!=="sans")document.documentElement.classList.add("serif")</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Abel&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..700;1,62..125,300..700&family=Instrument+Serif:ital@0;1&display=swap">
 <link rel="preload" as="image" href="img/harbor-hero3-1600.webp" imagesrcset="img/harbor-hero3-900.webp 900w, img/harbor-hero3-1600.webp 1600w, img/harbor-hero3-2560.webp 2560w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23081C31'/><path d='M16 6v16M16 22c-5.2 0-8.4-3.2-8.4-6.4l8.4 3.2 8.4-3.2c0 3.2-3.2 6.4-8.4 6.4Z' stroke='%23FFFFFF' stroke-width='1.6' fill='none' stroke-linejoin='round'/><circle cx='16' cy='7.6' r='1.9' stroke='%23FFFFFF' stroke-width='1.4' fill='none'/></svg>">
 <style>
 /* ═══════════════════════════════════════════════════════════
    HARBORVIEW — design tokens
    night #081C31 · pine #22403B · sea-glass #E7E9E3 · seafoam #8FB5A5
-   Abel (display) · Hanken Grotesk (text + italics) · Archivo (labels) — all sans
+   Instrument Serif (display + italics) · Archivo (text + labels) — two fonts only
    ═══════════════════════════════════════════════════════════ */
 :root{
   --night:#081C31;
@@ -38,8 +38,8 @@
   --ln-dark:rgba(255,255,255,.14);
   --ln-light:rgba(8,28,49,.16);
 
-  --serif:"Abel","Archivo Narrow",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  --text:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --text:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 
   --gut:clamp(20px,4.6vw,72px);
@@ -1255,6 +1255,12 @@ body.m-pages footer .foot-mark,body.m-pages footer .foot-mark img{opacity:1!impo
   .nm-rates{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(158,219,255,.35);border-radius:999px;padding:13px;background:none;color:#fff;
     font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;cursor:pointer}
   .nm-rates::before{content:"";width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+}
+
+/* ── Rikki notes 2026-11-23: two fonts only (Instrument Serif + Archivo); one even, slightly open spacing on every serif line ── */
+html.serif .disp,html.serif .t2,html.serif .t3,html.serif .t4,html.serif .sig-lg,html.serif .disp i,html.serif .t2 i,html.serif .t4 i,html.serif .sig-lg i,html.serif .cap,html.serif .foot-tel,html.serif .foot-mark,html.serif .brand b,html.serif .brand-sub,html.serif .tenet .k,html.serif .t10-n,html.serif .t10-p,html.serif .aba-stats b,html.serif .aba-aff,html.serif .about .pull,html.serif .svc .no,html.serif .fc-amt,html.serif .fc-meta b,html.serif .fc-back h3,html.serif .fc-hint,html.serif .dsheet h3,html.serif .dsheet .ds-amt,html.serif .qa-q,html.serif .faq-cta p,html.serif .caps-note,html.serif .rate b,html.serif .tk b,html.serif .tkpop .pr,html.serif .tsheet .ts-ph,html.serif .nm-list a,html.serif #directory .pc-cap i,html.serif #directory .pc-f .ini,html.serif .pc .ini{letter-spacing:.01em!important}
+@media (min-width:761px){
+  #about .abd .body-l{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--night);font-variation-settings:"wdth" 118}
 }
 </style>
 </head>
