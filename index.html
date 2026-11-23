@@ -1323,10 +1323,9 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
   #about .aba-note{display:block;margin:22px 0 0;text-align:center;font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.01em;color:var(--slate)}
   #about .aba-stats b .aba-ast{font-size:.5em;vertical-align:super;line-height:0;margin-left:2px}
 }
-/* About stats divider = wave line matching the photo's wave edge (2026-11-23) */
+/* About stats: no divider line above the stats (Rikki 2026-11-23) */
 @media (min-width:701px){
-  #about .aba-stats{border-top:0!important;position:relative;padding-top:96px!important;margin-top:clamp(30px,3vw,44px)!important}
-  #about .aba-stats::before{content:"";position:absolute;left:calc(50% - 50vw);width:100vw;top:0;height:90px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'%3E%3Cpath d='M0 22C70 0 130 2 200 20S330 38 400 18' fill='none' stroke='%23337ACC' stroke-width='2.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
+  #about .aba-stats{border-top:0!important;padding-top:0!important;margin-top:clamp(40px,4vw,60px)!important}
 }
 /* About (desktop): headline back to sentence case; asterisk sits before TOP */
 @media (min-width:701px){
@@ -1338,8 +1337,20 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
 .aba-note-wave{display:none}
 @media (min-width:701px){
   #about .aba-note{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0!important}
-  #about .aba-note-wave{display:block;position:relative;left:calc(50% - 50vw);width:100vw;height:90px;margin:18px 0 -40px;overflow:visible}
-  #about .aba-note-wave text{font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.02em;fill:var(--slate)}
+  #about .aba-note-wave{display:block;position:relative;z-index:2;width:100%;height:90px;margin:clamp(36px,3.6vw,56px) 0 -90px;overflow:visible;pointer-events:none}
+  #about .aba-note-wave+.aba-fig{margin-top:0}
+  #about .aba-note-wave text{font-family:var(--sans);font-size:clamp(18px,1.75vw,26px);font-weight:400;letter-spacing:.24em;fill:var(--slate)}
+}
+/* About (desktop): paragraph in the same font as the asset-class chips, not all caps (Rikki 2026-11-23) */
+@media (min-width:701px){
+  html body #about .abd .body-l{font-family:var(--sans)!important;font-weight:600!important;font-variation-settings:"wdth" 118!important;letter-spacing:.02em!important;text-transform:none!important;color:var(--night)!important}
+}
+/* About (desktop): FACG note straight and centered instead of curved (Rikki 2026-11-23) */
+@media (min-width:701px){
+  #about .aba-note-wave{display:none!important}
+  #about .aba-note-wave+.aba-fig{margin-top:clamp(28px,3vw,44px)}
+  #about .aba-note{position:static!important;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;
+    margin:clamp(28px,2.6vw,40px) 0 0!important;text-align:center;font-family:var(--sans);font-size:clamp(20px,1.7vw,26px);font-weight:400;letter-spacing:.1em;color:var(--slate)}
 }
 </style>
 </head>
@@ -1440,13 +1451,13 @@ html body #what .aidx .arow p{font-family:var(--sans)!important;font-size:13px!i
       <p class="body-l">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes.</p>
       <ul class="aba-chips" aria-label="Asset classes"><li>Multifamily</li><li>Healthcare</li><li>Office</li><li>Retail</li><li>Industrial</li><li>Hospitality</li></ul>
       <div class="aba-stats">
-        <div class="aba-top"><b><sup class="aba-ast aba-ast-l">*</sup>TOP 10</b><span>HUD lender in the country</span></div>
+        <div class="aba-top"><b>TOP 10</b><span>HUD lender in the country*</span></div>
         <div><b>2013</b><span>Top 10 HUD lender since</span></div>
-        <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$15B+</b><span>Closed</span></div>
+        <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$0B+</b><span>Closed</span></div>
       </div>
-      <p class="aba-note">*Harborview and its affiliate FACG*</p>
-      <svg class="aba-note-wave" aria-hidden="true" height="90"><path id="abaNoteCurve" fill="none" d=""/><text><textPath href="#abaNoteCurve" startOffset="50%" text-anchor="middle">*Harborview and its affiliate FACG*</textPath></text></svg>
+      <p class="aba-note">Harborview and its affiliate FACG</p>
     </div>
+    <svg class="aba-note-wave" aria-hidden="true" height="90"><path id="abaNoteCurve" fill="none" d=""/><text><textPath href="#abaNoteCurve" startOffset="50%" text-anchor="middle">Harborview and its affiliate FACG</textPath></text></svg>
     <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
   </div>
 </section>
@@ -2455,13 +2466,14 @@ function run(el){var to=+el.dataset.to,pre=el.dataset.prefix||'',suf=el.dataset.
  el.textContent=pre+'0'+suf;el._raf=requestAnimationFrame(f)}
 if(!('IntersectionObserver' in window))return;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;
-  if(e.isIntersecting&&!el._on){el._on=true;run(el)}else if(!e.isIntersecting){el._on=false;cancelAnimationFrame(el._raf);el.textContent=(el.dataset.prefix||'')+'0'+(el.dataset.suffix||'')}})},{threshold:.9});
-els.forEach(function(el){io.observe(el)})})();
+  if(e.isIntersecting&&!el._on){el._on=true;run(el)}else if(!e.isIntersecting&&!el._intro){el._on=false;cancelAnimationFrame(el._raf);el.textContent=(el.dataset.prefix||'')+'0'+(el.dataset.suffix||'')}})},{threshold:.3});
+els.forEach(function(el){el._on=true;el._intro=true;run(el);setTimeout(function(){el._intro=false},2700);io.observe(el)})})();
 </script>
 <script>/* bend the FACG footnote along the photo's wave: same curve, rebuilt for the current width */
 (function(){var p=document.getElementById('abaNoteCurve');if(!p)return;var svg=p.ownerSVGElement;
-function draw(){var W=svg.getBoundingClientRect().width||innerWidth,H=90;svg.setAttribute('viewBox','0 0 '+W+' '+H);
- p.setAttribute('d','M0 '+(.55*H)+'C'+(.175*W)+' 0 '+(.325*W)+' '+(.05*H)+' '+(.5*W)+' '+(.5*H)+'S'+(.825*W)+' '+(.95*H)+' '+W+' '+(.45*H))}
+function draw(){var W=svg.getBoundingClientRect().width||innerWidth,H=90,k=H/40,o=20;svg.setAttribute('viewBox','0 0 '+W+' '+H);
+ function y(v){return (v*k-o).toFixed(1)}
+ p.setAttribute('d','M0 '+y(22)+'C'+(.175*W)+' '+y(0)+' '+(.325*W)+' '+y(2)+' '+(.5*W)+' '+y(20)+'S'+(.825*W)+' '+y(38)+' '+W+' '+y(18))}
 draw();addEventListener('resize',draw)})();
 </script>
 </body>
