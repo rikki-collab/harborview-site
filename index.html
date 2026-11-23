@@ -1264,6 +1264,11 @@ html.serif .disp,html.serif .t2,html.serif .t3,html.serif .t4,html.serif .sig-lg
   #about .abd .sig{display:none}
   #about .aba-fig img{object-position:50% 100%}
 }
+@media (max-width:700px){
+  #about .about .sig-lg{display:none!important}
+  #about .about .body-l{font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:600;color:var(--night);font-variation-settings:"wdth" 118}
+  #about .about-fig img,body.m-pages #about .about-fig img{object-position:50% 100%!important;filter:none}
+}
 </style>
 </head>
 <body>
@@ -1345,7 +1350,7 @@ html.serif .disp,html.serif .t2,html.serif .t3,html.serif .t4,html.serif .sig-lg
 <section class="on-light chapter" id="about">
   <div class="wrap about">
     <figure class="about-fig gs-fade" style="margin:0">
-      <img class="prlx" data-speed="0.12" src="img/about-yaletown.webp" alt="Aerial view of a city marina ringed by residential towers." width="1200" height="1500" loading="lazy" decoding="async">
+      <img class="prlx" data-speed="0.12" src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w" sizes="100vw" alt="Curving blue glass façade against the sky" width="2576" height="1656" loading="lazy" decoding="async">
     </figure>
     <div>
       <p class="sig sig-lg gs-fade">About us</p>
