@@ -1284,6 +1284,21 @@ html.serif .disp,html.serif .t2,html.serif .t3,html.serif .t4,html.serif .sig-lg
 /* About: every sans line (paragraph, asset classes, stat labels) shares one font, weight, width and color; serif lines share one weight + spacing */
 #about .abd .body-l,#about .aba-chips li,#about .aba-stats span{font-family:var(--sans)!important;font-weight:600!important;color:var(--night)!important;font-variation-settings:"wdth" 118!important}
 #about .abd .t2,#about .abd .t2 i,#about .aba-stats b{font-family:"Instrument Serif",Georgia,serif!important;font-weight:400!important;letter-spacing:.01em!important}
+/* ══ Type system (Rikki 2026-11-23) ══
+   TITLES = Instrument Serif, ALL CAPS.  Serif also kept for design elements (big numbers, $ amounts, initials).
+   Subtitles, small titles, boxes and body = Archivo. */
+html.serif .disp,html.serif .t2,html.serif .t2 *,html.serif .sig-lg,html.serif .sig-lg *,html.serif .wwd-big,html.serif .wwd-big *{
+  font-family:"Instrument Serif",Georgia,serif!important;text-transform:uppercase!important;letter-spacing:.03em!important;font-weight:400!important}
+html.serif .t2 i,html.serif .disp i,html.serif .sig-lg i,html.serif .wwd-big i{font-style:italic}
+/* smaller titles, box titles, notes, lists -> sans */
+.t3,.t4,.tenet .t4,.tenets .tenet .t4,.svc-grid .svc .t3,.t10-p,.aba-aff,.about .pull,.caps-note,.cap,.qa-q,.faq-cta p,.fc-back h3,.dsheet h3,.fc-hint,.tsheet .ts-ph,.nm-list a,.brand-sub,.rate b,.tk b,body>#tkr .tk b,.tkpop .pr,#directory .pc-cap i,#what .arow .t3::after{
+  font-family:var(--sans)!important;font-style:normal!important;letter-spacing:0!important}
+.t3,.t4,.tenet .t4,.fc-back h3,.dsheet h3,.qa-q{font-weight:600!important}
+@media (min-width:701px){
+  html.serif #about .abd .t2.t2-sub{font-size:clamp(32px,4.4vw,70px)!important}
+  html.serif .wwd-big{font-size:clamp(36px,5.8vw,86px)!important}
+  html.serif #process .t2.t2-sub{font-size:clamp(30px,4.05vw,60px)!important}
+}
 </style>
 </head>
 <body>
