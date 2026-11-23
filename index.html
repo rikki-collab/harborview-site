@@ -1369,6 +1369,8 @@ html body #sources .cap,html body #sources .cap span{font-family:var(--sans)!imp
 html body #what .ac-head,html body #what .ac-head *{font-size:clamp(30px,3.2vw,46px)!important;line-height:1.05!important;letter-spacing:.1em!important}
 /* Closed deals (Rikki 2026-11-23): "Closed deals" label removed; "Closed, not pitched." much bigger — desktop + phone */
 html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)!important;line-height:1.02!important;white-space:normal!important}
+/* Closed deals (phone): "Closed," on line one, "not pitched." on line two */
+@media (max-width:700px){html body #transactions .ledger-head .np{display:block;white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -1594,7 +1596,7 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
   <div class="wrap">
     <div class="ledger-head">
       <div>
-        <h2 class="t2 t2-sub"><span class="msk"><span><i>Closed</i>, not pitched.</span></span></h2>
+        <h2 class="t2 t2-sub"><span class="msk"><span><i>Closed</i>, <span class="np">not pitched.</span></span></span></h2>
       </div>
     </div>
 
