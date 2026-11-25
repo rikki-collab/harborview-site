@@ -1406,6 +1406,9 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
 html body #about .aba-note{display:flex!important;align-items:center;justify-content:center;gap:clamp(10px,1.6vw,22px);text-transform:uppercase;white-space:nowrap!important;
   font-size:12px!important;font-weight:600!important;letter-spacing:.2em!important;color:var(--night)!important}
 html body #about .aba-note:before,html body #about .aba-note:after{content:"";flex:0 1 clamp(60px,14vw,220px);height:1px;background:currentColor;opacity:.28}
+/* Asterisk sits by TOP 10 in both the TOP 10 and 2013 stats; it hangs outside so TOP 10 stays centered (Rikki 2026-11-25) */
+#about .aba-stats b .aba-star-w{position:relative;font-style:normal;display:inline-block}
+#about .aba-stats b .aba-star{position:absolute;left:100%;top:.08em;margin-left:.06em;font-size:.5em;line-height:1}
 @media (min-width:701px){html body #about .aba-note{margin-top:clamp(36px,3.2vw,48px)!important}}
 @media (max-width:700px){html body #about .aba-note{font-size:8.5px!important;letter-spacing:.16em!important;margin-top:26px!important}
   html body #about .aba-note:before,html body #about .aba-note:after{flex:1 1 0;min-width:14px}}
@@ -1508,8 +1511,8 @@ html body #about .aba-note:before,html body #about .aba-note:after{content:"";fl
       <p class="body-l">Harborview Capital Partners is a full-service commercial real estate finance, equity and advisory firm. Our mission is to be an innovative partner with our clients by providing unparalleled access to debt, equity and advisory services for all of the commercial real estate asset classes.</p>
       <ul class="aba-chips" aria-label="Asset classes"><li>Multifamily</li><li>Healthcare</li><li>Office</li><li>Retail</li><li>Industrial</li><li>Hospitality</li></ul>
       <div class="aba-stats">
-        <div class="aba-top"><b>TOP 10</b><span>HUD lender in the country*</span></div>
-        <div><b>2013</b><span>Top 10 HUD lender since</span></div>
+        <div class="aba-top"><b><em class="aba-star-w">TOP 10<sup class="aba-star">*</sup></em></b><span>HUD lender in the country</span></div>
+        <div><b>2013</b><span>Top 10* HUD lender since</span></div>
         <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$0B+</b><span>Closed</span></div>
       </div>
       <p class="aba-note">*Harborview and its affiliate FACG</p>
