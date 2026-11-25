@@ -1402,6 +1402,13 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
 }
 /* PHONE About photo (Rikki 2026-11-23): just the building in the wave, like desktop */
 @media (max-width:700px){html body #about .aba-fig img{object-position:50% 100%!important;transform:scale(2.3)!important;transform-origin:55% 100%!important}}
+/* About (desktop + phone): FACG note as a small caps label with a thin line each side (Rikki 2026-11-25) */
+html body #about .aba-note{display:flex!important;align-items:center;justify-content:center;gap:clamp(10px,1.6vw,22px);text-transform:uppercase;white-space:nowrap!important;
+  font-size:12px!important;font-weight:600!important;letter-spacing:.2em!important;color:var(--night)!important}
+html body #about .aba-note:before,html body #about .aba-note:after{content:"";flex:0 1 clamp(60px,14vw,220px);height:1px;background:currentColor;opacity:.28}
+@media (min-width:701px){html body #about .aba-note{margin-top:clamp(36px,3.2vw,48px)!important}}
+@media (max-width:700px){html body #about .aba-note{font-size:8.5px!important;letter-spacing:.16em!important;margin-top:26px!important}
+  html body #about .aba-note:before,html body #about .aba-note:after{flex:1 1 0;min-width:14px}}
 </style>
 </head>
 <body>
@@ -1505,7 +1512,7 @@ html body #transactions .ledger-head .t2.t2-sub{font-size:clamp(40px,6.2vw,92px)
         <div><b>2013</b><span>Top 10 HUD lender since</span></div>
         <div><b class="countup" data-to="15" data-prefix="$" data-suffix="B+">$0B+</b><span>Closed</span></div>
       </div>
-      <p class="aba-note">Harborview and its affiliate FACG</p>
+      <p class="aba-note">*Harborview and its affiliate FACG</p>
     </div>
     <svg class="aba-note-wave" aria-hidden="true" height="90"><path id="abaNoteCurve" fill="none" d=""/><text><textPath href="#abaNoteCurve" startOffset="50%" text-anchor="middle">Harborview and its affiliate FACG</textPath></text></svg>
     <figure class="aba-fig"><img src="img/about-wave-1600.webp" srcset="img/about-wave-900.webp 900w, img/about-wave-1600.webp 1600w, img/about-wave-2560.webp 2560w" sizes="(max-width:700px) 230vw, 100vw" alt="Curving blue glass façade against the sky" loading="lazy" decoding="async"></figure>
