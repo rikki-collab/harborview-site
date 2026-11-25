@@ -1442,10 +1442,9 @@ html body:not(#_) #process .czone .inner .t2.t2-sub,html body:not(#_) #process .
 /* Light water background a clear step darker so the Our process boxes pop (Rikki 2026-11-25) */
 html body .on-light,html body.m-pages #process.statement,html body.m-pages #directory.dirsec{background:#B6CCE1!important}
 html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!important}
-/* About photo: a soft film so it flows out of the water background — the ripples carry over the building and the top fades into the page blue (Rikki 2026-11-25) */
-#about .aba-fig{position:relative}
-#about .aba-fig::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("img/water-light.webp") 0 0/480px 480px repeat;mix-blend-mode:screen;opacity:.42}
-#about .aba-fig::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(182,204,225,.88) 0%,rgba(182,204,225,.5) 26%,rgba(182,204,225,.16) 55%,rgba(182,204,225,0) 80%)}
+/* Closed deals (Rikki 2026-11-25): no rates or pricing; places read "A & B" and sit under the amount on the back of the card and in the phone sheet */
+#dealCards .fc-back .fc-loc2{order:1;display:block;margin:-1.4cqi 0 4cqi;font-family:var(--sans);font-size:max(10.5px,3.6cqi);letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-variation-settings:"wdth" 118;line-height:1.4;color:var(--drift)}
+.dsheet .ds-loc{display:block;margin:-2px 0 12px;font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 118;color:rgba(255,255,255,.7)}
 </style>
 </head>
 <body>
@@ -1685,55 +1684,55 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
     </div>
 
     <div class="cards" id="dealCards">
-      <article class="fcard gs-up" data-c="retail" tabindex="0" role="button" aria-pressed="false" aria-label="Anchored retail portfolio, $102,560,000, WV · PA · NJ · TX. Activate to see deal points">
+      <article class="fcard gs-up" data-c="retail" tabindex="0" role="button" aria-pressed="false" aria-label="Anchored Retail portfolio, $102,560,000, WV, PA, NJ &amp; TX. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-1.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Retail</span>
-            <div class="fc-meta"><b>$102,560,000</b><span>WV · PA · NJ · TX</span></div>
+            <div class="fc-meta"><b>$102,560,000</b><span>WV, PA, NJ &amp; TX</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Life company · WV · PA · NJ · TX</span>
-            <h3>Anchored retail portfolio</h3>
-            <ul><li>Four grocery- and big-box-anchored centers</li><li>Permanent non-recourse loans</li><li>Lengthy amortization with cash-out</li><li>Recapitalized a non-US borrower's equity</li></ul>
-            <b class="fc-amt">$102,560,000</b>
+            <span class="fc-tag2">Life Company Loan</span>
+            <h3>Anchored Retail portfolio</h3>
+            <ul><li>Four grocery- and big box&ndash;anchored centers</li><li>Permanent non-recourse loans</li><li>Lengthy amortization with cash-out</li><li>Recapitalized a non-US borrower's equity</li></ul>
+            <b class="fc-amt">$102,560,000</b><span class="fc-loc2">WV, PA, NJ &amp; TX</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="19-facility senior living portfolio, $68,300,000, Tennessee · Kentucky. Activate to see deal points">
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="19-facility Senior Living portfolio, $68,300,000, Tennessee &amp; Kentucky. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-2.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
-            <div class="fc-meta"><b>$68,300,000</b><span>Tennessee · Kentucky</span></div>
+            <div class="fc-meta"><b>$68,300,000</b><span>Tennessee &amp; Kentucky</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Bank · Tennessee · Kentucky</span>
-            <h3>19-facility senior living portfolio</h3>
-            <ul><li>910 beds: assisted, memory care, independent</li><li>Libor + 155 with a fee cap</li><li>Five-year term, 17-year amortization</li><li>Additional proceeds for expansion</li></ul>
-            <b class="fc-amt">$68,300,000</b>
+            <span class="fc-tag2">Bank Loan</span>
+            <h3>19-facility Senior Living portfolio</h3>
+            <ul><li>910 beds: Assisted Living, Memory Care &amp; Independent Living</li><li>Five-year term, 17-year amortization</li><li>Additional proceeds for expansion</li></ul>
+            <b class="fc-amt">$68,300,000</b><span class="fc-loc2">Tennessee &amp; Kentucky</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Independent living pair, $19,168,000, Michigan · Texas. Activate to see deal points">
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Independent Living pair, $19,168,000, Michigan &amp; Texas. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-3.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
             <span class="fc-tag">Healthcare</span>
-            <div class="fc-meta"><b>$19,168,000</b><span>Michigan · Texas</span></div>
+            <div class="fc-meta"><b>$19,168,000</b><span>Michigan &amp; Texas</span></div>
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Balance sheet · Michigan · Texas</span>
-            <h3>Independent living pair</h3>
-            <ul><li>320 beds across two facilities</li><li>Non-recourse bridge, interest-only</li><li>Libor + 325 with a $4M cash-out</li><li>Positioned for an agency takeout</li></ul>
-            <b class="fc-amt">$19,168,000</b>
+            <span class="fc-tag2">Balance Sheet Bridge Loan</span>
+            <h3>Independent Living pair</h3>
+            <ul><li>320 beds across two facilities</li><li>Non-recourse bridge, interest-only</li><li>$4M cash-out</li><li>Positioned for an agency takeout</li></ul>
+            <b class="fc-amt">$19,168,000</b><span class="fc-loc2">Michigan &amp; Texas</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="Historic mixed-use redevelopment, $22,000,000, Dallas, Texas. Activate to see deal points">
+      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="Historic Mixed-Use redevelopment, $22,000,000, Dallas, Texas. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-4.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
@@ -1742,10 +1741,10 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Construction · Dallas, Texas</span>
-            <h3>Historic mixed-use redevelopment</h3>
-            <ul><li>105-year-old building, 100,000 SF</li><li>Construction loan at Libor + 3.25</li><li>Three years interest-only</li><li>National Register + LEED path</li></ul>
-            <b class="fc-amt">$22,000,000</b>
+            <span class="fc-tag2">Construction Loan</span>
+            <h3>Historic Mixed-Use redevelopment</h3>
+            <ul><li>105-year-old building, 100,000 SF</li><li>Three years interest-only</li><li>National Register + LEED path</li></ul>
+            <b class="fc-amt">$22,000,000</b><span class="fc-loc2">Dallas, Texas</span>
           </div>
         </div>
       </article>
@@ -1758,14 +1757,14 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">CMBS · Washington</span>
+            <span class="fc-tag2">CMBS Loan</span>
             <h3>Multifamily apartments</h3>
-            <ul><li>196 stabilized units</li><li>Non-recourse with full cash-out</li><li>Near-doubled leverage at a stellar rate</li><li>Closed through the 2016 rate hikes</li></ul>
-            <b class="fc-amt">$15,000,000</b>
+            <ul><li>196 stabilized units</li><li>Non-recourse with full cash-out</li><li>Near-doubled leverage</li><li>Closed through the 2016 rate hikes</li></ul>
+            <b class="fc-amt">$15,000,000</b><span class="fc-loc2">Washington</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Boutique skilled nursing build, $14,500,000, California. Activate to see deal points">
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Boutique Skilled Nursing build, $14,500,000, California. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-6.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
@@ -1774,10 +1773,10 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Construction · California</span>
-            <h3>Boutique skilled nursing build</h3>
-            <ul><li>40-bed luxury short-stay rehab</li><li>Close to 80% leverage</li><li>Prime + 1, two years interest-only</li><li>Bank syndication led by Harborview</li></ul>
-            <b class="fc-amt">$14,500,000</b>
+            <span class="fc-tag2">Construction Loan</span>
+            <h3>Boutique Skilled Nursing build</h3>
+            <ul><li>40-bed luxury short-stay rehab</li><li>Close to 80% leverage</li><li>Two years interest-only</li><li>Bank syndication led by Harborview</li></ul>
+            <b class="fc-amt">$14,500,000</b><span class="fc-loc2">California</span>
           </div>
         </div>
       </article>
@@ -1790,14 +1789,14 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Bank · Washington, D.C.</span>
+            <span class="fc-tag2">Bank Loan</span>
             <h3>Comfort Inn refinance</h3>
-            <ul><li>100 rooms in a top-50 MSA</li><li>3.9% fixed, 10-year term</li><li>25-year amortization</li><li>Relationship bank execution</li></ul>
-            <b class="fc-amt">$12,000,000</b>
+            <ul><li>100 rooms in a top-50 MSA</li><li>10-year term, 25-year amortization</li><li>Relationship bank execution</li></ul>
+            <b class="fc-amt">$12,000,000</b><span class="fc-loc2">Washington, D.C.</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Garden style apartments, $11,600,000, Oklahoma. Activate to see deal points">
+      <article class="fcard gs-up" data-c="multifamily" tabindex="0" role="button" aria-pressed="false" aria-label="Garden-style apartments, $11,600,000, Oklahoma. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-8.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
@@ -1806,14 +1805,14 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Bridge to HUD · Oklahoma</span>
-            <h3>Garden style apartments</h3>
-            <ul><li>304 units</li><li>100% of purchase price financed</li><li>Libor + 300, 24 months interest-only</li><li>Now heading to permanent HUD debt</li></ul>
-            <b class="fc-amt">$11,600,000</b>
+            <span class="fc-tag2">Bridge Loan to HUD</span>
+            <h3>Garden-style apartments</h3>
+            <ul><li>304 units</li><li>100% of purchase price financed</li><li>24 months interest-only</li><li>Now heading to permanent HUD debt</li></ul>
+            <b class="fc-amt">$11,600,000</b><span class="fc-loc2">Oklahoma</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Skilled nursing refinance, $11,440,000, Massachusetts. Activate to see deal points">
+      <article class="fcard gs-up" data-c="healthcare" tabindex="0" role="button" aria-pressed="false" aria-label="Skilled Nursing refinance, $11,440,000, Massachusetts. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-9.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
@@ -1822,14 +1821,14 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">HUD 232/223(f) · Massachusetts</span>
-            <h3>Skilled nursing refinance</h3>
-            <ul><li>120 beds outside Boston</li><li>Non-recourse</li><li>Rate fixed for 35 years</li><li>Originated by Jonathan Kutner</li></ul>
-            <b class="fc-amt">$11,440,000</b>
+            <span class="fc-tag2">HUD 232/223(f) Loan</span>
+            <h3>Skilled Nursing refinance</h3>
+            <ul><li>120 beds outside Boston</li><li>Non-recourse</li><li>Fixed for 35 years</li></ul>
+            <b class="fc-amt">$11,440,000</b><span class="fc-loc2">Massachusetts</span>
           </div>
         </div>
       </article>
-      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="New construction office, $8,200,000, New York. Activate to see deal points">
+      <article class="fcard gs-up" data-c="office" tabindex="0" role="button" aria-pressed="false" aria-label="New construction Office, $8,200,000, New York. Activate to see deal points">
         <div class="fc-in">
           <div class="fc-front">
             <img src="img/deal-10.webp?v=6" alt="" width="1400" height="1400" loading="lazy" decoding="async">
@@ -1838,10 +1837,10 @@ html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!impor
             <span class="fc-hint" aria-hidden="true">+</span>
           </div>
           <div class="fc-back">
-            <span class="fc-tag2">Bank · New York</span>
-            <h3>New construction office</h3>
+            <span class="fc-tag2">Bank Loan</span>
+            <h3>New construction Office</h3>
             <ul><li>Newly completed building</li><li>Refinanced with no operating history</li><li>30-year amortization</li><li>Closed on relationship strength</li></ul>
-            <b class="fc-amt">$8,200,000</b>
+            <b class="fc-amt">$8,200,000</b><span class="fc-loc2">New York</span>
           </div>
         </div>
       </article>
@@ -2485,7 +2484,7 @@ setTimeout(function(){ta.focus()},700);});});})();
   var mq=window.matchMedia('(max-width:700px)'), grid=document.getElementById('dealCards'); if(!grid) return;
   var scrim=document.createElement('div'); scrim.className='dscrim';
   var sh=document.createElement('div'); sh.className='dsheet'; sh.setAttribute('role','dialog'); sh.setAttribute('aria-modal','true'); sh.setAttribute('aria-label','Deal details');
-  sh.innerHTML='<div class="ds-grab"></div><button class="ds-x" aria-label="Close">&times;</button><img class="ds-img" alt=""><div class="ds-body"><span class="ds-tag"></span><b class="ds-amt"></b><h3></h3><ul></ul></div>';
+  sh.innerHTML='<div class="ds-grab"></div><button class="ds-x" aria-label="Close">&times;</button><img class="ds-img" alt=""><div class="ds-body"><span class="ds-tag"></span><b class="ds-amt"></b><span class="ds-loc"></span><h3></h3><ul></ul></div>';
   document.body.appendChild(scrim); document.body.appendChild(sh);
   var last=null;
   function open(card){
@@ -2493,6 +2492,7 @@ setTimeout(function(){ta.focus()},700);});});})();
     sh.querySelector('.ds-img').src=img.currentSrc||img.src;
     sh.querySelector('.ds-tag').textContent=(card.querySelector('.fc-tag')||{}).textContent+' \u00b7 '+back.querySelector('.fc-tag2').textContent;
     sh.querySelector('.ds-amt').textContent=back.querySelector('.fc-amt').textContent;
+    sh.querySelector('.ds-loc').textContent=(back.querySelector('.fc-loc2')||{}).textContent||'';
     sh.querySelector('h3').textContent=back.querySelector('h3').textContent;
     sh.querySelector('ul').innerHTML=back.querySelector('ul').innerHTML;
     sh.scrollTop=0; last=card; document.body.classList.add('deal-open'); sh.querySelector('.ds-x').focus({preventScroll:true});
