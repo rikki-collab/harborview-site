@@ -1442,6 +1442,10 @@ html body:not(#_) #process .czone .inner .t2.t2-sub,html body:not(#_) #process .
 /* Light water background a clear step darker so the Our process boxes pop (Rikki 2026-11-25) */
 html body .on-light,html body.m-pages #process.statement,html body.m-pages #directory.dirsec{background:#B6CCE1!important}
 html body:not(#_) #process .tenets .tenet{background:rgba(255,255,255,.78)!important}
+/* About photo: a soft film so it flows out of the water background — the ripples carry over the building and the top fades into the page blue (Rikki 2026-11-25) */
+#about .aba-fig{position:relative}
+#about .aba-fig::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url("img/water-light.webp") 0 0/480px 480px repeat;mix-blend-mode:screen;opacity:.42}
+#about .aba-fig::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(182,204,225,.88) 0%,rgba(182,204,225,.5) 26%,rgba(182,204,225,.16) 55%,rgba(182,204,225,0) 80%)}
 </style>
 </head>
 <body>
